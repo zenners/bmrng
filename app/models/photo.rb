@@ -1,10 +1,5 @@
 class Photo < ActiveRecord::Base
-
-## ================================ INCLUDES ====================================
-
-  ### IMAGE UPLOADING
-  #include Mongoid::Paperclip
-  #include Mongoid::Followable
+  acts_as_followable
 
   include Rails.application.routes.url_helpers
 
@@ -30,7 +25,7 @@ class Photo < ActiveRecord::Base
 
 ## ================================= IMAGES ======================================
 
-  #TODO: Bad image sizes and non 3.0 paperclip settings
+  #TODO: Bad image sizes
   has_attached_file :photo,
     :styles => {
       :original => ['400x400', :jpg],

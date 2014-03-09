@@ -12,4 +12,22 @@ class Album < ActiveRecord::Base
 
   belongs_to :user
 
+  # utility to make finding things easier when the key could be an
+  # object, integer, symbol, or string.   Works even if the string holds
+  # an integer, so it can take params[:id] like "25020"
+  def self.find_by_name_or_id(x)
+    if x.is_a?(ActiveRecord::Base)
+      r = x
+    elsif x.is_a?(Fixnum)
+      r = find_by_id(x)
+    elsif x.is_a?(String) or x.is_a?(Symbol)
+      if (r = find_by_name(x.to_s))
+        r
+      elsif !(x.is_a?(Symbol)) and ((i = x.to_i) and (i.to_s == x.to_s.strip))
+        find_by_id(i)
+      else
+        nil
+      end
+    end
+  end
 end

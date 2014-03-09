@@ -8,7 +8,7 @@
 
 		  <%= f.hidden_field :album_id, :value => @album.id %>
 		  <%= f.hidden_field :album_url, :value => request.original_url %>
-		  <%= f.hidden_field :guest_ip, :value => request.remote_ip %>
+		  <%= f.hidden_field :last_sign_in_ip, :value => request.remote_ip %>
 
 		  <div class="form-inputs">
 		    <%= f.input :name, :label => false, :autofocus => true %>
@@ -26,43 +26,37 @@
 	</div>
 </div>
 
+<!--TODO: This JS code got a quick fix without checking. Make sure to test-->
 <script language="javascript">
 document.onmousedown=disableclick;
 status="Right Click Disabled";
-Function disableclick(event)
-{
-  if(event.button==2)
-   {
-     alert(status);
-     return false;    
-   }
-}
+//function disableclick(event){
+//  if(event.button==2)
+//   {
+//     alert(status);
+//     return false;
+//   }
+//}
 </script> 
 
+<!-- TODO: This needs review. There was a lot of bad formatting here that got a quick fix without viewing in browser-->
 <div id="thegrid" oncontextmenu="return false">
-<% @album.photos.each do |photo| %>
-
-
-
-	<a class="fancybox-button" oncontextmenu="return false" rel="fancybox-button" href="<%= photo.photo.url %>" 
-	<% if @album.social %>
-		title="facebook | twitter | pinterest | tumblr"
+    <% @album.photos.each do |photo| %>
+        <a class="fancybox-button" oncontextmenu="return false" rel="fancybox-button" href="<%= photo.photo.url %>">
+            <% if @album.social %>
+                title= "facebook | twitter | pinterest | tumblr"
+            <% end %>
+            <div class="image_container item">
+                <img src="<%= photo.photo.url %>" alt="" class="image" />
+            </div>
+        </a>
+        <div class="fave_controls <%= photo.id %>">
+            <span class="fave_heart">
+                <p><%= render 'photos/fave_options', :photo => Photo.find_by(id: photo.id) %></p>
+            </span>
+        </div>
+        <div class="fave_count"><p><%= photo.followers_count %></p></div>
     <% end %>
-    >
-	<div class="image_container item">
-		<img src="<%= photo.photo.url %>" alt="" class="image" />
-		</a>
-		<div class="fave_controls <%= photo.id %>">
-			<span class="fave_heart">
-				<p><%= render 'photos/fave_options', :photo => Photo.find_by(id: photo.id) %></p>
-			</span>
-		</div>
-		<div class="fave_count"><p><%= photo.followers_count %></p></div>
-	</div>
-	</a>
-
-
-<% end %>
 
 </div>
 

@@ -15,3 +15,6 @@ ADMIN_PASSWORD: 05test05
 ROLES: [admin, silver, gold, platinum]
 STRIPE_API_KEY: Your_Stripe_API_key
 STRIPE_PUBLIC_KEY: Your_Stripe_Public_Key
+amazon_access_key_id: AKIAJNOGJIXZ6YT34HUA
+amazon_secret_access_key: TieFCpIcR2O6JuxGt9BLwoxksDakUvoCwn0myNsr
+

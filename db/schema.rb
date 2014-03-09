@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140309050606) do
+ActiveRecord::Schema.define(version: 20140309084855) do
 
   create_table "albums", force: true do |t|
     t.integer  "user_id"
     t.string   "name"
     t.string   "title"
-    t.boolean  "social",          default: false
-    t.boolean  "watermark",       default: false
-    t.boolean  "password_toggle", default: false
+    t.boolean  "social",            default: false
+    t.boolean  "watermark",         default: false
+    t.boolean  "password_toggle",   default: false
     t.string   "password"
+    t.integer  "impressions_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,6 +33,19 @@ ActiveRecord::Schema.define(version: 20140309050606) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "follows", force: true do |t|
+    t.integer  "followable_id",                   null: false
+    t.string   "followable_type",                 null: false
+    t.integer  "follower_id",                     null: false
+    t.string   "follower_type",                   null: false
+    t.boolean  "blocked",         default: false, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "follows", ["followable_id", "followable_type"], name: "fk_followables", using: :btree
+  add_index "follows", ["follower_id", "follower_type"], name: "fk_follows", using: :btree
 
   create_table "guests", force: true do |t|
     t.string   "name"

@@ -1,5 +1,6 @@
 <div class="row manage_panel">
 	<div class="span3 sessions_list animated slideInLeft no-print">
+        <p>Current Sessions</p>
 		<ul>
 			<% @albums.each do |album| %>
 				<li>
@@ -8,7 +9,7 @@
 					:remote => true %>
 				</li>
 			<% end %>
-		<ul>
+		</ul>
 	</div>
 	<div class="span6 sessions_stats  no-print">
 		<span class="session_name"></span>

@@ -16,6 +16,7 @@ class GuestsController < ApplicationController
 
     respond_to do |format|
       if @guest.save
+        debugger
         format.html { redirect_to @guest.album_url }
         format.json { render json: display_path(@guest.album_id), status: :created, location: @album }
       else

@@ -1,5 +1,5 @@
 <% if current_guest %>
-	<% if current_guest.follower_of?(photo) %>
+	<% if current_guest.following?(photo) %>
 		<%= render 'photos/defave', :photo => Photo.find_by(id: photo.id) %>
 	<% else %>
 		<%= render 'photos/fave', :photo => Photo.find_by(id: photo.id) %>

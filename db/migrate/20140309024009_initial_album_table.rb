@@ -8,6 +8,7 @@ class InitialAlbumTable < ActiveRecord::Migration
       a.boolean :watermark, default: false
       a.boolean :password_toggle, default: false
       a.string  :password
+      a.integer :impressions_count
       a.timestamps
     end
   end

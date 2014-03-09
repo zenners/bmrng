@@ -26,9 +26,9 @@ class AlbumsController < ApplicationController
   end
 
   def display
-    @album = Album.find(params[:id])
+    @album = Album.find_by_name_or_id(params[:id])
     guests = Guest.where(album_id: @album.id)
-    @guests = guests.where(guest_ip: request.remote_ip)
+    @guests = guests.where(last_sign_in_ip: request.remote_ip)
     render layout: "display"
   end
 
@@ -64,6 +64,7 @@ class AlbumsController < ApplicationController
 
     respond_to do |format|
       if @album.update_attributes(params[:album])
+        #TODO: This should probably be :back, but the page won't load correctly due to JS update_view on link click from left side
         format.html { redirect_to @album, notice: 'Album was successfully updated' }
         format.json { head :no_content }
       else

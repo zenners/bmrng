@@ -24,7 +24,7 @@
     </div>
     <div class="span4 set_4">
       <h2 style="margin-top: 25px;">FAVES<%= image_tag('heart_red.png', :width => "40px") %></h2>
-      <% guest.all_followees.each do |photo| %>
+      <% guest.all_follows.each do |photo| %>
         <div class="image_box">
           <div class="image_title">
             <%= photo.photo_file_name[0..10] %>

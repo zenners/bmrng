@@ -20,6 +20,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # TODO: What the hell is this?? port 3000 on production...
   default_url_options[:port] = 3000 if Rails.env.production?
 
   helper_method :current_guest
