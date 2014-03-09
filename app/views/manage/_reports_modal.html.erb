@@ -1,0 +1,62 @@
+<div class="modal fade" id="reposts_<%= guest.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 850px; margin-left: -450px; padding: 20px; display: none;">
+  <div class="row modal_set">
+    <div class="span3 set_3">
+      <div class="owner_tag">
+        <%= image_tag(current_user.logo.url, :width => "270") %>
+      </div>
+      <h3><u>SESSION TITLE</u></h3>
+      <%= @album.title %>
+      <h3><u>REPORT NAME</u></h3>
+      <%= guest.name %>
+      <h3><u>FEEDBACK</u></h3>
+      <ol>
+        <% guest.answers.each do |answer| %>
+          <li><%= answer.content %></li>
+        <% end %>
+      </ol>
+      <script>
+        function printpage(){
+          window.print()
+        }
+      </script>
+      
+      <input type="button" value="PRINT" onclick="printpage()" class="btn short">
+    </div>
+    <div class="span4 set_4">
+      <h2 style="margin-top: 25px;">FAVES<%= image_tag('heart_red.png', :width => "40px") %></h2>
+      <% guest.all_followees.each do |photo| %>
+        <div class="image_box">
+          <div class="image_title">
+            <%= photo.photo_file_name[0..10] %>
+          </div>
+          <%= image_tag(photo.photo.url, :width => "200px") %>
+        </div>
+        <div class="extras_container">
+          <div class="fave_heart">
+            <%= image_tag('heart_red.png', :width => "40px") %>
+          </div>
+          <div class="grey_ball">
+            <%= photo.followers_count %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="span3 set_3 raves">
+      <h2 class="raves_title">RAVES <span class="top5">TOP 5</span></h2>
+      <% @popular_pics.each do |rave| %>
+        <div class="image_box">
+          <%= image_tag(rave.photo.url, :width => "200px") %>
+        </div>
+        <div class="extras_container">
+          <div class="grey_ball">
+            <%= rave.followers_count %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<style type="text/css" media="print">
+   .no-print { display: none; }
+</style>

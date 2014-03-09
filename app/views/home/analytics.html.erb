@@ -1,0 +1,30 @@
+<div class="row analytics_panel">
+	<div class="row">
+		<div class="span4">
+			<div class="title_holder  animated bounceIn">
+				<span class="title animated bounceIn">MOST<br>VIEWED<br>SESSIONS</span>
+			</div>
+			<ul class="animated slideInLeft">
+				<% @albums.each do |album| %>
+					<li class="caps"><%= album.title %> (<%= album.impressionist_count(:filter=>:all) %>)</li>
+				<% end %>
+			<ul>
+		</div>
+		<div class="span4">
+			<div class="title_holder animated rotateInDownLeft">
+				<span class="title">MOST<br>LIKED<br>PHOTOS</span>
+			</div>
+			<ul class="animated slideInLeft">
+				<% @popular_pics.each do |pic| %>
+				<%= image_tag(pic.photo.url(:thumb)) %>
+				<% end %>
+			<ul>
+		</div>
+		<div class="span4">
+			<div class="title_holder animated slideInDown">
+				<span class="title animated bounceIn">DESKTOP<br>VS<br>MOBILE</span>
+			</div>
+			<div class="red_hoop animated slideInLeft"></div>
+		</div>
+	</div>
+</div>

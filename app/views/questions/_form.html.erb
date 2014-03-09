@@ -1,0 +1,10 @@
+<%= simple_form_for(@question) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.input :content %>
+  </div>
+
+    <%= f.button :submit %>
+<% end %>

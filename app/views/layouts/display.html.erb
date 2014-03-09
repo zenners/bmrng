@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= @album.user.name %> | <%= @album.name %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "BOOMERANG" %>">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "jquery.grid-a-licious.min" %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body class="<%= controller_name %> <%= action_name %>">
+    <div id="main" role="main">
+
+        <div class="content">
+
+              <%= render 'layouts/messages' %>
+              <%= yield %>
+
+          </div>
+          <footer>
+          </footer>
+        </div>
+
+    </div> <!--! end of #main -->
+    <div class="navbar navbar-fixed-bottom navbar-inverse">
+      <nav class="navbar-inner">
+        <div class="container">
+          <%= render 'layouts/display_nav' %>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

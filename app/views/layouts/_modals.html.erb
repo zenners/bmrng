@@ -1,0 +1,171 @@
+<div class="modal fade" id="vanity" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">VANITY URL</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(current_user, :as => current_user, :url => update_path, :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
+          <%= f.error_notification %>
+          <%= f.input :name, :required => false, :label => false %>
+          <%= f.button :submit, 'UPDATE', :class => 'btn-primary big_button' %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="logo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">LOGO</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for current_user, :url => update_path, :html => { :multipart => true } do |f| %>
+          <%= f.file_field :logo %>
+          <%= f.button :submit, 'UPDATE', :class => 'btn-primary big_button' %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="link" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">LINK</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for current_user, :url => update_path do |f| %>
+          <%= f.input :link, :label => false %>
+          <%= f.button :submit, 'UPDATE', :class => 'btn-primary big_button' %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">PASSWORD</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(current_user, :as => current_user, :url => registration_path(current_user), :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
+          <%= f.error_notification %>
+          <%= display_base_errors current_user %>
+          <h4>PASSWORD</h4>
+          <%= f.input :password, :autocomplete => "off", :hint => "leave it blank if you don't want to change it", :required => false, :label => false %>
+          <h4>PASSWORD CONFIRMATION</h4>
+          <%= f.input :password_confirmation, :required => false, :label => false %>
+          <h4>CURRENT PASSWORD (REQUIRED)</h4>
+          <%= f.input :current_password, :hint => "we need your current password to confirm your changes", :required => true, :label => false %>
+          <%= f.button :submit, 'UPDATE', :class => 'btn-primary big_button' %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div id="credit_card" class="modal fade" style="display: none;">
+  <%= simple_form_for resource, :as => resource_name, :url => update_card_path, :html => {:method => :put, :class => 'form-horizontal card_form' } do |f| %>
+    <div class="modal-header">
+      <a class="close" data-dismiss="modal">&#215;</a>
+      <h3>Change Credit Card</h3>
+    </div>
+    <div class="modal-body">
+      <div class="field">
+        <%= label_tag :card_number, "Credit Card Number" %>
+        <%= text_field_tag :card_number, nil, name: nil %>
+      </div>
+      <div class="field">
+        <%= label_tag :card_code, "Card Security Code (CVV)" %>
+        <%= text_field_tag :card_code, nil, name: nil %>
+      </div>
+      <div class="field">
+        <%= label_tag :card_month, "Card Expiration" %>
+        <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"}%>
+        <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+10}, {name: nil, id: "card_year"}%>
+      </div>
+      <%= f.hidden_field :name %>
+      <%= f.hidden_field :email %>
+      <%= f.hidden_field :stripe_token %>
+    </div>
+    <div style="margin-left: 15px;">
+      <%= f.submit "UPDATE", :class => "btn btn-primary big_button" %>
+    </div>
+  <% end %>
+</div>
+
+<div class="modal fade" id="feedback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">FEEDBACK</h4>
+      </div>
+      <div class="modal-body">
+        <h2>Ask your clients a few questions</h2>
+
+        <div class="questions_box"></div>
+
+        <br />
+
+        <%= simple_form_for(Question.new, :remote => true) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.hidden_field :user_id, :value => current_user.id %>
+            <%= f.input :content, :label => false %>
+          </div>
+
+            <%= f.button :submit, "ASK", :class => "big_button" %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="support" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">SUPPORT</h4>
+      </div>
+      <div class="modal-body">
+        <h4>Have an issue? Let us know.</h4>
+
+        <form>
+          <textarea></textarea>
+        </form
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="suggestions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">SUGGESTIONS</h4>
+      </div>
+      <div class="modal-body">
+        <h2>Have any feature requests? Let us know.</h2>
+
+        <form>
+          <textarea></textarea>
+        </form
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+

@@ -1,0 +1,15 @@
+<div class="row">
+	<div class="span3 option_links animated fadeInUp">
+		<h4><a data-toggle="modal" href="#name">CHANGE NAME</a></h4>
+		<h4><a data-toggle="modal" href="#title">CHANGE TITLE</a></h4>
+		<h4><a data-toggle="modal" href="#password">CHANGE PASSWORD</a></h4>
+		<h4><a data-toggle="modal" href="#invisible">MAKE INVISIBLE</a></h4>
+		<h4><a data-toggle="modal" href="#watermark">WATERMARK</a></h4>
+		<h4><a data-toggle="modal" href="#social">SOCIAL SHARE</a></h4>
+	</div>
+	<div class="span3 options_buttons">
+		<%= link_to 'DELETE SESSION', @album, method: :delete, data: { confirm: 'Are you sure?' }, :class => "delete_btn animated fadeInUp" %>
+	</div>
+</div>
+
+<%= render 'manage/options_modals' %>

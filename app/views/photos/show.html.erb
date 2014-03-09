@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= image_tag @photo.session_image.url %>
+  <h1><%= @photo.album_id %></h1>
+  <h1><%= @photo.session_image.content_type %></h1>
+</p>
+
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

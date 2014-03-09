@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "BOOMERANG" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "BOOMERANG" %>">
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "dropzone" %>
+    <%# TODO: Should not need fancyInput, but wasn't looking in asset pipeline %>
+    <%= javascript_include_tag "fancyInput" %>
+    <%= csrf_meta_tags %>
+    <%= yield(:head) %>
+  </head>
+  <body class="<%= controller_name %> <%= action_name %>">
+    <% if current_user %>
+    <div class="navbar navbar-fixed-top navbar-inverse animated fadeInDownBig  no-print">
+      <nav class="navbar-inner">
+          <%= render 'layouts/navigation' %>
+      </nav>
+    </div>
+    <% end %>
+    <div id="main" role="main">
+      <div class="container">
+        <div class="content">
+           <div class="row">
+            <div class="span12">
+              <%= render 'layouts/messages' %>
+              <%= yield %>
+              <% if user_signed_in? %>
+              <%= render 'layouts/modals' %>
+              <% end %>
+            </div>
+          </div>
+          <footer>
+          </footer>
+        </div>
+      </div> <!--! end of .container -->
+    </div> <!--! end of #main -->
+    <% if current_user %>
+    <div class="navbar navbar-fixed-bottom navbar-inverse animated fadeInUpBig  no-print">
+      <nav class="navbar-inner">
+          <%= render 'layouts/navigation_bottom' %>
+      </nav>
+    </div>
+    <% end %>
+  </body>
+</html>

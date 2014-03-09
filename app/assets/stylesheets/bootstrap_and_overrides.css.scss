@@ -1,0 +1,454 @@
+@import "bootstrap";
+body { padding-top: 100px; }
+@import "bootstrap-responsive";
+
+// ============= COLORS =================
+
+$red: rgb(199,70,61);
+$blue: rgb(123,186,179);
+$black: rgb(24,25,23);
+$grey: rgb(50,52,51);
+$white: #ffffff;
+
+// =========== BACKGROUNDS =============
+
+.red{background: $red;}
+.blue{background: $blue;}
+.black{background: $black;}
+.grey{background: $grey;}
+
+// ============= FONTS =================
+
+@font-face {
+  font-family: 'GothamMedium';
+  src:url('gotham/Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamThin';
+  src:url('gotham/ExtraLight.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.thin{font-family: 'GothamThin';}
+
+body{
+	background: $black;
+	color: $white;
+	font-family: 'GothamThin';
+  margin-bottom: 60px;
+}
+
+.brand{
+	margin-top: 0px;
+  margin-left: -10px !important;
+}
+
+h1{
+	font-family: 'GothamMedium';
+	font-size: 40px;
+}
+
+.navbar-inverse .navbar-inner{
+	background-color: #000;
+	background-image: -moz-linear-gradient(top, #000, #000);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(#000));
+	background-image: -webkit-linear-gradient(top, #000, #000);
+	background-image: -o-linear-gradient(top, #000, #000);
+	background-image: linear-gradient(to bottom, #000, #000);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#000', GradientType=0);
+	border-color: #000;
+	height: 50px;
+	a{
+		color: $white !important;
+	}
+	a:hover{
+		background: $grey;
+		color: $white !important;
+	}
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 160px;
+	padding: 5px 0;
+	margin: 2px 0 0;
+	list-style: none;
+	background-color: $grey;
+	border: none;
+	border: none;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;
+}
+
+ul .dropdown-menu li a:hover{
+  background: $blue !important;
+}
+
+.btn{
+	display: inline-block;
+	padding: 4px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	color: $white;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	background-color: $red;
+	background-image: -moz-linear-gradient(top, $red, $red);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from($red), to($red));
+	background-image: -webkit-linear-gradient(top, $red, $red);
+	background-image: -o-linear-gradient(top, $red, $red);
+	background-image: linear-gradient(to bottom, $red, $red);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$red', endColorstr='$red', GradientType=0);
+	border: none;
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	-webkit-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.2), 0 0px 0px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.2), 0 0px 0px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.2), 0 0px 0px rgba(0, 0, 0, 0.05);
+	width: 410px !important;
+	height: 30px;
+	text-shadow: none;
+}
+
+.btn:hover{
+	background: $grey;
+	color: $white;
+}
+
+.badge{
+	display: inline-block;
+	padding-left: 6px;
+	padding-right: 6px;
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 25px;
+	color: white;
+	vertical-align: baseline;
+	white-space: nowrap;
+	text-shadow: none;
+	margin-top: 9px;
+	border-radius: 50%;
+}
+
+input[type="text"]{
+	background-color: #000;
+	background-image: -moz-linear-gradient(top, #000, #000);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(#000));
+	background-image: -webkit-linear-gradient(top, #000, #000);
+	background-image: -o-linear-gradient(top, #000, #000);
+	background-image: linear-gradient(to bottom, #000, #000);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#000', GradientType=0);
+	border-color: #000;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
+	width: 395px;
+	height: 40px;
+	font-size: 20px;
+	color: $white;
+  padding-left: 10px;
+}
+
+.carousel-indicators .active{
+	background: $red;
+}
+
+a{
+  text-decoration: none !important;
+}
+
+.nav_link_bot:hover{
+  background: $blue;
+}
+
+
+
+
+// ======================= MODALS =====================
+
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 1050;
+  width: 560px;
+  margin-left: -280px;
+  background-color: white;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: none;
+  color: #202020;
+}
+
+.modal .modal_set {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.set_3{width: 270px;}
+.set_4{width: 270px; margin-top: -25px;}
+.set_3.raves{
+  margin-top: -10px;
+}
+
+
+// =================== FORMS ============================
+
+input[type="email"],input[type="password"]{
+      background: #000;
+      border: 0px solid #cccccc;
+      -webkit-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+      -moz-box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+      box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.075);
+      -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+      -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+      -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+      transition: border linear 0.2s, box-shadow linear 0.2s;
+      border-radius:  0px;
+      width: 400px;
+      height: 50px;
+      font-size: 25px;
+      padding-bottom:0px;
+    }
+
+
+// ================= FANCY BOX =======================
+
+.fancybox-skin {
+  position: relative;
+  background: transparent;
+  color: #444;
+  text-shadow: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+
+// ========== SLIDE DOWN NAV ===========
+
+.options_bar{
+  background: $grey;
+  margin-top: 51px;
+  text-align: right;
+  vertical-align: center;
+  .link_holder{
+    padding: 10px 0px 10px 0px;
+  }
+  ul{
+    list-style-type: block;
+    height: 10px;
+  }
+  li{
+    display:inline;
+    margin: 10px !important;
+    font-size: 15px;
+  }
+  li a{
+    text-decoration:none;
+    padding: 10px;
+  }
+  li a:hover{
+    background: $black !important;
+  }
+}
+
+
+// ================ ALERTS ===============
+
+.alert, .alert h4 {
+  color: $white;
+}
+
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border: 1px solid $white;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  box-shadow: none;
+  text-align: center;
+  width: 500px;
+  margin: 0px auto;
+  margin-bottom: 30px;
+  font-family: 'GothamThin';
+  text-transform:uppercase;
+  font-size: 15px;
+}
+
+.alert-success {
+  background-color: transparent;
+  border-color: $white;
+  color: $white;
+  background-color: transparent;
+  border: 1px solid $white;
+}
+
+// ================ SUPER FOCUS ================
+
+.super_focus input[type="text"]{
+  background: transparent !important;
+  outline: 0 !important;
+}
+
+.super_focus input[type="text"]:focus{
+  outline: 0 !important;
+  background: transparent !important;
+  
+}
+
+*:focus {
+    outline: 0;
+}
+
+// ===================== RESPONSIVE PHOTO GRID ====================
+
+#masonry-container {
+  background: transparent;
+  padding: 0px;
+  margin-bottom: 20px;
+  border-radius: 0px;
+  clear: both;
+  -webkit-border-radius: 0px;
+     -moz-border-radius: 0px;
+          border-radius: 0px;
+}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+.col1 { width: 80px; }
+.col2 { width: 180px; }
+.col3 { width: 280px; }
+.col4 { width: 380px; }
+.col5 { width: 480px; }
+
+.col1 img { max-width: 80px; }
+.col2 img { max-width: 180px; }
+.col3 img { max-width: 280px; }
+.col4 img { max-width: 380px; }
+.col5 img { max-width: 480px; }
+
+.transitions-enabled.masonry,
+.transitions-enabled.masonry .masonry-brick {
+  -webkit-transition-duration: 0.7s;
+     -moz-transition-duration: 0.7s;
+      -ms-transition-duration: 0.7s;
+       -o-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.transitions-enabled.masonry {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.transitions-enabled.masonry  .masonry-brick {
+  -webkit-transition-property: left, right, top;
+     -moz-transition-property: left, right, top;
+      -ms-transition-property: left, right, top;
+       -o-transition-property: left, right, top;
+          transition-property: left, right, top;
+}
+
+
+/* disable transitions on container */
+.transitions-enabled.infinite-scroll.masonry {
+  -webkit-transition-property: none;
+     -moz-transition-property: none;
+      -ms-transition-property: none;
+       -o-transition-property: none;
+          transition-property: none;
+}
+
+.box{
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
+  font-size: 11px;
+  line-height: 1.4em;
+  float: left;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+// ================= ADJUSTS ================
+
+.btn.short{width: 270px !important;}
+
+::selection {
+  background: $blue; /* Safari */
+  color: $white;
+}
+::-moz-selection {
+  background: $blue; /* Firefox */
+  color: $white;
+}
+
+.small-heart{
+  width: 15px !important;
+  margin-top: 37px;
+  margin-left: 2px !important;
+}
+
+.fancyInput input, textarea {
+  color: #fff !important;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  top: 0px;
+  left: 0;
+  background: #000 !important;
+  padding: 10px;
+  font-size: 15px;
+  letter-spacing: -1px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-radius: 0px;
+}
+
+.thebox{
+  background: #404040;
+  text-align: center;
+}

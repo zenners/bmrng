@@ -1,0 +1,137 @@
+// ============= COLORS =================
+
+$red: rgb(199,70,61);
+$blue: rgb(123,186,179);
+$black: rgb(24,25,23);
+$grey: rgb(50,52,51);
+$white: #ffffff;
+
+
+.session_start{
+	text-align: center;
+	margin-bottom: 50px;
+	h1{
+		margin-bottom: 80px;
+	}
+}
+
+.extra_options{
+	width: 500px;
+	margin: 0px auto;
+	text-align: left;
+	h3{
+		font-family: GothamThin;
+	}
+	.bold{font-family: GothamMedium;}
+}
+
+* { margin: 0; padding: 0; }
+
+#photos {
+   /* Prevent vertical gaps */
+   line-height: 0;
+
+   -webkit-column-count: 5;
+   -webkit-column-gap:   0px;
+   -moz-column-count:    5;
+   -moz-column-gap:      0px;
+   column-count:         5;
+   column-gap:           0px;
+
+}
+#photos img {
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media (max-width: 1200px) {
+  #photos {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #photos {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #photos {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #photos {
+  -moz-column-count:    1;
+  -webkit-column-count: 1;
+  column-count:         1;
+  }
+}
+
+.image_container{
+	position: relative;
+	width: 100%;
+	.fave_controls{
+		position: absolute;
+		bottom: 0px;
+		left: 0px;
+		width: 0; 
+		height: 0; 
+		border-bottom: 35px solid $red; 
+		border-right: 35px solid transparent; 
+		color: $white;
+		cursor: pointer;
+		.fave_heart{
+			p{
+				margin: -20px 20px 0px 0px;
+				a{
+					color: $white;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.fave_controls:hover{
+		border-bottom: 35px solid $grey; 
+		border-right: 35px solid transparent;
+	}
+	.fave_count{
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+		background: #000;
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		opacity: .5;
+		text-align: center;
+		font-size: 15px;
+		p{
+			margin-top: 10px;
+		}
+	}
+}
+
+.welcome_screen{
+	background: #000;
+	text-align: center;
+	opacity: .85;
+	position: absolute;
+	top: 0;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	.welcome_text{
+		margin-top: 200px;
+	}
+	.beautiful_people a{
+		color: #fff;
+	}
+}

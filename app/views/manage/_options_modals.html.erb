@@ -1,0 +1,132 @@
+<div class="modal fade" id="name" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">CHANGE NAME</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(@album) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :name %>
+          </div>
+
+            <%= f.button :submit, "UPDATE" %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="title" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">CHANGE TITLE</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(@album) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :title %>
+          </div>
+
+            <%= f.button :submit, "UPDATE" %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">CHANGE PASSWORD</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(@album) do |f| %>
+          <%= f.error_notification %>
+
+            <div class="make-switch">
+              <%= f.check_box :password_toggle %>
+            </div>
+
+            <%= f.button :submit, "UPDATE" %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="invisible" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">MAKE INVISIBLE</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(@album) do |f| %>
+          <%= f.error_notification %>
+
+            <div class="make-switch">
+              <%= f.check_box :password_toggle %>
+            </div>
+
+            <%= f.button :submit, "UPDATE" %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="watermark" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">WATERMARK</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(@album) do |f| %>
+          <%= f.error_notification %>
+
+            <div class="make-switch">
+                <%= f.check_box :watermark %>
+            </div>
+
+            <%= f.button :submit, "UPDATE" %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="social" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"  style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">SOCIAL SHARE</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for(@album) do |f| %>
+          <%= f.error_notification %>
+
+            <div class="make-switch">
+                <%= f.check_box :social %>
+            </div>
+
+            <%= f.button :submit, "UPDATE" %>
+        <% end %>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+

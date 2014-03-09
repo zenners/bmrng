@@ -1,0 +1,7 @@
+$(".session_name").html("<%= escape_javascript  
+	if current_guest.follower_of?(photo)
+		render 'photos/defave', :photo => Photo.find_by(id: photo.id)
+	else
+		render 'photos/fave', :photo => Photo.find_by(id: photo.id)
+	end
+%>");
