@@ -10,13 +10,12 @@ class GuestsController < ApplicationController
   end
 
   def create
-    @guest = Guest.new(params[:guest])
+    @guest = Guest.create(params[:guest])
     session[:guest_name] = @guest.name
     session[:guest_id] = @guest.id
 
     respond_to do |format|
       if @guest.save
-        debugger
         format.html { redirect_to @guest.album_url }
         format.json { render json: display_path(@guest.album_id), status: :created, location: @album }
       else
@@ -26,7 +25,7 @@ class GuestsController < ApplicationController
     end
   end
 
-  def start
+  def start_session
     @guest = Guest.find(params[:guest])
     session[:guest_name] = @guest.name
     session[:guest_id] = @guest.id
@@ -35,7 +34,7 @@ class GuestsController < ApplicationController
     redirect_to url
   end
 
-  def destroy
+  def destroy_session
     url = params[:url]
     reset_session
     redirect_to url

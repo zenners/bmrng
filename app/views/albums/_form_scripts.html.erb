@@ -1,0 +1,15 @@
+<%javascript_tag 'fancyInput.js' %>
+<script>
+    $('section :input').val('').fancyInput()[0].focus();
+</script>
+<script>
+	jQuery(function(){
+	    $("#album_name").on("keyup change", function() {
+	      var value = $("#album_name").val();
+	      $("#session_name").text(value);
+	      $("#session_name2").text(value);
+	      $("#session_name3").text(value.replace(' ', '_'));
+	      $("#new_photo").attr('id', 'butts');
+	    });
+	});
+</script>

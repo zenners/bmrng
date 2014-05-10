@@ -26,10 +26,14 @@ class AlbumsController < ApplicationController
   end
 
   def display
-    @album = Album.find_by_name_or_id(params[:id])
-    guests = Guest.where(album_id: @album.id)
-    @guests = guests.where(last_sign_in_ip: request.remote_ip)
-    render layout: "display"
+    if @album = Album.find_by_name_or_id(params[:id])
+      @guests = Guest.where(album_id: @album.id).
+                      where(last_sign_in_ip: request.remote_ip)
+    else
+      raise ActiveRecord::RecordNotFound
+    end
+
+    render partial: 'guests/load' if current_guest.blank?
   end
 
   def new
@@ -76,7 +80,7 @@ class AlbumsController < ApplicationController
 
   def destroy
     @album = Album.find(params[:id])
-    @album.destroy
+    @album.destroy #REVIEW: This probably better to mark as deleted
 
     respond_to do |format|
       format.html { redirect_to home_manage_path }

@@ -1,0 +1,28 @@
+<div class='welcome_screen'>
+	<div class="welcome_text">
+
+		<h1>WELCOME!</h1>
+		<h3>IS THIS YOUR FIRST TIME HERE?<br> WHAT DO YOU WANT US TO CALL YOU?</h3>
+		<%= simple_form_for(Guest.new, html: { class: 'super_focus' }) do |f| %>
+		  <%= f.error_notification %>
+
+		  <%= f.hidden_field :album_id, :value => @album.id %>
+		  <%= f.hidden_field :album_url, :value => request.original_url %>
+		  <%= f.hidden_field :last_sign_in_ip, :value => request.remote_ip %>
+
+		  <div class="form-inputs">
+		    <%= f.input :name, :label => false, :autofocus => true %>
+		  </div>
+
+		    <%= f.button :submit, "CONTINUE" %>
+		<% end %>
+		<% if @guests.any? %>
+            <h2>OR</h2>
+
+            <h3>ARE YOU ONE OF THESE BEAUTIFUL PEOPLE?</h3>
+            <% @guests.each do |guest| %>
+                <h4 class="beautiful_people"><%= link_to guest.name, start_session_guests_path(:guest => guest.id, :url => request.original_url) %></h4>
+            <% end %>
+        <% end %>
+	</div>
+</div>

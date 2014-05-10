@@ -1,7 +1,4 @@
 class Guest < ActiveRecord::Base
-  ## FOLLOWABLE FIELDS
-  #include Mongo::Followable::Follower
-  #include Mongo::Followable::History
 
   ## GIVE VOTING ABILITY
   #include Mongo::Voter

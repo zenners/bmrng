@@ -1,0 +1,9 @@
+<% if @user.roles.include? Role.find_by_name('Admin') %>
+    <%= render partial: 'admin' %>
+<% elsif @user.roles.include? 'platinum' %>
+    <%= render partial: 'content/platinum' %>
+<% elsif @user.roles.include? 'gold' %>
+    <%= render partial: 'content/gold' %>
+<% else %>
+    <%= render partial: 'content/silver' %>
+<% end %>

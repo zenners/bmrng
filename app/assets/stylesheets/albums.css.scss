@@ -15,6 +15,9 @@ $white: #ffffff;
 	}
 }
 
+.inline-help{
+  color: $blue;
+}
 .extra_options{
 	width: 500px;
 	margin: 0px auto;
@@ -23,6 +26,15 @@ $white: #ffffff;
 		font-family: GothamThin;
 	}
 	.bold{font-family: GothamMedium;}
+}
+
+.options_box{
+	width: 410px;
+	margin: 0px auto;
+	text-align: left;
+	h3{
+		font-size: 14px;
+	}
 }
 
 * { margin: 0; padding: 0; }
@@ -76,7 +88,8 @@ $white: #ffffff;
 
 .image_container{
 	position: relative;
-	width: 100%;
+	width: 200px; //REVIEW: This is may be bad. Need to check if they are scaled
+    padding: 12px;
 	.fave_controls{
 		position: absolute;
 		bottom: 0px;
@@ -103,8 +116,8 @@ $white: #ffffff;
 	}
 	.fave_count{
 		position: absolute;
-		bottom: 5px;
-		right: 5px;
+		bottom: 15px;
+		right: 15px;
 		background: #000;
 		width: 35px;
 		height: 35px;
@@ -119,7 +132,6 @@ $white: #ffffff;
 }
 
 .welcome_screen{
-	background: #000;
 	text-align: center;
 	opacity: .85;
 	position: absolute;

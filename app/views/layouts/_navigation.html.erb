@@ -1,8 +1,8 @@
 <li class="brand pull-left">
-  <% if current_user.logo.url.nil? %>
-    <%= link_to current_user.name, add_path %>
+  <% if current_user.logo.url.include? 'missing' %>
+    <%= link_to current_user.name, new_album_path %>
   <% else %>
-    <%= link_to image_tag(current_user.logo.url(:thumb)), add_path %>
+    <%= link_to image_tag(current_user.logo.url(:thumb)), new_album_path %>
   <% end %>
 </li>
 
@@ -16,17 +16,17 @@
 <div class="navbar-collapse pull-right">
     <ul class="nav navbar-nav navbar-right">
       <li class="nav_link_top">
-        <%= link_to 'MANAGE', manage_path %>        
+        <%= link_to 'SESSIONS', user_path(current_user) %>
       </li>
       <li class="nav_link_top">
-        <%= link_to 'ANALYTICS', analytics_path %>        
+        <%= link_to 'ANALYTICS', analytics_user_path(current_user) %>
       </li>
       <li data-toggle="collapse" data-target="#options" class="nav_link_top collapser">
         <div class="text">INFO</div>
       </li>
       </li>
       <li class="dropdown-toggle red plus_btn">
-        <%= link_to '+', add_path %>        
+        <%= link_to '+', new_album_path %>
       </li>
     </ul>
 </div>
@@ -38,8 +38,8 @@
       <li><a data-toggle="modal" href="#link">LINK</a></li>
       <li><a data-toggle="modal" href="#password">PASSWORD</a></li>
       <li><a data-toggle="modal" href="#vanity">VANITY URL</a></li>
-      <li><a data-toggle="modal" href="#feedback">FEEDBACK</a></li>
-      <li><a data-toggle="modal" href="#credit_card">CREDIT CARD</a></li>
+      <li><a data-toggle="modal" href="#feedback">CLIENT FEEDBACK</a></li>
+      <li><a data-toggle="modal" href="#credit_card">UPDATE CREDIT CARD</a></li>
       <li><%= link_to 'LOGOUT', destroy_user_session_path, :method=>'delete' %></li>
     </ul>
   </div>

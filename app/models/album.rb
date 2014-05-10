@@ -4,7 +4,15 @@ class Album < ActiveRecord::Base
 ## ========================== ATTRIBUTES ACCESSIBLE ==============================
 
   attr_accessible :user_id, :title, :session_image, :name, :watermark, 
-                  :password_toggle, :password
+                  :password_toggle, :password, :social
+
+## ================================ CALLBACKS ====================================
+  before_save :ensure_url_save_name
+
+## =============================== VALIDATIONS ===================================
+
+  validates_length_of :name, in: 1..50, allow_nil: false,  if: :name_changed?
+  validates_length_of :title, in: 1..50, allow_nil: false, if: :title_changed?
 
 ## ================================ RELATIONS ====================================
   has_many :photos
@@ -30,4 +38,11 @@ class Album < ActiveRecord::Base
       end
     end
   end
+
+  private
+
+  def ensure_url_save_name
+    self.name = name.gsub(' ', '_')
+  end
+
 end

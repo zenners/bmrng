@@ -32,6 +32,7 @@ class User < ActiveRecord::Base
   validates_presence_of :name
   validates_presence_of :email
   validates_presence_of :encrypted_password
+  validates_uniqueness_of :name, allow_nil: false, if: :name_changed?
 
 
 ## ATTRIBUTES ACCESIBILITY
@@ -122,5 +123,15 @@ class User < ActiveRecord::Base
     UserMailer.expire_email(self).deliver
     destroy
   end
-  
+
+  # Finds the best role of the user
+  def best_role
+    return nil if roles.blank?
+    #Could be better where it checks for platinum, then gold, etc
+    roles.first.name
+  end
+
+  def admin?
+    roles.first.name = 'Admin'
+  end
 end

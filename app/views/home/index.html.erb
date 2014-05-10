@@ -1,20 +1,6 @@
-<div id="welcome" class="welcome">
-  <h1><span class="thin">BOOMERANG |</span> LOGIN</h1>
-  <p>PERFECT PROOFING LIVES JUST INSIDE</p>
-</div>
-
-<div class="sign_in_form">
-  <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'bmrng_sign_in' }) do |f| %>
-    <%= f.input :email, :autofocus => true, :label => false, :placeholder => "EMAIL" %>
-    <%= f.input :password, :label => false, :placeholder => "PASSWORD" %>
-    <%= f.button :submit, "Sign in", :class => 'btn-primary' %>
-  <% end %>
-  <div class="sign_up_form_links">
-    <%= render "devise/shared/links" %>
-  </div>
-</div>
-
-<!--
+<h1><span class="thin">BOOMERANG</span> Proof</h1>
+<br>
+<br>
 <div class="row span12 plans">
   <div class="span2 well">
     <div class="plan"><h2>Silver</h2></div>
@@ -22,15 +8,15 @@
       <li>One lesson a month</li>
     </ul>
     <h3>$9/month</h3>
-    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'silver'), :class => 'btn btn-primary' %> 
+    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'silver') %>
   </div>
   <div class="span2 well featured">
     <div class="plan featured-plan"><h2>Gold</h2></div>
     <ul class="unstyled">
-      <li>Ten lessons a month</li>
+      <li>Ten sessons a month</li>
     </ul>
     <h3>$19/month</h3>
-    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'gold'), :class => 'btn btn-primary' %> 
+    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'gold') %>
   </div>
   <div class="span2 well">
     <div class="plan"><h2>Platinum</h2></div>
@@ -38,9 +24,6 @@
       <li>Thirty lessons a month</li>
     </ul>
     <h3>$29/month</h3>
-    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'platinum'), :class => 'btn btn-primary' %> 
+    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'platinum') %>
   </div>
 </div>
-
-<%= link_to 'Subscribe', new_user_registration_path(:plan => 'platinum'), :class => 'btn btn-primary' %>
--->

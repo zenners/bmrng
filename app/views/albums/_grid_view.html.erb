@@ -1,0 +1,27 @@
+<div id="thegrid">
+  <% if @album.photos.blank? %>
+      <h3>Sorry, no photos available at this time.</h3>
+  <% end %>
+  <% @album.photos.each do |photo| %>
+      <% if photo.photo.exists? %>
+          <a class="fancybox-button" rel="fancybox-button" href="<%= display_album_photo_path(@album, photo) %>"
+             <% if @album.social %>
+                title="facebook | twitter | pinterest | tumblr"
+             <% end %>
+             >
+            <div class="image_container item">
+                <%= image_tag(photo.photo.url(:thumb), class: 'image') %>
+
+                <% if current_guest %>
+                    <div class="fave_controls <%= photo.id %>">
+                        <span class="fave_heart">
+                            <p><%= render 'photos/fave_options', :photo => Photo.find_by(id: photo.id) %></p>
+                        </span>
+                    </div>
+                <% end %>
+               <div class="fave_count"><p><%= photo.followers_count %></p></div>
+          </div>
+          </a>
+        <% end %>
+  <% end %>
+</div>

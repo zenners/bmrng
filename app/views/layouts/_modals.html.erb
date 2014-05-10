@@ -6,6 +6,8 @@
         <h4 class="modal-title">VANITY URL</h4>
       </div>
       <div class="modal-body">
+        <h3 class='red_font'>NOTICE: This will invalid all paste links you have sent your clients.</h3>
+        <h4>ex. www.boomerangproof.com/<span id="session_name3"><%= current_user.name %></span></h4>
         <%= simple_form_for(current_user, :as => current_user, :url => update_path, :html => { :method => :put, :class => 'form-vertical' }) do |f| %>
           <%= f.error_notification %>
           <%= f.input :name, :required => false, :label => false %>
@@ -145,7 +147,7 @@
 
         <form>
           <textarea></textarea>
-        </form
+        </form>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -163,9 +165,46 @@
 
         <form>
           <textarea></textarea>
-        </form
+        </form>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<% if current_guest and @album %>
+    <div class="modal fade" id="save" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">QUESTIONS</h4>
+          </div>
+          <div class="modal-body">
+            <%= simple_form_for(Answer.new) do |f| %>
+              <%= f.error_notification %>
+
+              <% @album.user.questions.each do |question| %>
+                <%= question.content %>
+                <%= f.input :content, :label => false %>
+                <%= f.hidden_field :question_id, :value => question.id %>
+                <% if current_guest %>
+                    <%= f.hidden_field :guest_id, :value => current_guest.id %>
+                <% end %>
+              <% end %>
+
+                <%= f.button :submit, "SUBMIT" %>
+            <% end %>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+<% end %>
+
+<script>
+	jQuery(function(){
+	    $("#user_name").on("keyup change", function() {
+	      var value = $("#user_name").val();
+	      $("#session_name3").text(value.replace(' ', '_'));
+	    });
+	});
+</script>

@@ -10,19 +10,29 @@ class PhotosController < ApplicationController
     end
   end
 
+  def display
+    @photo = Photo.find_by_id(params[:id])
+    @album = @photo.album
+  end
+
   def fave
     photo = Photo.find(params[:id])
     album = Album.find_by(id: photo.album.id)
     current_guest.follow(photo)
+
+    respond_to do |format|
+      format.html { redirect_to display_path(id: album.id) }
+      format.json { render json: display_path(id: album.id, name: album.name) }
+    end
   end
 
   def defave
     photo = Photo.find(params[:id])
-    current_guest.unfollow(photo)
+    current_guest.stop_following(photo)
     
     respond_to do |format|
-      format.html { redirect_to display_path(album.id) }
-      format.json { render json: display_path(album.id) }
+      format.html { redirect_to display_path(id: photo.album.id) }
+      format.json { render json: display_path(id: photo.album.id, name: photo.album.name) }
     end
   end
 

@@ -15,9 +15,9 @@
 	          <%= f.hidden_field :user_id, :value => current_user.id %>
 	          <%= f.hidden_field :album_id, :value => @album.id %>
 	        </span>
-	        <button type="submit" class="btn btn-success pull-right short" style="height: 40px; font-family: GothamThin;">
-	          <span>START UPLOAD</span>
-	        </button>
+	        <!--<button type="submit" class="btn btn-success pull-right short" style="height: 40px; font-family: GothamThin;">-->
+	          <!--<span>START UPLOAD</span>-->
+	        <!--</button>-->
 	      </div>
         <span class="red_font big">
           DRAG<br> 
@@ -47,6 +47,8 @@
   	<% end %>
 	
 </div>
+
+<%= render 'grid_view' %>
 
 <script>
   var fileUploadErrors = {

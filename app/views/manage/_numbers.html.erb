@@ -4,17 +4,17 @@
 			<span class="title animated bounceIn">TOTAL VIEWS</span>
 		</div>
 			<div class="blue_ball animated pulse">
-				<span class="total_views"><%= @album.impressionist_count(:filter=> :all) %></span>
+				<span class="total_views"><%= @album.impressions_count || 0 %></span>
 			</div>
 	</div>
-	<div class="span2">
-		<div class="title_holder">
-			<span class="title animated bounceIn">UNIQUE VIEWS</span>
-		</div>
-			<div class="blue_ball animated pulse">
-				<span class="uni_views"><%= @album.impressions.count %></span>
-			</div>
-	</div>
+	<!--<div class="span2">-->
+		<!--<div class="title_holder">-->
+			<!--<span class="title animated bounceIn">UNIQUE VIEWS</span>-->
+		<!--</div>-->
+			<!--<div class="blue_ball animated pulse">-->
+				<!--<span class="uni_views"><%= @album.impressions.count %></span>-->
+			<!--</div>-->
+	<!--</div>-->
 	<div class="span2">
 		<div class="title_holder">
 			<span class="title animated pulese">TOTAL RAVES</span>

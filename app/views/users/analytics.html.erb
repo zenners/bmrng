@@ -6,9 +6,9 @@
 			</div>
 			<ul class="animated slideInLeft">
 				<% @albums.each do |album| %>
-					<li class="caps"><%= album.title %> (<%= album.impressionist_count(:filter=>:all) %>)</li>
+					<li class="caps"><%= link_to album.title, album %> - <%= album.impressions_count || 0 %></li>
 				<% end %>
-			<ul>
+			</ul>
 		</div>
 		<div class="span4">
 			<div class="title_holder animated rotateInDownLeft">
@@ -18,7 +18,7 @@
 				<% @popular_pics.each do |pic| %>
 				<%= image_tag(pic.photo.url(:thumb)) %>
 				<% end %>
-			<ul>
+			</ul>
 		</div>
 		<div class="span4">
 			<div class="title_holder animated slideInDown">

@@ -1,7 +1,7 @@
 <div class="session_start">
-	<%= simple_form_for @album do |f| %>
-            <%= f.error_notification %>
+	<%= simple_form_for [Album.new], remote: true do |f| %>
 	    	<div class="session_start">
+				<h1>UPLOAD NEW SESSION</h1>
 				<h4>Where do you want the session to live? Type it below, all one word.</h4>
 				<h4>ex. www.boomerangproof.com/<%= current_user.name %>/<span id="session_name3">___________________</span></h4>
 			</div>
@@ -11,7 +11,7 @@
 			    <%= f.input :title, :label => false, :placeholder => "TITLE" %>
 			    <div class="options_box">
 				    <h3>
-					    PASSWORD:
+					    PASSWORD: 
 					    <div class="make-switch">
 		    				<%= f.check_box :password_toggle %>
 						</div>
@@ -21,9 +21,9 @@
 					    <div class="make-switch">
 		    				<%= f.check_box :watermark %>
 						</div>
-					</h3>
+					</h3> 
 					<h3>
-						SOCIAL SHARE:
+						SOCIAL SHARE:  
 						<div class="make-switch">
 		    				<%= f.check_box :social %>
 						</div>
@@ -33,23 +33,5 @@
 			  <br>
 			  <%= f.button :submit, "CONTINUE" %>
 	<% end %>
-
 	</div>
-	<script src='fancyInput.js'></script>
-	<script>
-		$('section :input').val('').fancyInput()[0].focus();
-	</script>
-
 </div>
-
-<script>
-	jQuery(function(){
-	    $("#album_name").on("keyup change", function() {
-	      var value = $("#album_name").val();
-	      $("#session_name").text(value);
-	      $("#session_name2").text(value);
-	      $("#session_name3").text(value.replace(' ', '_'));
-	      $("#new_photo").attr('id', 'butts');
-	    });
-	});
-</script>
