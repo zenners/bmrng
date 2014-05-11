@@ -1,3 +1,4 @@
-<%= link_to fave_path(:id => photo.id), :remote => true do %>
+<% photo ||= @photo %>
+<%= link_to fave_photo_path(:id => photo.id), :remote => true do %>
 	<%= image_tag('heart.png', :class => "small-heart") %>
 <% end %>

@@ -1,0 +1,2 @@
+$('.fave_controls.<%= @photo.id %>').html("<%= escape_javascript(render('defave')).html_safe %>");
+$('.fave_count.<%= @photo.id %> p').html("<%= @photo.followers_count %> ")

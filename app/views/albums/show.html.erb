@@ -3,47 +3,42 @@
 	<h1><%= @album.title %></h1>
 
 	<%= form_for Photo.new, :html => { :multipart => true, :id => "fileupload", :class => "thebox"  } do |f| %>
-	    
-	    <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-	    <div class="row fileupload-buttonbar">
-	      
-	      <div class="span12">
-	        <!-- The fileinput-button span is used to style the file input field as button -->
-	        <span class="btn btn-success fileinput-button short" style="font-family: GothamThin;">
-	          <span>ADD FILES</span>
-	          <%= f.file_field :photo %>
-	          <%= f.hidden_field :user_id, :value => current_user.id %>
-	          <%= f.hidden_field :album_id, :value => @album.id %>
-	        </span>
-	        <!--<button type="submit" class="btn btn-success pull-right short" style="height: 40px; font-family: GothamThin;">-->
-	          <!--<span>START UPLOAD</span>-->
-	        <!--</button>-->
-	      </div>
-        <span class="red_font big">
-          DRAG<br> 
+        <%= f.hidden_field :user_id, :value => current_user.id %>
+        <%= f.hidden_field :album_id, :value => @album.id %>
+        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
+        <div class="row fileupload-buttonbar">
+          <div class="span12">
+            <!-- The fileinput-button span is used to style the file input field as button -->
+            <span class="btn btn-success fileinput-button short" style="font-family: GothamThin;">
+              <i class="icon-plus icon-white"></i>
+              <span>Add files...</span>
+              <%= file_field_tag(:photo, multiple: true, name: "photo[photo]") %>
+            </span>
+            <button type="submit" class="btn btn-primary start pull-right short" style="height: 40px; font-family: GothamThin;">
+              <i class="icon-upload icon-white"></i>
+              <span>Start upload</span>
+            </button>
+          </div>
+          <span class="red_font big">
+          DRAG<br>
           FILES<br>
-          INTO<br> 
+          INTO<br>
           BOX
         </span>
-	      
-	      <div class="span12">
-	        <!-- The global progress bar -->
-	        <div class="progress progress-success progress-striped active fade">
-	          <div class="bar" style="width:0%;"></div>
-	        </div>
-	      </div>
+          <div class="span12">
+            <!-- The global progress bar -->
+            <div class="progress progress-success progress-striped active fade">
+              <div class="bar" style="width:0%;"></div>
+            </div>
+          </div>
 
-	    </div>
-	    
-	    <!-- The loading indicator is shown during image processing -->
-	    <div class="fileupload-loading"></div>
-	    
-	    <br>
-	    
-	    <!-- The table listing the files available for upload/download -->
-	    <table class="table">
-	    	<tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
-	    </table>
+        </div>
+        <!-- The loading indicator is shown during image processing -->
+        <div class="fileupload-loading"></div>
+        <br>
+        <!-- The table listing the files available for upload/download -->
+        <table class="table"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
+        </table>
   	<% end %>
 	
 </div>

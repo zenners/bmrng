@@ -1,3 +1,4 @@
-<%= link_to defave_path(:id => photo.id), :remote => true do %>
+<% photo ||= @photo %>
+<%= link_to defave_photo_path(:id => photo.id), :remote => true do %>
     <%= image_tag('x.jpg', :class => "small-heart") %>
 <% end %>

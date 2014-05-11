@@ -1,17 +1,6 @@
 class Photo < ActiveRecord::Base
   acts_as_followable
-
   include Rails.application.routes.url_helpers
-
-  def to_jq_upload
-    {
-      "name" => read_attribute(:photo_file_name),
-      "size" => read_attribute(:photo_file_size),
-      "url" => photo.url(:original),
-      "delete_url" => photo_path(self),
-      "delete_type" => "DELETE" 
-    }
-  end
 
 ## ========================== ATTRIBUTES ACCESSIBLE ==============================
 
@@ -36,4 +25,13 @@ class Photo < ActiveRecord::Base
     },
     :convert_options => { :all => '-background white -flatten +matte' }
 
+  def to_jq_upload
+    {
+      "name" => read_attribute(:photo_file_name),
+      "size" => read_attribute(:photo_file_size),
+      "url" => photo.url(:original),
+      "delete_url" => photo_path(self),
+      "delete_type" => "DELETE"
+    }
+  end
 end

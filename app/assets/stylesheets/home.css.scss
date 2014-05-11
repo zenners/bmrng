@@ -12,28 +12,7 @@ $white: #ffffff;
     color: black;
   }
 }
-.extras_container{
-	float: left;
-	width: 70px;
-	.grey_ball{
-		background: $lightGrey;
-		color: $white;
-		height: 20px;
-		width: 20px;
-		border-radius: 50%;
-		text-align: center;
-		padding: 10px;
-		margin-left: 10px;
-		margin-top: -20px;
-		opacity: .5;
-	}
 
-	.fave_heart{
-		margin-top: 30px;
-		margin-left: 10px;
-		margin-bottom: 20px;
-	}
-}
 
 .raves_title{}
 

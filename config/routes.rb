@@ -31,6 +31,9 @@ BMRNG::Application.routes.draw do
   end
 
   resources :albums do
+    member do
+      get :display
+    end
     resources :photos do
       member do
         get :display
@@ -38,7 +41,12 @@ BMRNG::Application.routes.draw do
     end
   end
     
-  resources :photos
+  resources :photos do
+    member do
+      get :fave
+      get :defave
+    end
+  end
 
   mount StripeEvent::Engine => '/stripe'
 
@@ -46,14 +54,11 @@ BMRNG::Application.routes.draw do
 
   get "photos/update_view"
 
-  get "/display/:id", to: 'albums#display'
+  #get "/display/:id", to: 'albums#display'
   get "/feedback", to: 'questions#index'
 
   #get "/destroy_session", to: 'guests#destroy'
   #get "/start_session", to: 'guests#start'
-
-  get "/fave" => "photos#fave"
-  get "/defave" => "photos#defave"
 
   get "/:name/:id" => 'albums#display', :as => :display, :username => /[\.a-zA-Z0-9_]+/
 
