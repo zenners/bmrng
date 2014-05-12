@@ -1,8 +1,8 @@
 <li class="brand pull-left">
   <% if current_user.logo.url.include? 'missing' %>
-    <%= link_to current_user.name, new_album_path %>
+    <%= link_to 'Managing: ' + current_user.name, user_path(current_user) %>
   <% else %>
-    <%= link_to image_tag(current_user.logo.url(:thumb)), new_album_path %>
+    <%= link_to image_tag(current_user.logo.url(:thumb)), user_path(current_user) %>
   <% end %>
 </li>
 

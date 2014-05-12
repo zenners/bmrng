@@ -1,13 +1,32 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
 
+  def resource
+    @user ||= User.find_by_name_or_id(params[:id])
+  end
+
+  def myself_role?
+    resource == current_user
+  end
+  alias myself? myself_role?
+  helper_method :myself?
+
+    # special admin-only method to "turn ourselves into" the user specified
+  def become
+    return respond_with_status(401) unless admin? # double check
+    login_as(resource)
+    redirect_to user_url
+  end
+
   def index
     authorize! :index, @user, :message => 'Not authorized as an administrator'
     @users = User.all
   end
 
   def show
-    @user = User.find(params[:id])
+    unless resource and myself?
+      render :file => "#{Rails.root}/public/404.html", :status => 404 and return
+    end
     @albums = @user.albums
   end
   

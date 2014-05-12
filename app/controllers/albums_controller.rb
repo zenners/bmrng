@@ -26,7 +26,7 @@ class AlbumsController < ApplicationController
   end
 
   def display
-    if @album = Album.find_by_name_or_id(params[:id])
+    if @album = Album.find_by_name_or_id(params[:id].gsub(' ', '_'))
       @guests = Guest.where(album_id: @album.id).
                       where(last_sign_in_ip: request.remote_ip)
     else
