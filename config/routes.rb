@@ -54,13 +54,10 @@ BMRNG::Application.routes.draw do
 
   get "photos/update_view"
 
-  #get "/display/:id", to: 'albums#display'
   get "/feedback", to: 'questions#index'
-
-  #get "/destroy_session", to: 'guests#destroy'
-  #get "/start_session", to: 'guests#start'
 
   get "/:name/:id" => 'albums#display', :as => :display, :username => /[\.a-zA-Z0-9_]+/
 
+  get '/admin/become' => 'admin#become'
   root :to => 'home#index'
 end
