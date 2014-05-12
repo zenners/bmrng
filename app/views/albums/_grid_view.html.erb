@@ -1,3 +1,5 @@
+<% faves ||= true if faves.nil? %>
+<% column_count = 4.0 %>
 <div id="thegrid">
   <% if @album.photos.blank? %>
       <h3>Sorry, no photos available at this time.</h3>
@@ -6,7 +8,7 @@
 	<% count = 0.0 %>
 	<% for photo in @album.photos %>
 	<% count += 1%>
-  	<% if count == 1 || ( (count-1) / 4.0 == ( (count-1) / 4.0).to_i ) %><tr><% end %>
+  	<% if count == 1 || ( (count-1) / column_count == ( (count-1) / column_count).to_i ) %><tr><% end %>
 	<td valign='top'>
         <a class="fancybox-button" rel="fancybox-button" href="<%= display_album_photo_path(@album, photo) %>"
              <% if @album.social %>
@@ -16,7 +18,7 @@
             <div class="image_container item">
                 <%= image_tag(photo.photo.url(:thumb), class: 'image') %>
 
-                <% if current_guest %>
+                <% if current_guest and faves %>
                     <div class="fave_controls <%= photo.id %>">
                         <span class="fave_heart">
                             <p><%= render 'photos/fave_options', :photo => Photo.find_by(id: photo.id) %></p>
@@ -27,7 +29,7 @@
           </div>
           </a>
     </td>
-  	<% if count / 4.0 == (count / 4.0).to_i %></tr><% end %>
+  	<% if count / column_count == (count / column_count).to_i %></tr><% end %>
 	<% end %>
   </table>
 
