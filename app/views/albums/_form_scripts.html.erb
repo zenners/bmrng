@@ -8,7 +8,7 @@
 	      var value = $("#album_name").val();
 	      $("#session_name").text(value);
 	      $("#session_name2").text(value);
-	      $("#session_name3").text(value.replace(' ', '_'));
+	      $("#session_name3").text(value.replace(/ /g, '_'));
 	      $("#new_photo").attr('id', 'butts');
 	    });
 	});
