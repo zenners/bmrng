@@ -1,7 +1,8 @@
 <div class="session_start">
 
 	<h1><%= @album.title %></h1>
-
+    <h4>Found at: http://www.boomerangproof.com/<%= current_user.url_name %>/<%= @album.name %></h4>
+    <br>
 	<%= form_for Photo.new, :html => { :multipart => true, :id => "fileupload", :class => "thebox"  } do |f| %>
         <%= f.hidden_field :user_id, :value => current_user.id %>
         <%= f.hidden_field :album_id, :value => @album.id %>
@@ -43,7 +44,7 @@
 	
 </div>
 
-<%= render 'grid_view' %>
+<%= render 'grid_view', faves: false %>
 
 <script>
   var fileUploadErrors = {
