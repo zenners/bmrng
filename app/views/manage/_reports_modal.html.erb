@@ -1,4 +1,4 @@
-<div class="modal fade" id="reposts_<%= guest.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 850px; margin-left: -450px; padding: 20px; display: none;">
+<div class="modal fade" id="reposts_<%= guest.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="width: 1100px; margin-left: -550px; padding: 20px; display: none;">
   <div class="row modal_set">
     <div class="span3 set_3">
       <div class="owner_tag">
@@ -22,14 +22,14 @@
       
       <input type="button" value="PRINT" onclick="printpage()" class="btn short">
     </div>
-    <div class="span4 set_4">
-      <h2 style="margin-top: 25px;">FAVES<%= image_tag('heart_red.png', :width => "40px") %></h2>
+    <div class="span5 set_5">
+      <h2>FAVES<%= image_tag('heart_red.png', :width => "40px") %></h2>
       <% guest.all_follows.each do |photo| %>
         <div class="image_box">
           <div class="image_title">
             <%= photo.photo_file_name[0..10] %>
           </div>
-          <%= image_tag(photo.photo.url, :width => "200px") %>
+          <%= image_tag(photo.photo.url(:thumb), :width => "200px") %>
         </div>
         <div class="extras_container">
           <div class="fave_heart">
@@ -41,8 +41,8 @@
         </div>
       <% end %>
     </div>
-    <div class="span3 set_3 raves">
-      <h2 class="raves_title">RAVES <span class="top5">TOP 5</span></h2>
+    <div class="span3 set_5 raves pull-right">
+      <h2>RAVES <span class="top5">TOP 5</span></h2>
       <% @popular_pics.each do |rave| %>
         <div class="image_box">
           <%= image_tag(rave.photo.url, :width => "200px") %>

@@ -220,9 +220,6 @@ a{
 
 .set_3{width: 270px;}
 .set_4{width: 270px; margin-top: -25px;}
-.set_3.raves{
-  margin-top: -10px;
-}
 
 
 // =================== FORMS ============================
@@ -267,6 +264,7 @@ input[type="email"],input[type="password"]{
   vertical-align: center;
   .link_holder{
     padding: 10px 0px 10px 0px;
+    width: 1000;
   }
   ul{
     list-style-type: block;

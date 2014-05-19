@@ -1,26 +1,26 @@
 <div class="session_start">
-	<%= simple_form_for [Album.new], remote: true do |f| %>
+	<%= simple_form_for [Album.new] do |f| %>
 	    	<div class="session_start">
 				<h4>Where do you want the session to live?</h4>
-				<h4>ex. www.boomerangproof.com/<%= current_user.name %>/<span id="session_name3">___________________</span></h4>
+				<h4>ex. www.boomerangproof.com/<%= current_user.url_name %>/<span id="session_name3">___________________</span></h4>
 			</div>
 			  <div class="form-inputs">
 			  	<%= f.hidden_field :user_id, :value => current_user.id %>
-				<%= f.input :name, :label => false, :placeholder => "NAME" %>
+				<%= f.input :name, :label => false, :placeholder => "URL" %>
 			    <%= f.input :title, :label => false, :placeholder => "TITLE" %>
 			    <div class="options_box">
 				    <h3>
-					    PASSWORD:
+					    PASSWORD PROTECTED:
 					    <div class="make-switch">
 		    				<%= f.check_box :password_toggle %>
 						</div>
 					</h3>
-					<h3>
-						WATERMARK:
-					    <div class="make-switch">
-		    				<%= f.check_box :watermark %>
-						</div>
-					</h3>
+					<!--<h3>-->
+						<!--WATERMARK:-->
+					    <!--<div class="make-switch">-->
+		    				<!--<%= f.check_box :watermark %>-->
+						<!--</div>-->
+					<!--</h3>-->
 					<h3>
 						SOCIAL SHARE:
 						<div class="make-switch">

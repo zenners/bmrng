@@ -35,6 +35,7 @@ gem 'binding_of_caller'
 gem 'dropzonejs-rails'
 gem 'acts_as_follower'
 gem 'aws-sdk'
+gem 'paperclip-meta'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby

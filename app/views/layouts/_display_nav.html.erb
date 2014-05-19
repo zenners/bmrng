@@ -1,11 +1,11 @@
-<%= link_to image_tag(@album.user.logo.url(:thumb)), @album.user.link, :target => "blank" %> |
-<span class="album_title"><%= @album.title %></span>
+<%= link_to image_tag(@album.user.logo.url(:thumb)), @album.user.link, :target => "blank" %>
+<span class="album_title">
+  <%= @album.title %>
+</span>
 
-<% if session[:guest_name] %>
-	<span class="pull-right">
-		<a data-toggle="modal" href="#save">
-			<%= image_tag('cloud.png', :width => "50") %>
-		</a>
-		<%= link_to 'THIS IS NOT ME', destroy_session_guests_path(:url => request.original_url) %>
-	</span>
-<% end %>
+<span class="pull-right">
+    <a data-toggle="modal" href="#save">
+        <%= image_tag('cloud.png', :width => "50") %>
+    </a>
+    <%= link_to 'SAVE', destroy_session_guests_path(:url => request.original_url) %>
+</span>

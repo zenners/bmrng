@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!
 
+
   def resource
     @user ||= User.find_by_name_or_id(params[:id])
   end
@@ -13,7 +14,7 @@ class UsersController < ApplicationController
 
     # special admin-only method to "turn ourselves into" the user specified
   def become
-    return respond_with_status(401) unless admin? # double check
+    return respond_with_status(401) unless current_user.admin? # double check
     login_as(resource)
     redirect_to user_url
   end
@@ -24,12 +25,19 @@ class UsersController < ApplicationController
   end
 
   def show
-    unless resource and myself?
+    unless current_user.admin? or (resource and myself?)
+      render
+      #render :file => "#{Rails.root}/public/404.html", :status => 404 and return
+    end
+    @albums = resource.albums
+  end
+
+  def display
+    @user = User.find_by_name_or_id(params[:name].gsub('_', ' '))
+    unless @user
       render :file => "#{Rails.root}/public/404.html", :status => 404 and return
     end
-    @albums = @user.albums
   end
-  
   def update
     authorize! :update, @user, :message => 'Not authorized as an administrator'
     @user = User.find(params[:id])
@@ -57,22 +65,16 @@ class UsersController < ApplicationController
   def analytics
 		@albums = Album.where(user_id: current_user.id).
                     order(:impressions_count).limit(10)
-    #TODO: Need to write scope to find most popular photos
-		#@popular_pics = Photo.order(:followers_count, :desc).limit(5)
-    @popular_pics = []
+    photos = Photo.includes(:albums).where('albums.user_id = ?', current_user.id)
+    @popular_pics = photos.sort_by(&:followers_count)[0..4]
   end
 
   def update_view
 		@album = Album.find(params[:album_id])
-		@count = 0
-		@album.photos.each do |photo|
-      # TODO: scope followers to just guests (but can anyone besides guest follow anyways?)
-			count = photo.followers_by_type_count('Guest')
-			@count = @count + count
-		end
-		pop_pics = Photo.where(album_id: @album.id)
-    #TODO: Need to write scope to find most popular photos
-		#@popular_pics = pop_pics.order(:followers_count, :desc).limit(5)
-    @popular_pics = []
+		@count = @album.photos.map do |photo|
+			photo.followers_by_type_count('Guest')
+		end.reduce(:+)
+		@popular_pics = Photo.where(album_id: @album.id).
+                          sort_by(&:followers_count)[0..4]
 	end
 end

@@ -25,6 +25,14 @@ class GuestsController < ApplicationController
     end
   end
 
+  def show
+
+    @guest = Guest.find(params[:id])
+
+    @album = Album.find(params[:album_id])
+		@popular_pics = @album.photos.sort_by(&:followers_count)[0..4]
+  end
+
   def start_session
     @guest = Guest.find(params[:guest])
     session[:guest_name] = @guest.name

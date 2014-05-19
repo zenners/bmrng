@@ -56,6 +56,8 @@ BMRNG::Application.routes.draw do
 
   get "/feedback", to: 'questions#index'
 
+  #get '/:name' => 'users#display'
+
   get "/:name/:id" => 'albums#display', :as => :display, :username => /[\.a-zA-Z0-9_]+/
 
   get '/admin/become' => 'admin#become'

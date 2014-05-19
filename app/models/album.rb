@@ -39,6 +39,11 @@ class Album < ActiveRecord::Base
     end
   end
 
+  #REVIEW: THIS IS NOT DYNAMIC AT ALL
+  def url
+    "http://www.boomerangproof.com/#{user.url_name}/#{name}"
+  end
+
   private
 
   def ensure_url_save_name

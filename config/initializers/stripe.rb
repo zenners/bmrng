@@ -1,3 +1,4 @@
+#REVIEW: These should be in application.yml
 Stripe.api_key = "sk_test_N9jcRhTJ0pQB78HtSOpAs3Jf"
 STRIPE_PUBLIC_KEY = "pk_test_8cuWJKwYw2wM893BTHEPP4Ty"
 

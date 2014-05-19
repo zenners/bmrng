@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
 
 ## ================================ VALIDATIONS ================================
   
-  validates_presence_of :name
+  #validates_presence_of :name
   validates_presence_of :email
   validates_presence_of :encrypted_password
   validates_uniqueness_of :name, allow_nil: false, if: :name_changed?
@@ -86,7 +86,7 @@ class User < ActiveRecord::Base
   end
   
   def update_stripe
-    return if email.include?(ENV['ADMIN_EMAIL'])
+    return if Rails.env.development?
     return if email.include?('@example.com') and not Rails.env.production?
     if stripe_customer_id.nil?
       if !stripe_token.present?
@@ -155,6 +155,6 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    roles.first.name = 'Admin'
+    roles.first.name.downcase == 'admin'
   end
 end

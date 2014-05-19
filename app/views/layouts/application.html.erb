@@ -30,12 +30,10 @@
               <%= render 'layouts/messages' %>
               <%= yield %>
               <% if user_signed_in? %>
-              <%= render 'layouts/modals' %>
+                <%= render 'layouts/modals' %>
               <% end %>
             </div>
           </div>
-          <footer>
-          </footer>
         </div>
       </div> <!--! end of .container -->
     </div> <!--! end of #main -->

@@ -3,7 +3,7 @@
 	    	<div class="session_start">
 				<h1>UPLOAD NEW SESSION</h1>
 				<h4>Where do you want the session to live? Type it below, all one word.</h4>
-				<h4>ex. www.boomerangproof.com/<%= current_user.name %>/<span id="session_name3">___________________</span></h4>
+				<h4>ex. www.boomerangproof.com/<%= current_user.url_name %>/<span id="session_name3">___________________</span></h4>
 			</div>
 			  <div class="form-inputs">
 			  	<%= f.hidden_field :user_id, :value => current_user.id %>

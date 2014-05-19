@@ -26,13 +26,13 @@ class AlbumsController < ApplicationController
   end
 
   def display
-    if @album = Album.find_by_name_or_id(params[:id].gsub(' ', '_'))
-      @guests = Guest.where(album_id: @album.id).
-                      where(last_sign_in_ip: request.remote_ip)
-    else
-      raise ActiveRecord::RecordNotFound
+    if @user = User.find_by_name_or_id(params[:name])
+      if @album = @user.albums.where(name: params[:id].gsub(' ', '_')).first
+        @guests = Guest.where(album_id: @album.id).
+                        where(last_sign_in_ip: request.remote_ip)
+      end
     end
-
+    raise ActiveRecord::RecordNotFound unless @album
     render partial: 'guests/load' if current_guest.blank?
   end
 

@@ -1,5 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
 
+  before_filter :configure_permitted_parameters
+
   def new
     @plan = params[:plan]
     if @plan && ENV["ROLES"].include?(@plan) && @plan != "admin"
@@ -49,6 +51,19 @@ class RegistrationsController < Devise::RegistrationsController
     end
   end
 
+  protected
+  # my custom fields are :name, :stripe_token
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) do |u|
+      u.permit(:name, :stripe_token,
+        :email, :password, :password_confirmation)
+    end
+    devise_parameter_sanitizer.for(:user_update) do |u|
+      u.permit(:name,
+        :email, :password, :password_confirmation, :current_password)
+    end
+  end
+
   private
   def build_resource(*args)
     super
@@ -56,4 +71,5 @@ class RegistrationsController < Devise::RegistrationsController
       resource.add_role(params[:plan])
     end
   end
+
 end

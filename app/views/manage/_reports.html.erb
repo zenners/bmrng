@@ -1,13 +1,13 @@
 <div class="span3 reports_list animated slideInRight  no-print">
 	<h3>REPORTS</h3>
 	<% if @album.guests.count > 0 %>
-	<ul>
-		<% @album.guests.each do |guest| %>
-			<li><a data-toggle="modal" href="#reposts_<%= guest.id %>"><%= guest.name %></a></li>
-		<% end %>
-	<ul>
+        <ul>
+            <% @album.guests.each do |guest| %>
+                <li><%= link_to guest.name, guest_path(guest, album_id: @album) %></li>
+            <% end %>
+        </ul>
 	<% else %>
-	<h5>NO REPORTS</h5>
+	    <h5>NO REPORTS</h5>
 	<% end %>
 </div>
 
