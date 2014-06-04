@@ -5,13 +5,17 @@
 # Add application configuration variables here, as shown below.
 #
 
+PRIMARY_DOMAIN: boomerangproof
+DISPLAY_DOMAIN: myalbumviewer
 ADMIN_NAME: Chris Dutton
 ADMIN_EMAIL: chris@aquatic-edge.com
 ADMIN_PASSWORD: 05test05
 ROLES: [admin, silver, gold, platinum]
 STRIPE_API_KEY: Your_Stripe_API_key
 STRIPE_PUBLIC_KEY: Your_Stripe_Public_Key
-amazon_access_key_id: AKIAJNOGJIXZ6YT34HUA
-amazon_secret_access_key: TieFCpIcR2O6JuxGt9BLwoxksDakUvoCwn0myNsr
+amazon_access_key_id: AKIAJRZOY2M5T5IPZSKA
+amazon_secret_access_key: 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
+#amazon_access_key_id: AKIAJNOGJIXZ6YT34HUA
+#amazon_secret_access_key: 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
 
 
