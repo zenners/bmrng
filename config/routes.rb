@@ -1,5 +1,6 @@
 BMRNG::Application.routes.draw do
 
+
   resources :answers
 
   #mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
@@ -19,6 +20,7 @@ BMRNG::Application.routes.draw do
       get :analytics
       get :manage
       get :update_view
+      match :change, via: [:get, :post, :patch]
     end
   end
 
@@ -33,6 +35,8 @@ BMRNG::Application.routes.draw do
   resources :albums do
     member do
       get :display
+      match :set_title, via: [:get, :post, :patch]
+      match :settings, via: [:get, :post, :patch]
     end
     resources :photos do
       member do
@@ -56,10 +60,14 @@ BMRNG::Application.routes.draw do
 
   get "/feedback", to: 'questions#index'
 
-  #get '/:name' => 'users#display'
-
-  get "/:name/:id" => 'albums#display', :as => :display, :username => /[\.a-zA-Z0-9_]+/
-
   get '/admin/become' => 'admin#become'
-  root :to => 'home#index'
+
+  constraints DomainConstraint.new ['myalbumviewer.dev', 'myalbumviewer.com'] do
+    root to: 'home#viewer', as: :viewer
+    resources :users, path: '/' do
+      get '/:album_id' => 'albums#display'
+    end
+  end
+
+  root :to => 'home#index', as: :home
 end

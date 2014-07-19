@@ -35,6 +35,10 @@ $white: #ffffff;
 	}
 }
 
+.update{
+  vertical-align: center;
+}
+
 // ============================= MANAGE PAGE ==============================
 
 .manage_panel{
@@ -177,14 +181,18 @@ $white: #ffffff;
 			font-size: 17px;
 			padding: 2px 0px 2px 0px;
 		}
-		li:before{
-			content: "  •  ";
-			width: 15px;
-			height: 15px;
-			background: $blue;
-			border-radius: 50%;
-			color: $blue;
-			margin-right: 5px;
+		li .counter{
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          line-height: 30px;
+
+          -moz-border-radius: 15px; /* or 50% */
+          border-radius: 15px; /* or 50% */
+
+          background-color: $blue;
+          color: white;
+          text-align: center;
 		}
 	}
 }

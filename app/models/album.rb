@@ -20,6 +20,9 @@ class Album < ActiveRecord::Base
 
   belongs_to :user
 
+## ================================= SCOPES ====================================
+  scope :active, -> {where(status: :active) }
+
   # utility to make finding things easier when the key could be an
   # object, integer, symbol, or string.   Works even if the string holds
   # an integer, so it can take params[:id] like "25020"

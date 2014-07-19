@@ -5,8 +5,8 @@
 # Add application configuration variables here, as shown below.
 #
 
-PRIMARY_DOMAIN: boomerangproof
-DISPLAY_DOMAIN: myalbumviewer
+PRIMARY_DOMAIN: boomerangproof.com
+DISPLAY_DOMAIN: myalbumviewer.com
 ADMIN_NAME: Chris Dutton
 ADMIN_EMAIL: chris@aquatic-edge.com
 ADMIN_PASSWORD: 05test05

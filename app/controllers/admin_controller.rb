@@ -11,6 +11,6 @@ class AdminController < ApplicationController
         sign_in(:user, a)
       end
     end
-    redirect_to root_url # or user_root_url
+    redirect_to home_path
   end
 end

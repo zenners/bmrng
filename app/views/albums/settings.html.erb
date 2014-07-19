@@ -1,0 +1,38 @@
+<div class="session_start">
+  <%= image_tag('upload_cloud.png') %>
+  <h1>NEW SESSION</h1>
+</div>
+<div class="session_start">
+	<%= simple_form_for @album, url: 'settings' do |f| %>
+            <%= f.error_notification %>
+	    	<div class="session_start">
+				<h4>Please specify album settings</h4>
+			</div>
+			  <div class="form-inputs">
+			  	<div class="options_box">
+				    <h3>
+					    PASSWORD:
+					    <div class="make-switch">
+		    				<%= f.check_box :password_toggle %>
+						</div>
+					</h3>
+					<!--<h3>-->
+						<!--WATERMARK:-->
+					    <!--<div class="make-switch">-->
+		    				<!--<%= f.check_box :watermark %>-->
+						<!--</div>-->
+					<!--</h3>-->
+					<h3>
+						SOCIAL SHARE:
+						<div class="make-switch">
+		    				<%= f.check_box :social %>
+						</div>
+					</h3>
+				</div>
+			  </div>
+			  <br>
+			  <%= f.button :submit, "CONTINUE" %>
+	<% end %>
+	</div>
+    <%= render 'layouts/progress_circles', number: 3, active: 3 %>
+</div>

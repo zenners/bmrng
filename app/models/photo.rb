@@ -28,7 +28,7 @@ class Photo < ActiveRecord::Base
       :thumb    => ['200x200>',   :jpg]
     },
     :convert_options => { :all => '-background white -flatten +matte' },
-    :default_url => "/images/original/missing.png"
+    :default_url => "/images/missing.png"
 
   def to_jq_upload
     {
@@ -38,5 +38,10 @@ class Photo < ActiveRecord::Base
       "delete_url" => photo_path(self),
       "delete_type" => "DELETE"
     }
+  end
+
+  # Just remove the extention for displaying in UI
+  def file_name
+    photo_file_name.split('.')[0..-2].join('.')
   end
 end

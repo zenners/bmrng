@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
       :thumb    => ['200x30',   :jpg]
     },
     :convert_options => { :all => '-background white -flatten +matte' },
-    :default_url => "/images/:style/missing.png"
+    :default_url => "/images/missing.png"
   #validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
 ## ================================ VALIDATIONS ================================

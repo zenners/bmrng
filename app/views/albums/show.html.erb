@@ -1,20 +1,10 @@
-<script>
-  $('#fileupload').fileupload({
-    progressall: function (e, data) {
-        var progress = parseInt(data.loaded / data.total * 100, 10);
-        $('#progress .bar').css(
-            'width',
-            progress + '%'
-        );
-    }
-});
-</script>
 <div class="session_start">
-
-	<h1><%= @album.title %></h1>
-    <h4>Found at: http://www.boomerangproof.com/<%= current_user.url_name %>/<%= @album.name %></h4>
+	<%= image_tag('upload_cloud.png') %>
+    <h1>NEW SESSION</h1>
+    <h4>Found at: http://www.<%= ENV['DISPLAY_DOMAIN'] %>/<%= current_user.url_name %>/<%= @album.name %></h4>
     <br>
 	<%= form_for Photo.new, :html => { :multipart => true, :id => "fileupload", :class => "thebox"  } do |f| %>
+        <noscript><input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/"></noscript>
         <%= f.hidden_field :user_id, :value => current_user.id %>
         <%= f.hidden_field :album_id, :value => @album.id %>
         <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
@@ -35,27 +25,26 @@
           DRAG<br>
           FILES<br>
           INTO<br>
-          BOX
+          SCREEN
           </span>
-          <div class="fileupload-process"></div>
-        <!-- The global progress state -->
-        <div class="fileupload-progress fade" style="display:none">
-            <!-- The global progress bar -->
-            <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-            <!-- The extended global progress state -->
-            <div class="progress-extended">&nbsp;</div>
-        </div>
-
+            <!--<div class="col-lg-5 fileupload-progress fade">-->
+                <!--&lt;!&ndash; The global progress bar &ndash;&gt;-->
+                <!--<div id="progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">-->
+                    <!--<div class="progress-bar progress-bar-success bar" style="width:0%;"></div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; The extended global progress state &ndash;&gt;-->
+                <!--<div class="progress-extended">&nbsp;</div>-->
+            <!--</div>-->
         </div>
         <br>
         <!-- The table listing the files available for upload/download -->
-        <table class="table"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
+        <table class="table">
+          <tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
         </table>
   	<% end %>
-	
 </div>
 
-<%= render 'grid_view', faves: false %>
+<%# render 'grid_view', faves: false %>
 
 <script>
   var fileUploadErrors = {
@@ -66,6 +55,7 @@
   uploadedBytes: 'Uploaded bytes exceed file size',
   emptyResult: 'Empty file upload result'
   };
+  var totalFileSizes = 0;
 </script>
 
 <!-- The template to display files available for upload -->
@@ -81,7 +71,7 @@
     <td>
       <div class="progress progress-success progress-striped active"><div class="bar" style="width:0%;"></div></div>
     </td>
-    <td class="start">{% if (!o.options.autoUpload) { %}
+    <td class="start" style="display:none">{% if (!o.options.autoUpload) { %}
       <button class="btn btn-primary short">
         <span>{%=locale.fileupload.start%}</span>
       </button>
@@ -89,7 +79,7 @@
     {% } else { %}
     <td colspan="2"></td>
     {% } %}
-    <td class="cancel">{% if (!i) { %}
+    <td class="cancel" style="display:none">{% if (!i) { %}
       <button class="btn btn-warning short">
         <span>{%=locale.fileupload.cancel%}</span>
       </button>
@@ -113,11 +103,25 @@
 <script type="text/javascript" charset="utf-8">
   $(function () {
       // Initialize the jQuery File Upload widget:
-      $('#fileupload').fileupload();
-      // 
+      $('#fileupload').fileupload({
+        dataType: 'json',
+        done: function (e, data) {
+          $.each(data.result, function (index, file) {
+            $('<p/>').text(file.name).appendTo(document.body);
+          });
+        },
+        progressall: function (e, data) {
+          var progress = parseInt(data.loaded / totalFileSizes * 100, 10);
+          $('#progress .bar').css(
+            'width',
+            progress + '%'
+          );
+        }
+       });
+      //
       // Load existing files:
       $.getJSON($('#fileupload').prop('action'), function (files) {
-        var fu = $('#fileupload').data('blueimpFileupload'), 
+        var fu = $('#fileupload').data('blueimpFileupload'),
           template;
         fu._adjustMaxNumberOfFiles(-files.length);
         console.log(files);
@@ -127,6 +131,11 @@
         fu._reflow = fu._transition && template.length &&
           template[0].offsetWidth;
         template.addClass('in');
+        // Update total file size
+
+          $.map(files, function(n, i){
+              totalFileSizes = totalFileSizes + n.photo_file_size
+          })
         $('#loading').remove();
       });
 

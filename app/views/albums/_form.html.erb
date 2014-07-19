@@ -1,47 +1,4 @@
-<div class="session_start">
-	<%= simple_form_for @album do |f| %>
-            <%= f.error_notification %>
-	    	<div class="session_start">
-				<h4>Where do you want the session to live? Type it below, all one word.</h4>
-				<h4>ex. www.boomerangproof.com/<%= current_user.name %>/<span id="session_name3">___________________</span></h4>
-			</div>
-			  <div class="form-inputs">
-			  	<%= f.hidden_field :user_id, :value => current_user.id %>
-				<%= f.input :name, :label => false, :placeholder => "NAME" %>
-			    <%= f.input :title, :label => false, :placeholder => "TITLE" %>
-			    <div class="options_box">
-				    <h3>
-					    PASSWORD:
-					    <div class="make-switch">
-		    				<%= f.check_box :password_toggle %>
-						</div>
-					</h3>
-					<h3>
-						WATERMARK:
-					    <div class="make-switch">
-		    				<%= f.check_box :watermark %>
-						</div>
-					</h3>
-					<h3>
-						SOCIAL SHARE:
-						<div class="make-switch">
-		    				<%= f.check_box :social %>
-						</div>
-					</h3>
-				</div>
-			  </div>
-			  <br>
-			  <%= f.button :submit, "CONTINUE" %>
-	<% end %>
-
-	</div>
-	<script src='fancyInput.js'></script>
-	<script>
-		$('section :input').val('').fancyInput()[0].focus();
-	</script>
-
-</div>
-
+<%= javascript_include_tag 'fancyInput' %>
 <script>
 	jQuery(function(){
 	    $("#album_name").on("keyup change", function() {
@@ -53,3 +10,28 @@
 	    });
 	});
 </script>
+
+<div class="session_start">
+	<%= simple_form_for @album do |f| %>
+            <%= f.error_notification %>
+	    	<div class="session_start">
+				<h4>Where do you want the session to live? Type it below, all one word.</h4>
+				<h4>ex. www.<%= ENV['DISPLAY_DOMAIN'] %>/<%= current_user.name %>/<span id="session_name3">___________________</span></h4>
+			</div>
+			  <div class="form-inputs big_input">
+			  	<%= f.hidden_field :user_id, :value => current_user.id %>
+				<%= f.input :name, :label => false %>
+			  </div>
+			  <br>
+			  <%= f.button :submit, "CONTINUE" %>
+	<% end %>
+
+	</div>
+    <%= render 'layouts/progress_circles', number: 3, active: 1 %>
+</div>
+<script>
+    $(document).ready(function(){
+      $("#album_name").trigger('focus');
+    })
+</script>
+

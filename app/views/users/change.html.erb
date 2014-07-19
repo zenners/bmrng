@@ -1,0 +1,7 @@
+<%= simple_form_for current_user, url: change_user_path, :html => { :multipart => true } do |f| %>
+    <div style='visibility:hidden;'>
+        <%= text_field_tag :what, params[:what]%>
+    </div>
+    <%= render partial: "users/#{params[:what]}", locals: {f: f} %>
+    <%= f.button :submit, 'SAVE', :class => 'btn-primary big_button' %>
+<% end %>

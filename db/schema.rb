@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140516062359) do
     t.boolean  "password_toggle",   default: false
     t.string   "password"
     t.integer  "impressions_count"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -51,7 +52,6 @@ ActiveRecord::Schema.define(version: 20140516062359) do
     t.string   "name"
     t.integer  "album_id"
     t.string   "album_url"
-    t.string   "guest_id"
     t.integer  "sign_in_count"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"

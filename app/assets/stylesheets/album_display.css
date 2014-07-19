@@ -1,7 +1,19 @@
-.album_title{
+span.album_title{
     color: white;
     position: relative;
     top: 15px;
     font-size: large;
     padding-left: 40px;
+}
+
+body.display{
+    padding-top: 0px;
+}
+
+.fave_options{
+    display: none;
+}
+
+li.image_container:hover .fave_options{
+    display: block;
 }

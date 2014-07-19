@@ -19,11 +19,17 @@ a.btn {
 }
 
 .session_start{
+    color: $white;
 	text-align: center;
 	margin-bottom: 50px;
 	h1{
-		margin-bottom: 80px;
+	  margin-bottom: 80px;
+      font-family: GothamThin;
 	}
+}
+
+.session_start img{
+  height: 90px;
 }
 
 .inline-help{
@@ -122,13 +128,12 @@ a.btn {
 
 .image_container{
 	position: relative;
-	width: 200px; //REVIEW: This is may be bad. Need to check if they are scaled
+	width: 200px;
     padding: 12px;
 	.fave_controls{
 		position: absolute;
-		bottom: 12px;
-		left: 12px;
-		width: 0; 
+		bottom: 0px;
+		width: 0;
 		height: 0; 
 		border-bottom: 35px solid $red; 
 		border-right: 35px solid transparent; 
@@ -183,8 +188,4 @@ a.btn {
 	.beautiful_people a{
 		color: #fff;
 	}
-}
-
-.container{
-
 }

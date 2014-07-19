@@ -1,6 +1,8 @@
 <div class="session_start">
-  <h1>UPLOAD NEW SESSION</h1>
+  <%= image_tag('upload_cloud.png') %>
+  <h1>NEW SESSION</h1>
 </div>
+
 <% if current_user.admin? %>
     <%= render 'form' %>
 <%else %>

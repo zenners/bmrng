@@ -1,0 +1,29 @@
+<div class="session_start">
+  <%= image_tag('upload_cloud.png') %>
+  <h1>NEW SESSION</h1>
+</div>
+<div class="session_start">
+	<%= simple_form_for @album, url: 'set_title' do |f| %>
+            <%= f.error_notification %>
+	    	<div class="session_start">
+				<h4>What would you like to call this session?</h4>
+			</div>
+			  <div class="form-inputs big_input">
+				<%= f.input :title, :label => false %>
+			  </div>
+			  <br>
+			  <%= f.button :submit, "CONTINUE" %>
+	<% end %>
+
+	</div>
+	<%= javascript_include_tag 'fancyInput' %>
+	<script>
+		$('section :input').val('').fancyInput()[0].focus();
+	</script>
+    <%= render 'layouts/progress_circles', number: 3, active: 2 %>
+</div>
+<script>
+    $(document).ready(function(){
+      $("#album_title").trigger('focus');
+    })
+</script>

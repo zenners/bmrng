@@ -1,12 +1,15 @@
 <div class="row analytics_panel">
 	<div class="row">
 		<div class="span4">
-			<div class="title_holder  animated bounceIn">
+			<div class="title_holder animated bounceIn">
 				<span class="title animated bounceIn">MOST<br>VIEWED<br>SESSIONS</span>
 			</div>
 			<ul class="animated slideInLeft">
-				<% @albums.each do |album| %>
-					<li class="caps"><%= link_to album.title, album %> - <%= album.impressions_count || 0 %></li>
+				<% @most_viewed_albums.active.each do |album| %>
+					<li class="caps">
+                      <span class='counter'><%= album.impressions_count || 0 %></span>
+                      -
+                      <%= link_to album.title, album %></li>
 				<% end %>
 			</ul>
 		</div>
@@ -15,8 +18,12 @@
 				<span class="title">MOST<br>LIKED<br>PHOTOS</span>
 			</div>
 			<ul class="animated slideInLeft">
-				<% @popular_pics.each do |pic| %>
-				<%= image_tag(pic.photo.url(:thumb)) %>
+				<% @popular_pic_albums.each do |album| %>
+                  <li class='caps'>
+                    <span class='counter'><%= album.impressions.count || 0 %></span>
+                    -
+                    <%= link_to "#{album.title}", album %>
+                  </li>
 				<% end %>
 			</ul>
 		</div>

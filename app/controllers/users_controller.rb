@@ -1,9 +1,17 @@
 class UsersController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:show, :display]
 
+  layout :determine_layout
+
+  def determine_layout
+    return 'application' if current_user
+    return 'display' if resource
+    'marketing'
+  end
 
   def resource
-    @user ||= User.find_by_name_or_id(params[:id])
+    param = params['user_id'] || params['id']
+    @user ||= User.find_by_name_or_id(param)
   end
 
   def myself_role?
@@ -25,19 +33,19 @@ class UsersController < ApplicationController
   end
 
   def show
-    unless current_user.admin? or (resource and myself?)
-      render
-      #render :file => "#{Rails.root}/public/404.html", :status => 404 and return
+    if !resource or (!myself? and !current_user.admin?)
+      render :file => "#{Rails.root}/public/404.html", :status => 404 and return
     end
     @albums = resource.albums
   end
 
   def display
-    @user = User.find_by_name_or_id(params[:name].gsub('_', ' '))
+    @user = resource
     unless @user
       render :file => "#{Rails.root}/public/404.html", :status => 404 and return
     end
   end
+
   def update
     authorize! :update, @user, :message => 'Not authorized as an administrator'
     @user = User.find(params[:id])
@@ -62,18 +70,33 @@ class UsersController < ApplicationController
     end
   end
 
+  def change
+    if request.post? or request.patch?
+      if params[:user] and params[:user][:password].blank?
+        params[:user].delete("password")
+        params[:user].delete("password_confirmation")
+      end
+      if resource.update_attributes(params[:user])
+        flash[:notice] = 'Saved Successfully'
+        redirect_to users_path
+      end
+      render 'users/change', what: params[:what]
+    end
+  end
+
   def analytics
-		@albums = Album.where(user_id: current_user.id).
+		@most_viewed_albums = Album.where(user_id: current_user.id).
                     order(:impressions_count).limit(10)
-    photos = Photo.includes(:albums).where('albums.user_id = ?', current_user.id)
-    @popular_pics = photos.sort_by(&:followers_count)[0..4]
+    photos = Photo.includes(:album).where('albums.user_id = ?', current_user.id)
+    @popular_pic_albums = photos.sort_by(&:followers_count).map{|p| p.album}.uniq![0..4]
   end
 
   def update_view
 		@album = Album.find(params[:album_id])
 		@count = @album.photos.map do |photo|
 			photo.followers_by_type_count('Guest')
-		end.reduce(:+)
+    end.reduce(:+)
+    @count ||= 0
 		@popular_pics = Photo.where(album_id: @album.id).
                           sort_by(&:followers_count)[0..4]
 	end

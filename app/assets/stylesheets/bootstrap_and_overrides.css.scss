@@ -35,15 +35,21 @@ $white: #ffffff;
 
 .thin{font-family: 'GothamThin';}
 
+@media (max-width: 979px){
+  .pull-right{
+    float: none;
+  }
+}
+
 body{
 	background: $black;
 	color: $white;
 	font-family: 'GothamThin';
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 .brand{
-	margin-top: 0px;
+  margin-top: 0px;
   margin-left: -10px !important;
 }
 
@@ -52,33 +58,14 @@ h1{
 	font-size: 40px;
 }
 
-.navbar-inverse .navbar-inner{
-	background-color: #000;
-	background-image: -moz-linear-gradient(top, #000, #000);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(#000));
-	background-image: -webkit-linear-gradient(top, #000, #000);
-	background-image: -o-linear-gradient(top, #000, #000);
-	background-image: linear-gradient(to bottom, #000, #000);
-	background-repeat: repeat-x;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000', endColorstr='#000', GradientType=0);
-	border-color: #000;
-	height: 50px;
-	a{
-		color: $white !important;
-	}
-	a:hover{
-		background: $grey;
-		color: $white !important;
-	}
+.navbar-inverse .nav-collapse .nav  li a:hover{
+  background-color: $grey;
 }
 
 .dropdown-menu {
 	position: absolute;
-	top: 100%;
-	left: 0;
+    right: 0px;
 	z-index: 1000;
-	display: none;
-	float: left;
 	min-width: 160px;
 	padding: 5px 0;
 	margin: 2px 0 0;
@@ -97,8 +84,12 @@ h1{
 	background-clip: padding-box;
 }
 
+ul .dropdown-menu li a {
+  color: white;
+}
+
 ul .dropdown-menu li a:hover{
-  background: $blue !important;
+  background: #383838 !important;
 }
 
 .btn{
@@ -279,9 +270,6 @@ input[type="email"],input[type="password"]{
     text-decoration:none;
     padding: 10px;
   }
-  li a:hover{
-    background: $black !important;
-  }
 }
 
 
@@ -328,7 +316,7 @@ input[type="email"],input[type="password"]{
 .super_focus input[type="text"]:focus{
   outline: 0 !important;
   background: transparent !important;
-  
+
 }
 
 *:focus {
@@ -427,7 +415,7 @@ input[type="email"],input[type="password"]{
 .small-heart{
   width: 15px !important;
   margin-top: 17px;
-  margin-left: 2px !important;
+  margin-left: -4px !important;
 }
 
 .fancyInput input, textarea {
@@ -447,6 +435,6 @@ input[type="email"],input[type="password"]{
 }
 
 .thebox{
-  background: #404040;
+  //background: #404040;
   text-align: center;
 }
