@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   has_many :albums
   has_many :questions
+  has_one  :subscription
 
   ## FOLLOWABLE FIELDS
   ##include Mongo::Followable::Follower
@@ -38,12 +39,12 @@ class User < ActiveRecord::Base
 ## ATTRIBUTES ACCESIBILITY
 
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, 
-  :created_at, :updated_at, :image, :stripe_token, :coupon, :logo, :link
+  :created_at, :updated_at, :image, :stripe_customer_token, :coupon, :logo, :link
 
   attr_accessor :stripe_token, :coupon
 
 ## Hooks
-  before_save :update_stripe
+  #before_save :update_stripe
   before_destroy :cancel_subscription
 
 ## Methods
@@ -69,82 +70,6 @@ class User < ActiveRecord::Base
 
   def url_name
     name.gsub(' ', '_')
-  end
-
-  def update_plan(role)
-    self.role_ids = []
-    self.add_role(role.name)
-    unless stripe_customer_id.nil?
-      customer = Stripe::Customer.retrieve(stripe_customer_id)
-      customer.update_subscription(:plan => role.name)
-    end
-    true
-  rescue Stripe::StripeError => e
-    logger.error "Stripe Error: " + e.message
-    errors.add :base, "Unable to update your subscription. #{e.message}."
-    false
-  end
-  
-  def update_stripe
-    return if Rails.env.development?
-    return if email.include?('@example.com') and not Rails.env.production?
-    if stripe_customer_id.nil?
-      if !stripe_token.present?
-        raise "Stripe token not present. Can't create account."
-      end
-      if coupon.blank?
-        customer = Stripe::Customer.create(
-          :email => email,
-          :description => name,
-          :card => stripe_token,
-          :plan => roles.first.name
-        )
-      else
-        customer = Stripe::Customer.create(
-          :email => email,
-          :description => name,
-          :card => stripe_token,
-          :plan => roles.first.name,
-          :coupon => coupon
-        )
-      end
-    else
-      customer = Stripe::Customer.retrieve(stripe_customer_id)
-      if stripe_token.present?
-        customer.card = stripe_token
-      end
-      customer.email = email
-      customer.description = name
-      customer.save
-    end
-    self.last_4_digits = customer.cards.data.first["last4"]
-    self.stripe_customer_id = customer.id
-    self.stripe_token = nil
-  rescue Stripe::StripeError => e
-    logger.error "Stripe Error: " + e.message
-    errors.add :base, "#{e.message}."
-    self.stripe_token = nil
-    false
-  end
-  
-  def cancel_subscription
-    unless stripe_customer_id.nil?
-      customer = Stripe::Customer.retrieve(stripe_customer_id)
-      unless customer.nil? or customer.respond_to?('deleted')
-        if customer.subscription.status == 'active'
-          customer.cancel_subscription
-        end
-      end
-    end
-  rescue Stripe::StripeError => e
-    logger.error "Stripe Error: " + e.message
-    errors.add :base, "Unable to cancel your subscription. #{e.message}."
-    false
-  end
-  
-  def expire
-    UserMailer.expire_email(self).deliver
-    destroy
   end
 
   # Finds the best role of the user

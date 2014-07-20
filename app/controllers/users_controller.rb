@@ -71,6 +71,7 @@ class UsersController < ApplicationController
   end
 
   def change
+     redirect_to current_user and return if params[:what].blank?
     if request.post? or request.patch?
       if params[:user] and params[:user][:password].blank?
         params[:user].delete("password")
@@ -81,6 +82,27 @@ class UsersController < ApplicationController
         redirect_to users_path
       end
       render 'users/change', what: params[:what]
+    end
+    if params[:what] == 'subscription'
+      if current_user.stripe_customer_token
+        customer = Stripe::Customer.retrieve current_user.stripe_customer_token
+        if current_user.subscription
+          begin
+            sub = customer.subscriptions.retrieve current_user.subscription.try(:stripe_subscription_token)
+            if sub.ended_at
+              redirect_to new_user_subscription_path(current_user) and return
+            else
+              redirect_to edit_user_subscription_path(current_user, current_user.subscription) and return
+            end
+          rescue Stripe::InvalidRequestError => e
+            logger.error "Stripe error: #{e}"
+          end
+        else
+          redirect_to new_user_subscription_path(current_user) and return
+        end
+      else
+        redirect_to new_user_subscription_path(current_user) and return
+      end
     end
   end
 

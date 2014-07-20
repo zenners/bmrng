@@ -1,3 +1,4 @@
 # Be sure to restart your server when you modify this file.
+ActiveRecord::SessionStore::Session.attr_accessible :data, :session_id
+BMRNG::Application.config.session_store :active_record_store
 
-BMRNG::Application.config.session_store :cookie_store, key: '_BMRNG_session'

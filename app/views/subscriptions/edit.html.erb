@@ -1,0 +1,12 @@
+<h1 class='thin'>Update Subscription</h1>
+<h4>Current subscription ends: <%= @subscription.stripe_current_period_end.strftime("%m-%d-%Y") %></h4>
+<br/>
+<br/>
+<h2 class='thin'>Update Card</h2>
+<%= simple_form_for @subscription, url: user_subscription_path(@subscription.user_id, @subscription.id) do |f| %>
+    <%= render 'form', f: f %>
+<% end %>
+<br/>
+<br/>
+<h2>Cancel Account</h2>
+<%= button_to 'Cancel', '#' %>

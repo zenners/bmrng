@@ -1,0 +1,4 @@
+<h1 class='thin'>Renew Subscription</h1>
+<%= simple_form_for @subscription, url: user_subscriptions_path(@subscription.user_id) do |f| %>
+    <%= render 'form', f: f %>
+<% end %>

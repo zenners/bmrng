@@ -35,6 +35,13 @@ $white: #ffffff;
 	}
 }
 
+.help-inline{
+  color: $red;
+  font-size: 20px;
+  padding-left: 75px;
+  padding-bottom: 15px;
+}
+
 .update{
   vertical-align: center;
 }
@@ -48,7 +55,7 @@ $white: #ffffff;
 		position: absolute;
 		top: 50px;
 		left: -20px;
-		height: 700px;
+		height: 100%;
 		overflow: auto;
 		ul{
 			list-style-type: none;
@@ -153,10 +160,10 @@ $white: #ffffff;
 .analytics_panel{
 	.title_holder{
 		border-bottom: 1px solid $grey;
-		text-align: center;
 		color: $lightGrey;
 		width: 90%;
 		margin-bottom: 20px;
+        padding-left: 50px; // REVIEW: A little different then mock up
 		.title{
 			font-size: 30px;
 		}
@@ -167,12 +174,6 @@ $white: #ffffff;
 		border-radius: 50%;
 		height: 200px;
 		width: 200px;
-	}
-	.blue_dot{
-		width: 15px;
-		height: 15px;
-		background: $blue;
-		border-radius: 50%;
 	}
 	ul{
 		list-style: none;
@@ -194,5 +195,8 @@ $white: #ffffff;
           color: white;
           text-align: center;
 		}
+        li .title{
+          padding-left: 20px;
+        }
 	}
 }

@@ -5,7 +5,7 @@ class InitialUsersTable < ActiveRecord::Migration
       u.string :watermark_image
       u.string :link
       u.string :email, null: false
-      u.string :stripe_customer_id
+      u.string :stripe_customer_token
       u.string :last_4_digits
       u.timestamps
     end

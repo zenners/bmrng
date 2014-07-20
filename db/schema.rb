@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140516062359) do
+ActiveRecord::Schema.define(version: 20140720074208) do
 
   create_table "albums", force: true do |t|
     t.integer  "user_id"
@@ -116,6 +116,25 @@ ActiveRecord::Schema.define(version: 20140516062359) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
 
+  create_table "sessions", force: true do |t|
+    t.string   "session_id", default: "null", null: false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true, using: :btree
+  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at", using: :btree
+
+  create_table "subscriptions", force: true do |t|
+    t.integer  "user_id"
+    t.string   "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "stripe_subscription_token"
+    t.datetime "stripe_current_period_end"
+  end
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "watermark_image"
@@ -138,6 +157,8 @@ ActiveRecord::Schema.define(version: 20140516062359) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "subscription_id"
+    t.string   "stripe_customer_token"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -16,6 +16,7 @@ BMRNG::Application.routes.draw do
   end
 
   resources :users do
+    resources :subscriptions
     member do
       get :analytics
       get :manage
