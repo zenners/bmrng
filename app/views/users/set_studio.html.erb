@@ -1,0 +1,29 @@
+<div class="session_start">
+  <h1>Studio Name</h1>
+</div>
+<p class='session_start'>
+  Good name. Now we need to know the name of your studio. This will be used
+  in the title bar and a few other places, as well as for our own records. 
+</p>
+<div class="session_start">
+	<%= simple_form_for resource, url: 'set_studio' do |f| %>
+            <%= f.error_notification %>
+			  <div class="form-inputs big_input">
+				<%= f.input :studio_name, :label => false %>
+			  </div>
+			  <br>
+			  <%= f.button :submit, "CONTINUE" %>
+	<% end %>
+
+	</div>
+	<%= javascript_include_tag 'fancyInput' %>
+	<script>
+		$('section :input').val('').fancyInput()[0].focus();
+	</script>
+    <%= render 'layouts/progress_circles', number: 6, active: 2 %>
+</div>
+<script>
+    $(document).ready(function(){
+      $("#user_name").trigger('focus');
+    });
+</script>

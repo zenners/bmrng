@@ -1,0 +1,35 @@
+<div class="session_start login_logo">
+  <h1>
+    MAKE
+    <%= image_tag('bmrng_logo.png') %>
+    BETTER
+  </h1>
+</div>
+
+<p class='session_start'>
+  <b>We need you.</b> We want your ideas, your frustrations and your feature
+  requests. Tell us anything and everything that you’re thinking. We’re serious
+  about making Boomerang the best but we need you to help us do that. Thanks SO
+  much. Just start typing whenever you’re ready!
+</p>
+
+<div class="session_start">
+	<%= simple_form_for :feedback, url: 'send_feedback' do |f| %>
+			  <div class="form-inputs big_input">
+				<%= f.input :message, :label => false %>
+			  </div>
+			  <br>
+			  <%= f.button :submit, "SEND FEEDBACK" %>
+	<% end %>
+
+	</div>
+	<%= javascript_include_tag 'fancyInput' %>
+	<script>
+		$('section :input').val('').fancyInput()[0].focus();
+	</script>
+</div>
+<script>
+    $(document).ready(function(){
+      $("#feedback_message").trigger('focus');
+    });
+</script>

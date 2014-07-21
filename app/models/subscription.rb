@@ -1,12 +1,17 @@
 class Subscription < ActiveRecord::Base
-  attr_accessible :user_id, :stripe_subscription_token
-  attr_accessor :stripe_card_token
+  attr_accessible :user_id, :stripe_subscription_token, :stripe_card_token, :plan
+  attr_accessor :stripe_card_token, :plan
 
   belongs_to :user
 
+  def self.available_plans
+    plans = Stripe::Plan.all
+    plans.map{|p| [p.name, p.id]}
+  end
+
   def save_with_payment
     if valid?
-      customer = Stripe::Customer.create(description: user_id, plan: :default, card: stripe_card_token)
+      customer = Stripe::Customer.create(description: user_id, plan: plan, card: stripe_card_token)
       user.update stripe_customer_token: customer.id
       self.stripe_subscription_token = customer.subscriptions.first.id
       self.stripe_current_period_end = Time.at(customer.subscriptions.first.current_period_end)

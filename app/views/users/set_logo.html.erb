@@ -1,0 +1,28 @@
+<div class="session_start">
+  <h1>Studio Logo</h1>
+</div>
+<p class='session_start'>
+  Perfect. Now, we need a logo from you to use to brand your galleries.
+  It needs to be 75 pixels high by 200 pixels wide max. It also needs to be a
+  jpeg or a png. When you have that ready, drop it anywhere on this page. 
+</p>
+<div class="session_start">
+	<%= simple_form_for resource, url: 'set_logo', html: {:multipart => true} do |f| %>
+            <%= f.error_notification %>
+			  <%= f.file_field :logo %>
+			  <br>
+			  <%= f.button :submit, "CONTINUE" %>
+	<% end %>
+
+	</div>
+	<%= javascript_include_tag 'fancyInput' %>
+	<script>
+		$('section :input').val('').fancyInput()[0].focus();
+	</script>
+    <%= render 'layouts/progress_circles', number: 6, active: 4 %>
+</div>
+<script>
+    $(document).ready(function(){
+      $("#user_name").trigger('focus');
+    });
+</script>

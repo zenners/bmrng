@@ -1,0 +1,36 @@
+<script>
+	jQuery(function(){
+	    $("#user_name").on("keyup change", function() {
+	      var value = $("#user_name").val();
+	      $("#url_name3").text(value.replace(' ', '_'));
+	    });
+	});
+</script>
+<div class="session_start">
+  <h1>Vanity Url</h1>
+</div>
+<p class='session_start'>
+  Cool, got it. Next, what would you like your vanity url to be? This is usually
+  the name of your studio and will be part of the URL that you’ll give clients
+  to view their photos. Like the rest of your info, you can change this later
+  too as long as it’s not already taken. One rule: it needs to be all one
+  word. For example, www.<%= ENV['DISPLAY_DOMAIN'] %>/yourvanityurl/sessionname
+</p>
+<h4 class='session_start'>ex. www.<%= ENV['DISPLAY_DOMAIN'] %>/<span id="url_name3">___________________</span></h4>
+<div class="session_start">
+	<%= simple_form_for resource, url: 'set_url' do |f| %>
+			  <div class="form-inputs big_input">
+				<%= f.input :name, :label => false %>
+			  </div>
+			  <br>
+			  <%= f.button :submit, "CONTINUE" %>
+	<% end %>
+
+	</div>
+    <%= render 'layouts/progress_circles', number: 6, active: 3 %>
+</div>
+<script>
+    $(document).ready(function(){
+      $("#user_name").trigger('focus');
+    });
+</script>

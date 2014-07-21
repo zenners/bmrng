@@ -3,8 +3,14 @@ class ApplicationController < ActionController::Base
 
   layout :determine_layout
 
+  before_filter :setup_mailer_host
+
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to home_path, :alert => exception.message
+  end
+
+  def setup_mailer_host
+    ActionMailer::Base.default_url_options[:host] = request.host_with_port
   end
 
   def determine_layout
@@ -22,7 +28,15 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-     users_path
+    if resource.active?
+      users_path
+    elsif resource.expired?
+      #TODO: expired_path
+    elsif resource.created?
+      welcome_user_path(resource)
+    else
+      #TODO: ERROR?
+    end
   end
 
   def after_sign_out_path_for(resource)

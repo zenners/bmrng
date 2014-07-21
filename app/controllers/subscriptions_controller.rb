@@ -35,4 +35,17 @@ class SubscriptionsController < ApplicationController
       render :edit and return # action: :edit
     end
   end
+
+  def destroy
+    resource.status = 'canceled'
+    customer = Stripe::Customer.retrieve(resource.user.stripe_customer_token)
+    customer.subscriptions.retrieve(resource.stripe_subscription_token).delete(at_period_end: true)
+    resource.save
+    redirect_to current_user, notice: "We are sorry to see you go! You subscription will end on #{resource.stripe_current_period_end.strftime("%m-%d-%Y")}"
+  end
+
+  def resource
+    param = params['id']
+    @subscription ||= Subscription.find(param)
+  end
 end

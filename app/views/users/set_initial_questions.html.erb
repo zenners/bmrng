@@ -1,0 +1,33 @@
+<div class="session_start">
+  <h1>Client Questions</h1>
+</div>
+<p class='session_start'>
+  Thank you very much! Last, Boomerang lets you ask a your clients a few
+  questions of your own to help you get insight to better prepare for orders
+  or get feedback. We already ask for their name, what else do you want to know?
+  It can be anything, but we love “What do you think about these photos?” or
+  “Are you looking at any packages yet? Which ones?” as starters.
+</p>
+<div class="session_start">
+	<%= nested_form_for resource, url: 'set_initial_questions' do |f| %>
+        <%= f.fields_for :questions do |q_form| %>
+          <%= q_form.text_field :content %>
+          <%= q_form.link_to_remove "Remove this question" %>
+        <% end %>
+        <p><%= f.link_to_add "Add a question", :questions %></p>
+        <br>
+        <%= f.submit %>
+	<% end %>
+
+	</div>
+	<%= javascript_include_tag 'fancyInput' %>
+	<script>
+		$('section :input').val('').fancyInput()[0].focus();
+	</script>
+    <%= render 'layouts/progress_circles', number: 6, active: 5 %>
+</div>
+<script>
+    $(document).ready(function(){
+      $("#user_name").trigger('focus');
+    });
+</script>

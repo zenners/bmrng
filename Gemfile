@@ -37,6 +37,7 @@ gem 'dropzonejs-rails'
 gem 'acts_as_follower'
 gem 'aws-sdk'
 gem 'paperclip-meta'
+gem "nested_form"
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -45,7 +46,7 @@ gem 'paperclip-meta'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+#gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 1.2'

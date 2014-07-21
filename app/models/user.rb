@@ -9,6 +9,10 @@ class User < ActiveRecord::Base
   has_many :questions
   has_one  :subscription
 
+  attr_accessor :subscription_plan, :stripe_card_token
+
+  accepts_nested_attributes_for :questions, :allow_destroy => true
+
   ## FOLLOWABLE FIELDS
   ##include Mongo::Followable::Follower
   ##include Mongo::Followable::History
@@ -24,7 +28,7 @@ class User < ActiveRecord::Base
       :original => ['400x400', :jpg],
       :thumb    => ['200x30',   :jpg]
     },
-    :convert_options => { :all => '-background white -flatten +matte' },
+    #:convert_options => { :all => '-background white -flatten +matte' },
     :default_url => "/images/missing.png"
   #validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
@@ -39,7 +43,7 @@ class User < ActiveRecord::Base
 ## ATTRIBUTES ACCESIBILITY
 
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me, 
-  :created_at, :updated_at, :image, :stripe_customer_token, :coupon, :logo, :link
+  :created_at, :updated_at, :image, :stripe_customer_token, :coupon, :logo, :link, :status
 
   attr_accessor :stripe_token, :coupon
 
@@ -80,6 +84,18 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    roles.first.name.downcase == 'admin'
+    roles.try(:first).try(:name).try(:downcase) == 'admin'
+  end
+
+  def active?
+    status == 'active'
+  end
+
+  def expired?
+    subscription.stripe_current_period_end < Time.now rescue false
+  end
+
+  def created?
+    status == 'created'
   end
 end

@@ -8,6 +8,7 @@ BMRNG::Application.routes.draw do
   resources :questions
 
   devise_for :users, :controllers => { :registrations => 'registrations' }
+
   devise_scope :user do
     put 'update_plan', :to => 'registrations#update_plan'
     put 'update_card', :to => 'registrations#update_card'
@@ -17,11 +18,19 @@ BMRNG::Application.routes.draw do
 
   resources :users do
     resources :subscriptions
+    match :send_feedback, via: [:get, :post]
     member do
       get :analytics
       get :manage
       get :update_view
       match :change, via: [:get, :post, :patch]
+      match :welcome, via: [:get]
+      match :set_human_name, via: [:patch, :post]
+      match :set_studio, via: [:get, :post]
+      match :set_url, via: [:get, :post]
+      match :set_logo, via: [:get, :post]
+      match :set_initial_questions, via: [:get, :post]
+      match :welcome_complete, via: [:get]
     end
   end
 

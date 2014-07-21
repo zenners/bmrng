@@ -2,11 +2,7 @@
 
       <!-- Be sure to leave the brand out there if you want it shown -->
       <span class="brand">
-        <% if current_user.logo.url.include? 'missing' %>
-            BOOMERANG | DASHBOARD
-        <% else %>
-            <%= image_tag(current_user.logo.url(:thumb)) unless current_user.logo.url.include? 'missing' %>
-        <% end %>
+        BOOMERANG | DASHBOARD
       </span>
       <li class="nav"><span class="badge red">5</span></li>
 

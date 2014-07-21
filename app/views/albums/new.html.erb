@@ -5,7 +5,7 @@
 
 <% if current_user.admin? %>
     <%= render 'form' %>
-<%else %>
-    <%= render("#{current_user.best_role}_form" || 'form') %>
+<%elsif current_user.active?%>
+    <%= render('silver_form') %>
 <% end %>
 <%= render 'form_scripts' %>

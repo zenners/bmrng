@@ -9,4 +9,4 @@
 <br/>
 <br/>
 <h2>Cancel Account</h2>
-<%= button_to 'Cancel', '#' %>
+<%= button_to 'Cancel Subscription', user_subscription_path(@subscription.user_id, @subscription.id), method: :delete  %>

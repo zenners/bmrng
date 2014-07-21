@@ -3,12 +3,22 @@ class RegistrationsController < Devise::RegistrationsController
   before_filter :configure_permitted_parameters
 
   def new
-    @plan = params[:plan]
-    if @plan && ENV["ROLES"].include?(@plan) && @plan != "admin"
-      super
-    else
-      redirect_to home_path, :notice => 'Please select a subscription plan below'
+    super
+  end
+
+  def create
+    byebug
+    sub_params = params[:user].delete(:subscription)
+    @user = User.new(params[:user].merge(status: :created))
+    if @user.save
+      #Create the subscription
+      sub = Subscription.new(sub_params.merge(user_id: @user.id))
+      if sub.save_with_payment
+        sign_in @user, :bypass => true
+        redirect_to after_sign_up_path_for(@user)
+      end
     end
+    render :new
   end
 
   def update_plan

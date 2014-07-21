@@ -1,0 +1,31 @@
+<div class="session_start">
+  <h1>You finally made it.</h1>
+</div>
+
+<p class='session_start'>We’ve been waiting a long time for you! :) We want you to start proofing
+  better right away, but first we need a few things from you. This will only
+  take a second and won’t hurt one bit. First, what’s your name? P.S. You can
+  change all of this information later.</p>
+
+<div class="session_start">
+	<%= simple_form_for resource, url: 'set_human_name' do |f| %>
+            <%= f.error_notification %>
+			  <div class="form-inputs big_input">
+				<%= f.input :human_name, :label => false %>
+			  </div>
+			  <br>
+			  <%= f.button :submit, "CONTINUE" %>
+	<% end %>
+
+	</div>
+	<%= javascript_include_tag 'fancyInput' %>
+	<script>
+		$('section :input').val('').fancyInput()[0].focus();
+	</script>
+    <%= render 'layouts/progress_circles', number: 6, active: 1 %>
+</div>
+<script>
+    $(document).ready(function(){
+      $("#user_human_name").trigger('focus');
+    });
+</script>

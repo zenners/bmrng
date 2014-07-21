@@ -10,7 +10,7 @@
       <!-- Be sure to leave the brand out there if you want it shown -->
       <span class="brand">
         <% if current_user.logo.url.include? 'missing' %>
-            <%= link_to 'Managing: ' + current_user.name %>
+            <%= link_to 'Managing: ' + current_user.studio_name %>
         <% else %>
             <%= image_tag(current_user.logo.url(:thumb)) unless current_user.logo.url.include? 'missing' %>
         <% end %>
@@ -31,7 +31,7 @@
                 <li><%= link_to 'LOGO', change_user_path(current_user, what: 'logo') %></li>
                 <!--<li><a data-toggle="modal" href="#link">LINK</a></li>-->
                 <li><%= link_to 'PASSWORD', change_user_path(current_user, what: 'password') %></li>
-                <li><%= link_to 'FEEDBACK', change_user_path(current_user, what: 'feedback') %></li>
+                <li><%= link_to 'FEEDBACK', user_send_feedback_path(current_user) %></li>
                 <li><%= link_to 'SUBSCRIPTION', change_user_path(current_user, what: 'subscription') %></li>
                 <li><%= link_to 'LOGOUT', destroy_user_session_path, :method=>'delete' %></li>
             </ul>

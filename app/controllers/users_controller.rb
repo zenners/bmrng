@@ -106,11 +106,59 @@ class UsersController < ApplicationController
     end
   end
 
+  def set_human_name
+    if resource.update(params[:user])
+      redirect_to set_studio_user_path(resource)
+    else
+      render :welcome
+    end
+  end
+
+  def set_studio
+    if request.post?
+      if resource.update(params[:user])
+        redirect_to set_url_user_path(resource)
+      else
+        render :set_studio
+      end
+    end
+  end
+
+  def set_url
+    if request.post?
+      if resource.update(params[:user])
+        redirect_to set_logo_user_path(resource)
+      else
+        render :set_url
+      end
+    end
+  end
+
+  def set_logo
+    if request.post?
+      if resource.update(params[:user])
+        redirect_to set_initial_questions_user_path(resource)
+      else
+        render :set_logo
+      end
+    end
+  end
+
+  def set_initial_questions
+    if request.post?
+      if resource.update(params[:user].merge(status: :active))
+        redirect_to welcome_complete_user_path(resource)
+      else
+        render :set_initial_questions
+      end
+    end
+  end
+
   def analytics
 		@most_viewed_albums = Album.where(user_id: current_user.id).
                     order(:impressions_count).limit(10)
     photos = Photo.includes(:album).where('albums.user_id = ?', current_user.id)
-    @popular_pic_albums = photos.sort_by(&:followers_count).map{|p| p.album}.uniq![0..4]
+    @popular_pic_albums = photos.sort_by(&:followers_count).map{|p| p.album}.uniq![0..4] rescue []
   end
 
   def update_view
@@ -121,5 +169,14 @@ class UsersController < ApplicationController
     @count ||= 0
 		@popular_pics = Photo.where(album_id: @album.id).
                           sort_by(&:followers_count)[0..4]
-	end
+  end
+
+  def send_feedback
+    if request.post?
+      UserMailer.send_feedback(current_user, params[:feedback][:message]).deliver
+      redirect_to current_user, notice: 'Thank you for the feedback!'
+    else
+      render :send_feedback
+    end
+  end
 end

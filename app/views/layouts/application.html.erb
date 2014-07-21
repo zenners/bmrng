@@ -5,8 +5,6 @@
     <title><%= content_for?(:title) ? yield(:title) : "BOOMERANG" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "BOOMERANG" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <%= javascript_include_tag "https://js.stripe.com/v1/"%>
-    <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
     <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "dropzone" %>
     <%# TODO: Should not need fancyInput, but wasn't looking in asset pipeline %>
@@ -17,10 +15,12 @@
   <body class="<%= controller_name %> <%= action_name %>">
     <div class="navbar navbar-fixed-top navbar-inverse animated fadeInDownBig no-print">
       <nav class="navbar-inner">
-        <% if current_user %>
+        <% if current_user and current_user.active? %>
             <%= render 'layouts/navigation' %>
         <% elsif controller_name.include? 'home' %>
 
+        <% else %>
+            <li><%= link_to 'LOGOUT', destroy_user_session_path, :method=>'delete' %></li>
         <% end %>
       </nav>
     </div>

@@ -17,5 +17,9 @@ amazon_access_key_id: AKIAJRZOY2M5T5IPZSKA
 amazon_secret_access_key: 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
 #amazon_access_key_id: AKIAJNOGJIXZ6YT34HUA
 #amazon_secret_access_key: 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
+mail_address_dev: smtp.gmail.com
+mail_domain_dev: aquatic-edge.com
+mail_user_name_dev: chris@aquatic-edge.com
+mail_password_dev: 05test05
 
 

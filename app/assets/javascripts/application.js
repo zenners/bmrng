@@ -17,4 +17,5 @@
 //= require dropzone
 //= require jquery-fileupload
 //= require masonry/jquery.masonry
+//= require jquery_nested_form
 //= require_tree .
