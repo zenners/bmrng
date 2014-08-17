@@ -12,6 +12,7 @@ body.display{
 
 .fave_options{
     display: none;
+    z-index: 1000;
 }
 
 li.image_container:hover .fave_options{

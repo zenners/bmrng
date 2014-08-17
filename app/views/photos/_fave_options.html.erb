@@ -1,8 +1,7 @@
 <% faves ||= true if faves.nil? %>
 <% if current_guest and faves %>
     <div class="fave_controls <%= photo.id %>">
-        <span class="fave_heart">
-            <p>
+
               <% if current_guest %>
                 <% if current_guest.following?(photo) %>
                     <%= render 'photos/defave', :photo => photo %>
@@ -10,8 +9,6 @@
                     <%= render 'photos/fave', :photo => photo %>
                 <% end %>
               <% end %>
-            </p>
-        </span>
     </div>
 <% end %>
 <div class="fave_count <%= photo.id %>"><p><%= photo.followers_count %></p></div>

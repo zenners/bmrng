@@ -22,7 +22,7 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to display_album_path(id: album.id) }
-      format.js { }
+      format.js { render 'defave' }
     end
   end
 
@@ -32,7 +32,7 @@ class PhotosController < ApplicationController
     
     respond_to do |format|
       format.html { redirect_to display_album_path(id: @photo.album.id) }
-      format.js { }
+      format.js { render 'fave'}
     end
   end
 

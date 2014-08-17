@@ -5,7 +5,7 @@
       <ul id='tiles'>
           <% for photo in @album.photos %>
             <li class="image_container item">
-                <a href="<%= photo.photo.url %>"  rel="lightbox" title=<%= photo.file_name %>>
+                <a href="<%= photo.photo.url %>" class="photo" rel="lightbox" title=<%= photo.file_name %>>
 
                     <%= image_tag(photo.photo.url(:original), class: 'image') %>
 
@@ -37,7 +37,7 @@
   var handler = $('#tiles li');
 
   // Init lightbox
-  $('a', handler).colorbox({
+  $('a.photo', handler).colorbox({
     rel: 'lightbox'
   });
 

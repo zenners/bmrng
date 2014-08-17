@@ -1,4 +1,6 @@
 <% photo ||= @photo %>
+<span class="fave_heart">
 <%= link_to defave_photo_path(:id => photo.id), :remote => true do %>
     <%= image_tag('x_white.png', :class => "small-heart") %>
 <% end %>
+</span>
