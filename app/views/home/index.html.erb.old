@@ -1,0 +1,29 @@
+<h1><span class="thin">BOOMERANG</span> Proof</h1>
+<br>
+<br>
+<div class="row span12 plans">
+  <div class="span2 well">
+    <div class="plan"><h2>Silver</h2></div>
+    <ul class="unstyled">
+      <li>One lesson a month</li>
+    </ul>
+    <h3>$9/month</h3>
+    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'silver') %>
+  </div>
+  <div class="span2 well featured">
+    <div class="plan featured-plan"><h2>Gold</h2></div>
+    <ul class="unstyled">
+      <li>Ten sessons a month</li>
+    </ul>
+    <h3>$19/month</h3>
+    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'gold') %>
+  </div>
+  <div class="span2 well">
+    <div class="plan"><h2>Platinum</h2></div>
+    <ul class="unstyled">
+      <li>Thirty lessons a month</li>
+    </ul>
+    <h3>$29/month</h3>
+    <%= link_to 'Subscribe', new_user_registration_path(:plan => 'platinum') %>
+  </div>
+</div>
