@@ -13,7 +13,7 @@
 //= require jquery
 //= require fancybox
 //= require jquery_ujs
-//= require bootstrap
+//= require bootstrap.min
 //= require dropzone
 //= require jquery-fileupload
 //= require masonry/jquery.masonry

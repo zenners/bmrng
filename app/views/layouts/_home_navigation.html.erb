@@ -1,14 +1,31 @@
-<a data-target=".nav-collapse" data-toggle="collapse" class="btn-navbar pull-right">
+
+  <a data-target=".nav-collapse" data-toggle="collapse" class="btn-navbar" href="##">
     <!--These are to make the button look fancy-->
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
-</a>
+  </a>
 
-<div class="navbar-collapse pull-right">
-    <ul class="nav navbar-nav navbar-right">
-      <li class="nav_link_top">
-        <%= link_to 'Sign In', new_user_session_path %>
-      </li>
-    </ul>
-</div>
+    <!--REVIEW - BAR DOES NOT COLLAPSE-->
+    <div class="nav-collapse pull-right">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <%= link_to 'Watch', '#watch', class: 'scroll-link', :"data-id" => 'watch' %>
+          </li>
+          <li>
+            <%= link_to 'Why?', '#why', class: 'scroll-link', :"data-id" => 'why'%>
+          </li>
+          <li>
+            <%= link_to 'How?', '#how', class: 'scroll-link', :"data-id" => 'how'%>
+          </li>
+          <li>
+            <%= link_to 'Price', '#plans', class: 'scroll-link', :"data-id" => 'plans' %>
+          </li>
+          <li>
+            <%= link_to 'Blog', '#' %>
+          </li>
+          <li class="nav_button_top">
+            <%= link_to 'Sign In', new_user_session_path %>
+          </li>
+        </ul>
+    </div>

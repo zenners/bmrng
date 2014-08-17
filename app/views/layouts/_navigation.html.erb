@@ -24,17 +24,18 @@
             <li class="nav_link_top">
                 <%= link_to 'ANALYTICS', analytics_user_path(current_user) %>
             </li>
+
             <li class='dropdown nav_link_top'>
-           <a class='dropdown-toggle' data-toggle="dropdown" href="#">INFO</a>
-            <!--&lt;!&ndash;<b class="caret"></b>&ndash;&gt;-->
-            <ul class="dropdown-menu">
-                <li><%= link_to 'LOGO', change_user_path(current_user, what: 'logo') %></li>
-                <!--<li><a data-toggle="modal" href="#link">LINK</a></li>-->
-                <li><%= link_to 'PASSWORD', change_user_path(current_user, what: 'password') %></li>
-                <li><%= link_to 'FEEDBACK', user_send_feedback_path(current_user) %></li>
-                <li><%= link_to 'SUBSCRIPTION', change_user_path(current_user, what: 'subscription') %></li>
-                <li><%= link_to 'LOGOUT', destroy_user_session_path, :method=>'delete' %></li>
-            </ul>
+                <a class='dropdown-toggle' data-toggle="dropdown" href="#">INFO</a>
+                <!--<b class="caret"></b>-->
+                <ul class="dropdown-menu">
+                    <li><%= link_to 'LOGO', change_user_path(current_user, what: 'logo') %></li>
+                    <!--<li><a data-toggle="modal" href="#link">LINK</a></li>-->
+                    <li><%= link_to 'PASSWORD', change_user_path(current_user, what: 'password') %></li>
+                    <li><%= link_to 'FEEDBACK', user_send_feedback_path(current_user) %></li>
+                    <li><%= link_to 'SUBSCRIPTION', change_user_path(current_user, what: 'subscription') %></li>
+                    <li><%= link_to 'LOGOUT', destroy_user_session_path, :method=>'delete' %></li>
+                </ul>
             </li>
             <li class="red plus_btn">
                 <%= link_to '+', new_album_path %>

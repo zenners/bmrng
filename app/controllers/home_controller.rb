@@ -1,6 +1,11 @@
 class HomeController < ApplicationController
 
 	before_filter :authenticate_user!, :except => [:index, :viewer]
+  layout :choose_layout
+
+  def choose_layout
+    'marketing'
+  end
 
 	def index
 	  if current_user

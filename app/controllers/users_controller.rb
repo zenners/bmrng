@@ -106,6 +106,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def welcome
+    unless resource.created?
+      redirect_to user_path
+    end
+  end
+
   def set_human_name
     if resource.update(params[:user])
       redirect_to set_studio_user_path(resource)

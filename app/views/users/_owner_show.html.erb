@@ -2,7 +2,7 @@
 	<div class="span3 sessions_list animated slideInLeft no-print">
         <p>Your Sessions</p>
 		<ul>
-			<% @albums.active.each do |album| %>
+			<% @albums.active.order('title', true).each do |album| %>
 				<li>
 					<%= link_to album.title,
 					update_view_user_path(current_user, :album_id => album.id),

@@ -23,7 +23,7 @@ class AlbumsController < ApplicationController
 
   def show
     @album = Album.find(params[:id])
-
+    @photos = @album.photos
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @album }
@@ -32,13 +32,13 @@ class AlbumsController < ApplicationController
 
   def display
     if @user = User.find_by_name_or_id(params[:user_id])
-      if @album = @user.albums.where(name: params[:album_id].gsub(' ', '_')).first
+      if @album = @user.albums.active.where(name: params[:album_id].gsub(' ', '_')).first
         @guests = Guest.where(album_id: @album.id).
                         where(last_sign_in_ip: request.remote_ip)
       end
     end
     raise ActiveRecord::RecordNotFound unless @album
-    render partial: 'guests/load' if current_guest.blank?
+    render partial: 'guests/load' and return if current_guest.blank?
   end
 
   def new

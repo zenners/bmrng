@@ -11,40 +11,5 @@
   <p>WE CAN'T WAIT FOR YOU TO JOIN US!</p>
 </div>
 <div class='sign_in_form'>
-    <%= simple_form_for(resource, :url => registration_path(resource_name)) do |f| %>
-      <%= f.error_notification %>
-      <%= display_base_errors resource %>
-      <%= f.input :email, required: false %>
-      <%= f.input :password %>
-      <%= f.input :password_confirmation %>
-      <% if @user.stripe_token %>
-        <p>Credit card acceptance is pending.</p>
-      <% else %>
-        <div id="stripe_error">
-            <noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
-        </div>
-        <div class="field">
-          <%= label_tag :card_number, "Credit Card Number" %>
-          <%= text_field_tag :card_number, nil, name: nil %>
-        </div>
-        <div class="field">
-          <%= label_tag :card_code, "Card Security Code (CVV)" %>
-          <%= text_field_tag :card_code, nil, name: nil %>
-        </div>
-        <div class="field">
-            <%= label_tag :card_month, "Card Expiration" %>
-            <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
-            <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
-        </div>
-        <%= f.fields_for :subscription do |s| %>
-            <div class='field'>
-              <%= label_tag :plan, "Subscription" %>
-              <%= s.select :plan, options_for_select(Subscription.available_plans) %>
-            </div>
-              <%= s.hidden_field :stripe_card_token %>
-        <% end %>
-      <% end %>
-
-      <%= f.button :submit, 'Sign up', :class => 'btn-primary' %>
-    <% end %>
+    <%= render 'form' %>
 </div>

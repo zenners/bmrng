@@ -64,21 +64,19 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-    @photo = Photo.new(params[:photo])
-
-    respond_to do |format|
-      if @photo.save
-        format.html {
-          render :json => [@photo.to_jq_upload].to_json,
-          :content_type => 'text/html',
-          :layout => false
-        }
-        format.json { render json: {files: [@photo.to_jq_upload]}, status: :created, location: @photo }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @photo.errors, status: :unprocessable_entity }
+  	@photo = Photo.new(params[:photo])
+    #@photo.photo = params[:file]
+  	if @photo.save
+      respond_to do |format|
+        format.json {render json: { message: "success", fileID: @photo.id }, :status => 200}
+        format.html {redirect_to @photo.album}
       end
-    end
+
+  	else
+  	  #  you need to send an error header, otherwise Dropzone
+      #  will not interpret the response as an error:
+  	  render json: { error: @photo.errors.full_messages.join(',')}, :status => 400
+  	end
   end
 
   # PUT /photos/1
@@ -99,13 +97,27 @@ class PhotosController < ApplicationController
 
   # DELETE /photos/1
   # DELETE /photos/1.json
+
   def destroy
     @photo = Photo.find(params[:id])
-    @photo.destroy
-
-    respond_to do |format|
-      format.html { redirect_to photos_url }
-      format.json { head :no_content }
+    if @photo.destroy
+      render json: { message: "File deleted from server" }
+    else
+      render json: { message: @photo.errors.full_messages.join(',') }
     end
+  end
+  #def destroy
+  #  @photo = Photo.find(params[:id])
+  #  @photo.destroy
+  #
+  #  respond_to do |format|
+  #    format.html { redirect_to photos_url }
+  #    format.json { head :no_content }
+  #  end
+  #end
+
+  private
+  def upload_params
+  	params.require(:photo).permit(:photo, :file)
   end
 end

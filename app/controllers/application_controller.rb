@@ -17,13 +17,11 @@ class ApplicationController < ActionController::Base
     domain, tld = request.domain.split(".") rescue [nil, nil]
     domain ||= 'localhost'
     if [ENV['PRIMARY_DOMAIN'], 'localhost'].include? domain
-      if current_user
-        'application'
-      else
-        'marketing'
-      end
+      'application'
     elsif domain == ENV['DISPLAY_DOMAIN']
       'display'
+    else
+      raise "oops"
     end
   end
 

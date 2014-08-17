@@ -3,141 +3,21 @@
     <h1>NEW SESSION</h1>
     <h4>Found at: http://www.<%= ENV['DISPLAY_DOMAIN'] %>/<%= current_user.url_name %>/<%= @album.name %></h4>
     <br>
-	<%= form_for Photo.new, :html => { :multipart => true, :id => "fileupload", :class => "thebox"  } do |f| %>
-        <noscript><input type="hidden" name="redirect" value="http://blueimp.github.io/jQuery-File-Upload/"></noscript>
+  <%= form_for(Photo.new, html: { multipart: true, class: 'dropzone'}) do |f|  %>
         <%= f.hidden_field :user_id, :value => current_user.id %>
         <%= f.hidden_field :album_id, :value => @album.id %>
-        <!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload -->
-        <div class="row fileupload-buttonbar">
-          <div class="span12">
-            <!-- The fileinput-button span is used to style the file input field as button -->
-            <span class="btn btn-success fileinput-button short" style="font-family: GothamThin;">
-              <i class="icon-plus icon-white"></i>
-              <span>Add files...</span>
-              <%= file_field_tag(:photo, multiple: true, name: "photo[photo]") %>
-            </span>
-            <button type="submit" class="btn btn-primary start pull-right short" style="height: 40px; font-family: GothamThin;">
-              <i class="icon-upload icon-white"></i>
-              <span>Start upload</span>
-            </button>
-          </div>
-          <span class="red_font big">
-          DRAG<br>
-          FILES<br>
-          INTO<br>
-          SCREEN
-          </span>
-            <!--<div class="col-lg-5 fileupload-progress fade">-->
-                <!--&lt;!&ndash; The global progress bar &ndash;&gt;-->
-                <!--<div id="progress" class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">-->
-                    <!--<div class="progress-bar progress-bar-success bar" style="width:0%;"></div>-->
-                <!--</div>-->
-                <!--&lt;!&ndash; The extended global progress state &ndash;&gt;-->
-                <!--<div class="progress-extended">&nbsp;</div>-->
-            <!--</div>-->
-        </div>
-        <br>
-        <!-- The table listing the files available for upload/download -->
-        <table class="table">
-          <tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody>
-        </table>
-  	<% end %>
+    <div class="fallback">
+        <%= f.file_field :photo %><br>
+        <%= f.submit "Upload" %>
+    </div>
+<% end %>
+
 </div>
 
 <%# render 'grid_view', faves: false %>
-
 <script>
-  var fileUploadErrors = {
-  maxFileSize: 'File is too big',
-  minFileSize: 'File is too small',
-  acceptFileTypes: 'Filetype not allowed',
-  maxNumberOfFiles: 'Max number of files exceeded',
-  uploadedBytes: 'Uploaded bytes exceed file size',
-  emptyResult: 'Empty file upload result'
-  };
-  var totalFileSizes = 0;
-</script>
-
-<!-- The template to display files available for upload -->
-<script id="template-upload" type="text/x-tmpl">
-  {% for (var i=0, file; file=o.files[i]; i++) { %}
-  <tr class="template-upload fade">
-    <td class="preview"><span class="fade"></span></td>
-    <td class="name"><span>{%=file.name%}</span></td>
-    <td class="size"><span>{%=o.formatFileSize(file.size)%}</span></td>
-    {% if (file.error) { %}
-    <td class="error" colspan="2"><span class="label label-important">{%=locale.fileupload.error%}</span> {%=locale.fileupload.errors[file.error] || file.error%}</td>
-    {% } else if (o.files.valid && !i) { %}
-    <td>
-      <div class="progress progress-success progress-striped active"><div class="bar" style="width:0%;"></div></div>
-    </td>
-    <td class="start" style="display:none">{% if (!o.options.autoUpload) { %}
-      <button class="btn btn-primary short">
-        <span>{%=locale.fileupload.start%}</span>
-      </button>
-      {% } %}</td>
-    {% } else { %}
-    <td colspan="2"></td>
-    {% } %}
-    <td class="cancel" style="display:none">{% if (!i) { %}
-      <button class="btn btn-warning short">
-        <span>{%=locale.fileupload.cancel%}</span>
-      </button>
-      {% } %}</td>
-  </tr>
-  {% } %}
-</script>
-
-<!-- The template to display files available for download -->
-<script id="template-download" type="text/x-tmpl">
-  {% for (var i=0, file; file=o.files[i]; i++) { %}
-    <tr>
-      {% if (file.error) { %}
-        {% } else { %}
-
-        {% } %}
-    </tr>
-    {% } %}
-</script>
-
-<script type="text/javascript" charset="utf-8">
-  $(function () {
-      // Initialize the jQuery File Upload widget:
-      $('#fileupload').fileupload({
-        dataType: 'json',
-        done: function (e, data) {
-          $.each(data.result, function (index, file) {
-            $('<p/>').text(file.name).appendTo(document.body);
-          });
-        },
-        progressall: function (e, data) {
-          var progress = parseInt(data.loaded / totalFileSizes * 100, 10);
-          $('#progress .bar').css(
-            'width',
-            progress + '%'
-          );
-        }
-       });
-      //
-      // Load existing files:
-      $.getJSON($('#fileupload').prop('action'), function (files) {
-        var fu = $('#fileupload').data('blueimpFileupload'),
-          template;
-        fu._adjustMaxNumberOfFiles(-files.length);
-        console.log(files);
-        template = fu._renderDownload(files)
-          .appendTo($('#fileupload .files'));
-        // Force reflow:
-        fu._reflow = fu._transition && template.length &&
-          template[0].offsetWidth;
-        template.addClass('in');
-        // Update total file size
-
-          $.map(files, function(n, i){
-              totalFileSizes = totalFileSizes + n.photo_file_size
-          })
-        $('#loading').remove();
-      });
-
-  });
+ $(window).load(function(){
+    var photos = <%= @photos %>;
+    alert("Photos found");
+ });
 </script>

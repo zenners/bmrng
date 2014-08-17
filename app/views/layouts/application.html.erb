@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "BOOMERANG" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "BOOMERANG" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
-    <%= javascript_include_tag "dropzone" %>
     <%# TODO: Should not need fancyInput, but wasn't looking in asset pipeline %>
     <%= javascript_include_tag "fancyInput" %>
     <%= csrf_meta_tags %>
@@ -19,8 +19,8 @@
             <%= render 'layouts/navigation' %>
         <% elsif controller_name.include? 'home' %>
 
-        <% else %>
-            <li><%= link_to 'LOGOUT', destroy_user_session_path, :method=>'delete' %></li>
+        <!--<% else %>-->
+            <!--<li><%= link_to 'LOGOUT', destroy_user_session_path, :method=>'delete' %></li>-->
         <% end %>
       </nav>
     </div>

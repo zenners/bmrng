@@ -30,7 +30,7 @@ gem 'paperclip'
 gem 'protected_attributes' #TODO: this is a hack gem to allow attr_accessible
 gem 'jquery-fileupload-rails'
 gem 'figaro' #TODO: Instead of in source this should be a system file
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'dropzonejs-rails'

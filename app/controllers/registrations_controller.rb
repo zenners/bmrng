@@ -7,7 +7,6 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    byebug
     sub_params = params[:user].delete(:subscription)
     @user = User.new(params[:user].merge(status: :created))
     if @user.save

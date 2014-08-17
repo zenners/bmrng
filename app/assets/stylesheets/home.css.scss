@@ -1,18 +1,269 @@
 // ============= COLORS =================
 
-$red: rgb(199,70,61);
+$red: rgb(250, 35, 7);
 $blue: rgb(123,186,179);
 $black: rgb(24,25,23);
 $grey: rgb(50,52,51);
 $lightGrey: #606060;
 $white: #ffffff;
 
-.plans{
-  h3{
-    color: black;
+@font-face {
+  font-family: 'GothamMedium';
+  src:url('gotham/Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body.home{
+  background-color: white;
+  font-family: 'GothamMedium';
+  margin-top: 0px;
+  color: black;
+}
+
+.white{
+  color: white;
+}
+
+// ========= NAVBAR =====
+.navbar-inverse .nav li a {
+  color: white;
+}
+
+//========
+.video_block{
+  color: white;
+  width: 100%;
+  position: relative;
+  img.background{
+    position: relative;
+    top: 0;
+    width: 100%
+  }
+  .title{
+    width: 80%;
+    position: absolute;
+    top: 15%;
+    padding-left: 8%;
+
+    img{
+      height: 30%;
+      float: left;
+    }
+    p{
+      font-size: 36pt;
+      padding-top: 30px;
+      text-align: right;
+    }
+    .small{
+      font-size: 13pt;
+      text-align: right;
+    }
+
   }
 }
 
+.why_block{
+  width: 100%;
+  padding-bottom: 75px;
+  margin-top: 75px;
+  img{
+    margin-top: 40px;
+    float: right;
+    height: 350px;
+  }
+  .text{
+    padding-top: 75px;
+    padding-left: 10%;
+    h2{
+      .red{
+        color: red;
+        background-color: white;
+      }
+    }
+    p{
+      font-family: 'GothamThin';
+      width: 65%;
+      font-size: large;
+    }
+  }
+}
+
+.how_block{
+  width: 100%;
+  background-image: url(image_path('home/home_how.png'));
+  margin-top: 75px;
+  #title_block{
+    position: relative;
+    top: -30px;
+    margin: auto;
+    width: 175px;
+    padding: 10px;
+    background-color: $red;
+    color: white;
+    font-size: 24pt;
+    text-align: center;
+    font-family: 'GothamThin';
+  }
+  .description{
+    .title{
+      font-family: 'GothamMedium';
+      text-align: center;
+      font-size: 18pt;
+      color: white;
+    }
+    .title_bar{
+      margin: auto;
+      width: 90px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      padding: 3px;
+      background-color: white;
+    }
+    p{
+      font-family: 'GothamThin';
+      color: white;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+  img.background{
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.testimonial_block{
+  .quotes{
+    font-size: 80pt;
+    float: left;
+    margin-left: 5%;
+  }
+  p{
+    color: $blue;
+    font-size: 24px;
+    font-family: 'GothamMedium';
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+  }
+  .claimer{
+    width: 20%;
+    margin: auto;
+  }
+  padding-top: 75px;
+}
+
+.plans_block{
+  margin-top: 75px;
+  padding-bottom: 100px;
+  background-image: url(image_path('home/home_plans.png'));
+  background-color: lightgray;
+  color: white;
+
+  // Remove padding on container so everything is nice and tight
+  .container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+    @media(max-width: 768px){
+      height: 1800px;
+      background-repeat: repeat-y;
+
+    }
+  }
+  .info{
+    padding-top: 75px;
+    text-align: right;
+    font-family: 'GothamMedium';
+    font-size: 19pt;
+    padding-right: 30px;
+  }
+  .prices{
+    width: 100%;
+    min-height: 300px;
+    display: inline-block;
+    background: black;
+    text-align: center;
+    border-style: solid;
+    border-top-width: 0px;
+    border-bottom-width: 4px;
+    border-right-width: 0px;
+    border-left-width: 0px;
+    border-color: #444444;
+
+    .price{
+      padding-top: 75px;
+      font-size: 60pt;
+      @media (min-width: 768px){
+        font-size: 75pt;
+      }
+      font-family: 'GothamThin';
+      .period{
+        font-size: 40px;
+      }
+    }
+  }
+  .sign_up {
+    font-size: 19pt;
+    @media(max-width: 768px){
+
+      position: relative;
+      top: 150px;
+      margin: auto;
+
+      .title{
+        text-align: right;
+        img{
+          height: 80px;
+          float: left;
+          padding-left: 50px;
+        }
+        .small{
+          font-size: 13pt;
+        }
+      }
+      .cc{
+        padding-top: 75px;
+        .card_title{
+          color: $red;
+          font-size: 12pt;
+        }
+        input{
+          background-color:rgba(0,0,0,0.3) !important;
+          border:none !important;
+        }
+      }
+    }
+    @media (min-width: 768px){
+    .cc{
+        padding-top: 75px;
+        @media(min-width: 983px){
+          float: right;
+        }
+        .card_title{
+          color: $red;
+          text-align: right;
+          width: 100%;
+        }
+        input{
+          background-color:rgba(0,0,0,0.3) !important;
+          border:none !important;
+        }
+        select.date-select {
+          color: $grey;
+          width: 200px;
+        }
+        select.subscription{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+// =======
 
 .raves_title{}
 
