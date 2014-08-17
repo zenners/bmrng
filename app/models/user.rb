@@ -30,7 +30,13 @@ class User < ActiveRecord::Base
     },
     #:convert_options => { :all => '-background white -flatten +matte' },
     :default_url => "/images/missing.png"
-  #validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+  validates_attachment_content_type :logo, :content_type => ["image/jpg",
+                                                             "image/jpeg",
+                                                             "image/png",
+                                                             "image/gif"]
+  validates_attachment_file_name :logo, :matches => [/png\Z/,
+                                                     /jpe?g\Z/,
+                                                     /gif\Z/]
 
 ## ================================ VALIDATIONS ================================
   

@@ -29,8 +29,13 @@ class Photo < ActiveRecord::Base
     },
     :convert_options => { :all => '-background white -flatten +matte' },
     :default_url => "/images/missing.png"
-  validates_attachment_content_type :photo, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
-  validates_attachment_file_name :photo, :matches => [/png\Z/, /jpe?g\Z/, /gif\Z/]
+  validates_attachment_content_type :photo, :content_type => ["image/jpg",
+                                                              "image/jpeg",
+                                                              "image/png",
+                                                              "image/gif"]
+  validates_attachment_file_name :photo, :matches => [/png\Z/,
+                                                      /jpe?g\Z/,
+                                                      /gif\Z/]
 
   def to_jq_upload
     {

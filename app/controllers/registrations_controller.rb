@@ -8,13 +8,13 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     sub_params = params[:user].delete(:subscription)
-    @user = User.new(params[:user].merge(status: :created))
+    @user = User.new(params[:user].merge(status: 'created'))
     if @user.save
       #Create the subscription
       sub = Subscription.new(sub_params.merge(user_id: @user.id))
       if sub.save_with_payment
         sign_in @user, :bypass => true
-        redirect_to after_sign_up_path_for(@user)
+        redirect_to after_sign_in_path_for(@user) and return
       end
     end
     render :new

@@ -1,11 +1,3 @@
-<script>
-	jQuery(function(){
-	    $("#user_name").on("keyup change", function() {
-	      var value = $("#user_name").val();
-	      $("#url_name3").text(value.replace(' ', '_'));
-	    });
-	});
-</script>
 <div class="session_start">
   <h1>Vanity Url</h1>
 </div>
@@ -30,7 +22,11 @@
     <%= render 'layouts/progress_circles', number: 6, active: 3 %>
 </div>
 <script>
-    $(document).ready(function(){
-      $("#user_name").trigger('focus');
-    });
+        $("#user_name").focus();
+
+            $("#user_name").on("keyup change", function() {
+              var value = $("#user_name").val();
+              $("#url_name3").text(value.replace(' ', '_'));
+            });
+
 </script>

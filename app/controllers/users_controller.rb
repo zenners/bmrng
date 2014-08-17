@@ -108,6 +108,7 @@ class UsersController < ApplicationController
 
   def welcome
     unless resource.created?
+      byebug
       redirect_to user_path
     end
   end
@@ -152,7 +153,7 @@ class UsersController < ApplicationController
 
   def set_initial_questions
     if request.post?
-      if resource.update(params[:user].merge(status: :active))
+      if resource.update(params[:user].merge(status: 'active'))
         redirect_to welcome_complete_user_path(resource)
       else
         render :set_initial_questions
