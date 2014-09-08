@@ -1,12 +1,15 @@
 <div class="row">
 	<div class="span3 option_links animated fadeInUp">
         <h4><%= link_to 'UPLOAD PHOTOS', @album %></h4>
+        <h4><%= link_to 'CHANGE TITLE', set_title_album_path(@album) %></h4>
+        <h4><%= link_to (@album.password_toggle ? 'CHANGE PASSWORD' : 'SET PASSWORD'), set_password_album_path(@album) %></h4>
+        <h4><%= link_to 'SOCIAL SHARE', settings_album_path(@album) %></h4>
 		<!--<h4><a data-toggle="modal" href="#name">CHANGE VANITY URL</a></h4>-->
-		<h4><a data-toggle="modal" href="#title">CHANGE TITLE</a></h4>
-		<h4><a data-toggle="modal" href="#password">CHANGE PASSWORD</a></h4>
-		<h4><a data-toggle="modal" href="#invisible">MAKE INVISIBLE</a></h4>
+		<!--<h4><a data-toggle="modal" href="#title">CHANGE TITLE</a></h4>-->
+		<!--<h4><a data-toggle="modal" href="#password">CHANGE PASSWORD</a></h4>-->
+		<!--<h4><a data-toggle="modal" href="#invisible">MAKE INVISIBLE</a></h4>-->
 		<!--<h4><a data-toggle="modal" href="#watermark">WATERMARK</a></h4>-->
-		<h4><a data-toggle="modal" href="#social">SOCIAL SHARE</a></h4>
+		<!--<h4><a data-toggle="modal" href="#social">SOCIAL SHARE</a></h4>-->
         <%= link_to 'DELETE SESSION', @album, method: :delete, data: { confirm: 'Are you sure?' }, :class => "delete_btn animated fadeInUp" %>
 	</div>
 	<!--<div class="span3 options_buttons">-->

@@ -1,7 +1,8 @@
 <% faves ||= true if faves.nil? %>
 <% if current_guest and faves %>
     <div class="fave_controls <%= photo.id %>">
-
+<%# MUST SHOW HEART AFTER IT IS CLICKED %>
+<%# Once there is a fave for a photo they show up all the time %>
               <% if current_guest %>
                 <% if current_guest.following?(photo) %>
                     <%= render 'photos/defave', :photo => photo %>

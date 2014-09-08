@@ -1,38 +1,25 @@
 <% if @album.photos.blank? %>
       <h3>Sorry, no photos available at this time.</h3>
 <% else %>
-    <div id='main'>
+    <!--<div id='main'>-->
       <ul id='tiles'>
           <% for photo in @album.photos %>
             <li class="image_container item">
                 <a href="<%= photo.photo.url %>" class="photo" rel="lightbox" title=<%= photo.file_name %>>
-
                     <%= image_tag(photo.photo.url(:original), class: 'image') %>
-
                 </a>
-                <div class='fave_options animated fadeInUp'>
+                <div class='fave_options animated flipInX'>
                     <%= render partial: 'photos/fave_options', locals: {photo: photo} %>
                 </div>
             </li>
           <% end %>
       </ul>
-    </div>
+    <!--</div>-->
 <% end %>
 
 <!-- Once the page is loaded, initalize the plug-in. -->
 <script type="text/javascript">
 (function ($){
-  // Prepare layout options.
-  var options = {
-    autoResize: true, // This will auto-update the layout when the browser window is resized.
-    container: $('#main'), // Optional, used for some extra CSS styling
-    offset: 2, // Optional, the distance between grid items
-    align: 'center',
-    offset: 0,
-    resizeDelay: 1
-    //itemWidth: 210 // Optional, the width of a grid item
-  };
-
   // Get a reference to your grid items.
   var handler = $('#tiles li');
 

@@ -24,7 +24,7 @@ gem "stripe" #, ">= 1.7.11"
 gem "stripe_event" #, ">= 0.4.0"
 gem 'rmagick'
 gem 'fancybox2-rails'
-gem 'impressionist'
+gem 'impressionist', github: 'Loremaster/impressionist'
 gem 'masonry-rails'
 gem 'paperclip'
 gem 'protected_attributes' #TODO: this is a hack gem to allow attr_accessible

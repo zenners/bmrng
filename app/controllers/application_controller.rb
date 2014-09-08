@@ -16,12 +16,12 @@ class ApplicationController < ActionController::Base
   def determine_layout
     domain, tld = request.domain.split(".") rescue [nil, nil]
     domain ||= 'localhost'
-    if [ENV['PRIMARY_DOMAIN'], 'localhost'].include? domain
+    if [ENV['PRIMARY_DOMAIN'].split('.').first, 'localhost'].include? domain
       'application'
-    elsif domain == ENV['DISPLAY_DOMAIN']
+    elsif domain == ENV['DISPLAY_DOMAIN'].split('.').first
       'display'
     else
-      raise "oops"
+      raise "Seems like the wrong url... Sorry."
     end
   end
 

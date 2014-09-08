@@ -16,7 +16,7 @@
 <div class="session_start">
 	<%= simple_form_for :feedback, url: 'send_feedback' do |f| %>
 			  <div class="form-inputs big_input">
-				<%= f.input :message, :label => false %>
+				<%= f.input :message, :label => false, as: :text %>
 			  </div>
 			  <br>
 			  <%= f.button :submit, "SEND FEEDBACK" %>
@@ -29,7 +29,5 @@
 	</script>
 </div>
 <script>
-    $(document).ready(function(){
-      $("#feedback_message").trigger('focus');
-    });
+  $("#feedback_message").trigger('focus');
 </script>

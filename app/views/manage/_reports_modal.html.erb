@@ -27,16 +27,16 @@
       <% guest.all_follows.each do |photo| %>
         <div class="image_box">
           <div class="image_title">
-            <%= photo.photo_file_name[0..10] %>
+            <%= photo.photo_file_name[0..10] rescue 'Unknown' %>
           </div>
-          <%= image_tag(photo.photo.url(:thumb), :width => "200px") %>
+          <%= image_tag(photo.photo.url(:thumb), :width => "200px") rescue nil %>
         </div>
         <div class="extras_container">
           <div class="fave_heart">
             <%= image_tag('heart_red.png', :width => "40px") %>
           </div>
           <div class="grey_ball">
-            <%= photo.followers_count %>
+            <%= photo.followers_count rescue 0 %>
           </div>
         </div>
       <% end %>

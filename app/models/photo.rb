@@ -21,7 +21,7 @@ class Photo < ActiveRecord::Base
   #TODO: Bad image sizes
   has_attached_file :photo,
     :styles => {
-      :original => ['400x400', :jpg],
+      :original => ['800x800', :jpg],
       :small    => ['30x30',   :jpg],
       :medium   => ['100x100',    :jpg],
       :large => ['400x400', :jpg],
@@ -49,6 +49,6 @@ class Photo < ActiveRecord::Base
 
   # Just remove the extention for displaying in UI
   def file_name
-    photo_file_name.split('.')[0..-2].join('.')
+    photo_file_name.split('.')[0..-2].join('.') rescue nil
   end
 end

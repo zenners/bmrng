@@ -32,7 +32,7 @@
                     <li><%= link_to 'LOGO', change_user_path(current_user, what: 'logo') %></li>
                     <!--<li><a data-toggle="modal" href="#link">LINK</a></li>-->
                     <li><%= link_to 'PASSWORD', change_user_path(current_user, what: 'password') %></li>
-                    <li><%= link_to 'FEEDBACK', user_send_feedback_path(current_user) %></li>
+                    <li><%= link_to 'FEEDBACK', set_questions_user_path(current_user) %></li>
                     <li><%= link_to 'SUBSCRIPTION', change_user_path(current_user, what: 'subscription') %></li>
                     <li><%= link_to 'LOGOUT', destroy_user_session_path, :method=>'delete' %></li>
                 </ul>

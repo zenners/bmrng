@@ -127,9 +127,9 @@ a.btn {
 }
 
 .image_container{
-	position: relative;
-	width: 200px;
-    padding: 12px;
+	//position: relative;
+	//width: 200px;
+    //padding: 12px;
 	.fave_controls{
 		position: absolute;
 		bottom: 0px;
@@ -171,7 +171,7 @@ a.btn {
 		font-size: 15px;
 		p{
 			margin-top: 10px;
-            padding-right: 7px;
+            padding-left: 12px;
             color: white;
             font-family: 'GothamMedium';
 		}

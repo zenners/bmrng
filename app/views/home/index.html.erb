@@ -1,21 +1,18 @@
+<% content_for :head do %>
+    <%= stylesheet_link_tag("home") %>
+<% end %>
 <div class='video_block' id='watch'>
+    <%= link_to(image_tag('home/test_banner.png', class: 'banner animated bounceInDown'), '#plans', class: 'scroll-link', :"data-id" => 'plans') %>
     <%= image_tag 'home/home_video.png', class: :background %>
-    <div class='title'>
-        <%= image_tag('bmrng_logo.png') %>
-            <p>
-            PROOF SIMPLE.
-            <br/>
-            SELL MORE.
-            <div class='small'>
-              PROOFING MADE PERFECT FOR
-              <br/>
-              PROFESSIONAL PHOTOGRAPHERS
-            </div>
-        </p>
+    <%= image_tag 'home/logo_w_tag.png', class: :title %>
+    <div class='video_play'>
+      <%= image_tag 'home/play_button.png' %>
+      &nbsp;
+      WATCH VIDEO
     </div>
 </div>
 <div class='why_block' id='why'>
-  <%= image_tag('devices.tiff') %>
+  <%# image_tag('devices.tiff') %>
   <div class='text'>
     <h2>WE ARE SHOOTING TO SELL, <span class='red'>RIGHT?</span></h2>
     <p>
@@ -34,7 +31,10 @@
 </div>
 <div class='how_block' id='how'>
 
-  <div id='title_block'>HOW?</div>
+  <div id='title_block'>
+    HOW?
+    <%= image_tag 'home/down_arrow.png' %>
+  </div>
   <div class='row-fluid'>
       <div class='span3 description'>
         <div class='title'>PROOF BEAUTIFULLY</div>
@@ -121,6 +121,21 @@
         </p>
       </div>
     </div>
+    <div class='row-fluid'>
+      <div class='span4 offset1 features'>
+        <%= image_tag 'home/more_features.png', class: :left %>
+      </div>
+      <div class='span4 features text'>
+        <div class='text'>
+            CARTS, DOWNLOADS, NOTES... OH MY!
+            <br/>
+            JOIN THE FAMILY + HELP US DECIDE WHAT'S NEXT!
+        </div>
+      </div>
+      <div class='span3 features'>
+            <%= link_to((image_tag 'home/try_circle.png', class: :right), '#plans', class: 'scroll-link', :"data-id" => 'plans') %>
+      </div>
+    </div>
 </div>
 <div class="testimonial_block" id="testimonials">
   <div class="quotes">"</div>
@@ -132,57 +147,87 @@
 </div>
 <div class='plans_block' id='plans'>
   <div class="container-fluid">
-  <div class="row-fluid">
-    <div class="span5">
-      <div class='row-fluid'>
-        <div class='prices'>
-          <div class='info'>
-            NO TIERS.
-            <br/>
-            NO PLANS.
-            <br/>
-            ONE PRICE.
-            <br/>
-          EVERY FEATURE.
-          <br/>
-          UNLIMITED EVERYTHING.
-          </div>
-        </div>
-      </div>
-      <div class='row-fluid'>
-        <div class='prices'>
-            <div class='price'>
-              $30<span class='period'>/mo</span>
-            </div>
-          </div>
-      </div>
-      <div class='row-fluid'>
-          <div class='prices'>
-            <div class='price'>
-              $330<span class='period'>/yr</span>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div class="span5">
-      <div class='sign_up'>
-        <div class='title'>
-            <%= image_tag('bmrng_logo.png') %>
-            PROOF SIMPLE.
-            <br/>
-            SELL MORE.
-            <div class='small'>
-              PROOFING MADE PERFECT FOR
+      <div class="row-fluid">
+        <div class="span5">
+          <div class='row-fluid'>
+            <div class='prices'>
+              <%= image_tag 'home/test_banner.png' %>
+              <div class='info'>
+
+                NO TIERS.
+                <br/>
+                NO PLANS.
+                <br/>
+                ONE PRICE.
+                <br/>
+              EVERY FEATURE.
               <br/>
-              PROFESSIONAL PHOTOGRAPHERS
+              UNLIMITED EVERYTHING.
+              </div>
+            </div>
+          </div>
+          <div class='row-fluid'>
+            <div class='prices'>
+                <div class='price'>
+                  $30<span class='period'>/mo</span>
+                </div>
+                <p>CANCEL ANYTIME</p>
+              </div>
+          </div>
+          <div class='row-fluid'>
+              <div class='prices'>
+                <div class='price'>
+                  $330<span class='period'>/yr</span>
+                </div>
+                <p class='green'>ONE MONTH FREE</p>
+              </div>
             </div>
         </div>
-        <div class='cc'>
-            <div class='card_title'>START YOUR FIRST MONTH</div>
-            <%= render 'devise/registrations/form' %>
+        <div class="span5">
+          <div class='sign_up'>
+            <%= image_tag('home/logo_w_tag.png') %>
+            <div class='cc'>
+                <div class='card_title'>START YOUR FIRST MONTH</div>
+                <%= render  partial: 'devise/registrations/form', locals: {btn_value: 'SUBMIT, LETS DO THIS'} %>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </div>
+<div class='bottom_block'>
+  <div class='row-fluid'>
+      <div class='span4'>
+        <p>
+            <div class='red_font'>
+              NOT READY YET?
+            </div>
+            THAT'S OK! MAY WE SEND YOU A FEW UPDATES AS WE ADD NEW FEATURES?
+            <span class='bold'>
+              SPAM FREE, ALWAYS
+            </span>
+        </p>
+      </div>
+      <div class='span4'>
+        <!-- Begin MailChimp Signup Form -->
+        <link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            #mc_embed_signup{background:#fff; clear:left; padding-top: 50px; width: 100%; color: white; font:14px Helvetica,Arial,sans-serif; }
+            /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+               We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+        </style>
+        <div id="mc_embed_signup">
+        <form action="//boomerangproof.us7.list-manage.com/subscribe/post?u=f3cf372be03987e593ada1333&amp;id=63e70b467f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="E-MAIL ADDRESS" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;"><input type="text" name="b_f3cf372be03987e593ada1333_63e70b467f" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="GO!" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        </form>
+        </div>
+        <!--End mc_embed_signup-->
+      </div>
+      <div class='span4 blog'>
+        <%= link_to image_tag('home/blog.png'), '/blog' %>
+      </div>
+   </div>
 </div>

@@ -1,13 +1,5 @@
 <script>
-	jQuery(function(){
-	    $("#album_name").on("keyup change", function() {
-	      var value = $("#album_name").val();
-	      $("#session_name").text(value);
-	      $("#session_name2").text(value);
-	      $("#session_name3").text(value.replace(' ', '_'));
-	      $("#new_photo").attr('id', 'butts');
-	    });
-	});
+
 </script>
 
 <div class="session_start">
@@ -26,11 +18,16 @@
 	<% end %>
 
 	</div>
-    <%= render 'layouts/progress_circles', number: 3, active: 1 %>
+    <%= render 'layouts/progress_circles', number: 4, active: 1 %>
 </div>
 <script>
-    $(document).ready(function(){
       $("#album_name").trigger('focus');
-    })
+	    $("#album_name").on("keyup change", function() {
+	      var value = $("#album_name").val();
+	      $("#session_name").text(value);
+	      $("#session_name2").text(value);
+	      $("#session_name3").text(value.replace(/\s/g, ''));
+	      $("#new_photo").attr('id', 'butts');
+	    });
 </script>
 

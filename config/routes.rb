@@ -1,5 +1,6 @@
 BMRNG::Application.routes.draw do
 
+  get '/blog', to: redirect("http://google.com")
 
   resources :answers
 
@@ -29,7 +30,7 @@ BMRNG::Application.routes.draw do
       match :set_studio, via: [:get, :post]
       match :set_url, via: [:get, :post]
       match :set_logo, via: [:get, :post]
-      match :set_initial_questions, via: [:get, :post]
+      match :set_questions, via: [:get, :post]
       match :welcome_complete, via: [:get]
     end
   end
@@ -39,6 +40,9 @@ BMRNG::Application.routes.draw do
       get :destroy_session
       get :start_session
       get :load
+      get :save
+      match :ask_questions, via: [:get, :post]
+      get :thank_you
     end
   end
 
@@ -46,6 +50,7 @@ BMRNG::Application.routes.draw do
     member do
       get :display
       match :set_title, via: [:get, :post, :patch]
+      match :set_password, via: [:get, :patch]
       match :settings, via: [:get, :post, :patch]
     end
     resources :photos do

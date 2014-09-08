@@ -21,13 +21,7 @@
 
 	</div>
 	<%= javascript_include_tag 'fancyInput' %>
-	<script>
-		$('section :input').val('').fancyInput()[0].focus();
-	</script>
-    <%= render 'layouts/progress_circles', number: 6, active: 5 %>
+    <% if resource.status == 'created' %>
+        <%= render 'layouts/progress_circles', number: 6, active: 5 %>
+    <% end %>
 </div>
-<script>
-    $(document).ready(function(){
-      $("#user_name").trigger('focus');
-    });
-</script>

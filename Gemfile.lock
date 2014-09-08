@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/Loremaster/impressionist.git
+  revision: 8a5ac726c872873b9a0299fc3c8fc7f6d6f83553
+  specs:
+    impressionist (1.5.1)
+      httpclient (~> 2.2)
+      nokogiri (~> 1.5)
+
+GIT
   remote: git://github.com/rails/activerecord-session_store.git
   revision: e879bf087eb684452aaddb734efa20b95588b141
   specs:
@@ -88,9 +96,6 @@ GEM
     hike (1.2.3)
     httpclient (2.4.0)
     i18n (0.6.11)
-    impressionist (1.5.1)
-      httpclient (~> 2.2)
-      nokogiri (~> 1.5)
     jquery-fileupload-rails (0.4.1)
       actionpack (>= 3.1)
       railties (>= 3.1)
@@ -212,7 +217,7 @@ DEPENDENCIES
   dropzonejs-rails
   fancybox2-rails
   figaro
-  impressionist
+  impressionist!
   jquery-fileupload-rails
   jquery-rails
   masonry-rails

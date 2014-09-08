@@ -28,7 +28,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    authorize! :index, @user, :message => 'Not authorized as an administrator'
+    authorize! :index, @user #, :message => 'Not authorized as an administrator'
     @users = User.all
   end
 
@@ -108,13 +108,13 @@ class UsersController < ApplicationController
 
   def welcome
     unless resource.created?
-      byebug
       redirect_to user_path
     end
   end
 
   def set_human_name
-    if resource.update(params[:user])
+    resource.human_name = params[:user][:human_name]
+    if resource.save
       redirect_to set_studio_user_path(resource)
     else
       render :welcome
@@ -123,7 +123,8 @@ class UsersController < ApplicationController
 
   def set_studio
     if request.post?
-      if resource.update(params[:user])
+      resource.studio_name = params[:user][:studio_name]
+      if resource.save
         redirect_to set_url_user_path(resource)
       else
         render :set_studio
@@ -133,7 +134,8 @@ class UsersController < ApplicationController
 
   def set_url
     if request.post?
-      if resource.update(params[:user])
+      resource.name = params[:user][:name].gsub(' ', '')
+      if resource.save
         redirect_to set_logo_user_path(resource)
       else
         render :set_url
@@ -144,28 +146,30 @@ class UsersController < ApplicationController
   def set_logo
     if request.post?
       if resource.update(params[:user])
-        redirect_to set_initial_questions_user_path(resource)
+        redirect_to set_questions_user_path(resource)
       else
         render :set_logo
       end
     end
   end
 
-  def set_initial_questions
+  def set_questions
     if request.post?
+      params[:user] ||= {}
       if resource.update(params[:user].merge(status: 'active'))
         redirect_to welcome_complete_user_path(resource)
       else
-        render :set_initial_questions
+        @questions = []#Question.create(content: "May we please get your name?")
+        render :set_questions
       end
     end
   end
 
   def analytics
-		@most_viewed_albums = Album.where(user_id: current_user.id).
+		@most_viewed_albums = Album.where(user_id: current_user.id).where('impressions_count is not null').
                     order(:impressions_count).limit(10)
     photos = Photo.includes(:album).where('albums.user_id = ?', current_user.id)
-    @popular_pic_albums = photos.sort_by(&:followers_count).map{|p| p.album}.uniq![0..4] rescue []
+    @popular_pic_albums = photos.where(&:followers_count > 0).sort_by(&:followers_count).map{|p| p.album}.uniq![0..4] rescue []
   end
 
   def update_view

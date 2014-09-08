@@ -7,7 +7,11 @@ $grey: rgb(50,52,51);
 $lightGrey: #606060;
 $white: #ffffff;
 
-input[type="text"]{
+#main{
+  padding-top: 100px;
+}
+
+body.users input[type="text"]{
   background-color: #000;
   background-image: -moz-linear-gradient(top, #000, #000);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(#000));

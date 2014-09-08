@@ -1,6 +1,10 @@
 <div class="session_start">
-  <%= image_tag('upload_cloud.png') %>
-  <h1>NEW SESSION</h1>
+  <% if @album.status == 'created' %>
+      <%= image_tag('upload_cloud.png') %>
+      <h1>NEW SESSION</h1>
+  <% else %>
+    <h1>SETTINGS</h1>
+  <% end %>
 </div>
 <div class="session_start">
 	<%= simple_form_for @album, url: 'settings' do |f| %>
@@ -10,12 +14,6 @@
 			</div>
 			  <div class="form-inputs">
 			  	<div class="options_box">
-				    <h3>
-					    PASSWORD:
-					    <div class="make-switch">
-		    				<%= f.check_box :password_toggle %>
-						</div>
-					</h3>
 					<!--<h3>-->
 						<!--WATERMARK:-->
 					    <!--<div class="make-switch">-->
@@ -34,5 +32,6 @@
 			  <%= f.button :submit, "CONTINUE" %>
 	<% end %>
 	</div>
-    <%= render 'layouts/progress_circles', number: 3, active: 3 %>
+
+    <%= render 'layouts/progress_circles', number: 4, active: 4 %>
 </div>

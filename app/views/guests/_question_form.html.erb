@@ -1,0 +1,15 @@
+<%= simple_form_for :answers, url: ask_questions_guests_url, remote: true do |f| %>
+    <div class="question">
+        <h1><%= @question.content %></h1>
+        <%= f.hidden_field :question_id, value: @question.id %>
+        <%= f.hidden_field :questions, value: @questions %>
+        <%= f.hidden_field :album_id, value: @album_id %>
+        <div class='form-inputs'>
+            <%= f.input :content, label: false, as: :text %>
+        </div>
+    </div>
+    <%= f.submit 'CONTINUE' %>
+<% end %>
+<script>
+    $("#answers_content").trigger('focus');
+</script>

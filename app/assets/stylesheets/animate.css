@@ -377,7 +377,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 @-webkit-keyframes flipInX {
     0% {
         -webkit-transform: perspective(400px) rotateX(90deg);
-        opacity: 0;
+        opacity: 1;
     }
 
     40% {
@@ -396,7 +396,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 @-moz-keyframes flipInX {
     0% {
         -moz-transform: perspective(400px) rotateX(90deg);
-        opacity: 0;
+        opacity: 1;
     }
 
     40% {
@@ -415,7 +415,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 @-o-keyframes flipInX {
     0% {
         -o-transform: perspective(400px) rotateX(90deg);
-        opacity: 0;
+        opacity: 1;
     }
 
     40% {
@@ -434,7 +434,7 @@ body { /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
 @keyframes flipInX {
     0% {
         transform: perspective(400px) rotateX(90deg);
-        opacity: 0;
+        opacity: 1;
     }
 
     40% {

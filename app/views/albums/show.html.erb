@@ -1,6 +1,6 @@
 <div class="session_start">
 	<%= image_tag('upload_cloud.png') %>
-    <h1>NEW SESSION</h1>
+    <h1>UPLOAD PHOTOS</h1>
     <h4>Found at: http://www.<%= ENV['DISPLAY_DOMAIN'] %>/<%= current_user.url_name %>/<%= @album.name %></h4>
     <br>
   <%= form_for(Photo.new, html: { multipart: true, class: 'dropzone'}) do |f|  %>

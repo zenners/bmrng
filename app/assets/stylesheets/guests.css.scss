@@ -1,0 +1,24 @@
+$red: rgb(250, 35, 7);
+$blue: rgb(123,186,179);
+$black: rgb(24,25,23);
+$grey: rgb(50,52,51);
+$green: rgb(72,199,61);
+$lightGrey: #606060;
+$white: #ffffff;
+
+body.save input[type=text]{
+  color: $white;
+}
+
+body.guests .session_start{
+    color: $white;
+	text-align: center;
+	margin-bottom: 50px;
+	h1{
+	  margin-bottom: 80px;
+      font-family: GothamThin;
+	}
+    input{
+      color: $black;
+    }
+}

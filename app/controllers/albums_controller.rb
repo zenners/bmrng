@@ -5,7 +5,7 @@ class AlbumsController < ApplicationController
   before_filter :authenticate_user!, :except => [:display]
 
   # gather page impressions
-  impressionist actions: [:display]
+  #impressionist actions: [:display]
 
   def resource
     param = params['album_id'] || params['id']
@@ -32,13 +32,12 @@ class AlbumsController < ApplicationController
 
   def display
     if @user = User.find_by_name_or_id(params[:user_id])
-      if @album = @user.albums.active.where(name: params[:album_id].gsub(' ', '_')).first
-        @guests = Guest.where(album_id: @album.id).
-                        where(last_sign_in_ip: request.remote_ip)
+      if @album = @user.albums.active.where(name: params[:album_id].gsub(' ', '')).first
+        impressionist(@album)
       end
     end
     raise ActiveRecord::RecordNotFound unless @album
-    render partial: 'guests/load' and return if current_guest.blank?
+    session[:guest_id] = Guest.create unless current_guest
   end
 
   def new
@@ -51,7 +50,10 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    @album = Album.new(params[:album])
+    #fix the name up to not have spaces
+    name = params[:album].delete(:name)
+    name = name.gsub(' ', '')
+    @album = Album.new(params[:album].merge(name: name))
     @album.status = 'created'
 
     respond_to do |format|
@@ -70,10 +72,35 @@ class AlbumsController < ApplicationController
       resource.title = params[:album][:title]
       if resource.valid?
         resource.save
+        if resource.status == 'created'
+          redirect_to set_password_album_path
+        else
+          redirect_to resource.user
+        end
+      end
+    else
+      @album = resource
+    end
+  end
+
+  def set_password
+    if request.patch?
+      if params[:album][:password_toggle] == '1'
+        resource.password_toggle = 1
+        resource.password = params[:album][:password]
+        if resource.save
+          if resource.status == 'created'
+            redirect_to settings_album_path and return
+          else
+            redirect_to resource.user and return
+          end
+        end
+      else
         redirect_to settings_album_path
       end
+    else
+      @album = resource
     end
-    @album = resource
   end
 
   def settings

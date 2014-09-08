@@ -57,6 +57,7 @@ $white: #ffffff;
   line-height: 70px;
   font-size: 70px;
   background: #353535;
+  color: $white;
 }
 
 .big_input input.string.optional[type="text"]:focus {

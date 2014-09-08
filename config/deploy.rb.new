@@ -1,0 +1,128 @@
+# config valid only for Capistrano 3.2.1
+lock '3.2.1'
+
+## very ugly hask to force umask to 002 when creating and checking out the
+## repository cache on the remote server.  Should be a better way to do this
+#class Capistrano::Deploy::Strategy::RemoteCache < Capistrano::Deploy::Strategy::Remote
+#  private
+#  def update_repository_cache
+#    logger.trace "HACKED BY GARTH FOR UMASK: updating the cached checkout on all servers"
+#    command = "umask 002; if [ -d #{repository_cache} ]; then " +
+#        "#{source.sync(revision, repository_cache)}; " +
+#        "else #{source.checkout(revision, repository_cache)}; fi"
+#    scm_run(command)
+#  end
+#end
+
+def current_git_branch
+  $git_branch ||= begin
+    branch = `git symbolic-ref HEAD 2> /dev/null`.strip.gsub(/^refs\/heads\//, '')
+    puts "Deploying branch #{branch}"
+    branch
+  end
+end
+
+def default_stage_from_git
+  ({"master"=>"production", "beta"=>"staging"}[current_git_branch]) || current_git_branch
+end
+
+set :application, 'rpsf'
+set :repo_url, 'git@github.com:ghitchens/rpsf.git'
+set :branch, current_git_branch
+set :deploy_via, :remote_cache
+set :rails_env, default_stage_from_git
+set :test_log, "log/capistrano.test.log"
+
+role :web, "stuart.rosepointnav.com"
+role :app, "stuart.rosepointnav.com"
+role :db,  "stuart.rosepointnav.com", :primary => true
+
+namespace :deploy do
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "touch #{current_path}/tmp/restart.txt"
+  end
+
+  #before 'deploy:update_code' do
+  #  puts "--> Running tests, please wait ..."
+  #  unless system "bundle exec rake > #{test_log} 2>&1" #' > /dev/null'
+  #    puts "--> Tests failed. Run `cat #{test_log}` to see what went wrong."
+  #    exit
+  #  else
+  #    puts "--> Tests passed"
+  #    system "rm #{test_log}"
+  #  end
+  #end
+end
+
+set :stages, %w(bnw alpha staging production)
+set :default_stage, default_stage_from_git
+# Default branch is :master
+# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+
+# Default deploy_to directory is /var/www/my_app
+# set :deploy_to, '/var/www/my_app'
+
+# Default value for :scm is :git
+# set :scm, :git
+
+# Default value for :format is :pretty
+# set :format, :pretty
+
+# Default value for :log_level is :debug
+# set :log_level, :debug
+
+# Default value for :pty is false
+# set :pty, true
+
+# Default value for :linked_files is []
+# set :linked_files, %w{config/database.yml}
+
+# Default value for linked_dirs is []
+# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+
+# Default value for default_env is {}
+# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
+# Default value for keep_releases is 5
+set :keep_releases, 3
+
+#Create hooks to start, stop, and restart delayed jobs
+after "deploy:stop",    :delayed_job_stop
+after "deploy:start",   :delayed_job_start
+after "deploy:restart", :delayed_job_restart
+
+task :delayed_job_stop do
+  sudo "RAILS_ENV=#{rails_env} #{release_path}/script/delayed_job stop"
+end
+
+task :delayed_job_start do
+  sudo "RAILS_ENV=#{rails_env} #{release_path}/script/delayed_job start -u www-data #{args}"
+end
+
+task :delayed_job_restart do
+  sudo "RAILS_ENV=#{rails_env} #{release_path}/script/delayed_job restart -u www-data #{args}"
+end
+
+namespace :deploy do
+
+  desc 'Restart application'
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      # Your restart mechanism here, for example:
+      # execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
+
+  after :publishing, :restart
+
+  after :restart, :clear_cache do
+    on roles(:web), in: :groups, limit: 3, wait: 10 do
+      # Here we can do anything such as:
+      # within release_path do
+      #   execute :rake, 'cache:clear'
+      # end
+    end
+  end
+
+end

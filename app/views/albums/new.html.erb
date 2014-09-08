@@ -6,6 +6,7 @@
 <% if current_user.admin? %>
     <%= render 'form' %>
 <%elsif current_user.active?%>
-    <%= render('silver_form') %>
+    <%# render('silver_form') %>
+    <%= render 'form' %>
 <% end %>
 <%= render 'form_scripts' %>

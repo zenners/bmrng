@@ -1,5 +1,6 @@
 class Album < ActiveRecord::Base
-  is_impressionable counter_cache: true, unique: :ip_address
+  is_impressionable counter_cache: true
+  accepts_nested_attributes_for :impressions
 
 ## ========================== ATTRIBUTES ACCESSIBLE ==============================
 

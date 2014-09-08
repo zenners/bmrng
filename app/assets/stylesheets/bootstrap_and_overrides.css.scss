@@ -48,6 +48,7 @@ body{
       margin-top: 100px;
       margin-bottom: 60px;
     }
+  overflow-y: visible;
 }
 
 .brand{
@@ -63,10 +64,10 @@ h1{
 .navbar-inverse .nav-collapse .nav  li a:hover{
   background-color: $grey;
 }
-.navbar-fixed-bottom{
-  position: absolute;
-  bottom: 0px;
-}
+//.navbar-fixed-bottom{
+//  position: absolute;
+//  bottom: 0px;
+//}
 
 .dropdown-menu {
 	position: absolute;
@@ -191,7 +192,7 @@ a{
 	-webkit-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.2), 0 0px 0px rgba(0, 0, 0, 0.05);
 	-moz-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.2), 0 0px 0px rgba(0, 0, 0, 0.05);
 	box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.2), 0 0px 0px rgba(0, 0, 0, 0.05);
-	width: 100% !important;
+	width: 200px !important;
 	height: 30px;
 	text-shadow: none;
 }

@@ -24,6 +24,9 @@
     <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
     <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
 </div>
+<div class='field'>
+  <%= label_tag :plan, "Subscription Period" %>
+  <%= f.select :plan, options_for_select(Subscription.available_plans), {:include_blank => "Select Subscription Period", class: :subscription} %>
+</div>
 
-
-<%= f.submit %>
+<%= f.button :submit, 'Update Subscription', :class => 'btn-primary' %>

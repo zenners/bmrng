@@ -4,3 +4,8 @@
 	<%= image_tag('heart.png', :class => "small-heart") %>
 <% end %>
 </span>
+<script>
+//  $('.fave_options.<%= photo.id%>').hide();
+//  $('.fave_options.<%= photo.id%>').attr('style', 'display:block');
+  $('.fave_options.<%= photo.id%>').addClass("animated flipInX");
+</script>
