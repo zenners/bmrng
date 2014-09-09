@@ -1,6 +1,6 @@
 class CreateIntialStripeSubscription < ActiveRecord::Migration
   def change
-    plan = Stripe::Plan.retrieve('month')
+    plan = Stripe::Plan.retrieve('month') rescue nil
     unless plan
       Stripe::Plan.create(
         :amount => 30,
@@ -10,7 +10,7 @@ class CreateIntialStripeSubscription < ActiveRecord::Migration
         :id => 'month'
       )
     end
-    plan = Stripe::Plan.retrieve('year')
+    plan = Stripe::Plan.retrieve('year') rescue nil
     unless plan
       Stripe::Plan.create(
         :amount => 330,
