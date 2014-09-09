@@ -17,24 +17,9 @@ require 'capistrano/deploy'
 # require 'capistrano/rvm'
 # require 'capistrano/rbenv'
 # require 'capistrano/chruby'
-require 'capistrano/bundler'
+# require 'capistrano/bundler'
 # require 'capistrano/rails/assets'
 # require 'capistrano/rails/migrations'
-require 'capistrano/rails'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
-Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
-
-def current_git_branch
-  $git_branch ||= begin
-    branch = `git symbolic-ref HEAD 2> /dev/null`.strip.gsub(/^refs\/heads\//, '')
-    puts "Deploying branch #{branch}"
-    branch
-  end
-end
-
-def default_stage_from_git
-  ({"master"=>"production", "beta"=>"staging"}[current_git_branch]) || current_git_branch
-end
-
-invoke default_stage_from_git
+Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }
