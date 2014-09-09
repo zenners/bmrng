@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :setup_mailer_host
 
-  rescue_from RuntimeError::VisibleError,     with: :rescue_visible_error_in_public
+  rescue_from RuntimeError,     with: :rescue_visible_error_in_public
 
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to home_path, :alert => exception.message
