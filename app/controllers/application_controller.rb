@@ -5,8 +5,33 @@ class ApplicationController < ActionController::Base
 
   before_filter :setup_mailer_host
 
+  rescue_from RuntimeError::VisibleError,     with: :rescue_visible_error_in_public
+
   rescue_from CanCan::AccessDenied do |exception|
     redirect_to home_path, :alert => exception.message
+  end
+
+  def rescue_action_in_public(exception)
+    logger.info "Got Exception: #{exception.inspect}"
+    case exception
+      when ::ActionController::UnknownController,
+           ::ActionController::ActionNotFound,
+           ::ActionController::RoutingError,
+           ::ActionController::NoMethodError
+        render_404
+      else
+        deliverer = self.class.exception_data
+        data = case deliverer
+          when nil then {}
+          when Symbol then send(deliverer)
+          when Proc then deliverer.call(self)
+               end
+        unless request.headers['USER_AGENT'].include?("bot")
+          ExceptionNotifier.exception_notification(
+            exception, self, request, data).deliver
+        end
+        render_500
+    end
   end
 
   def setup_mailer_host
