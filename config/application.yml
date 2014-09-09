@@ -11,8 +11,8 @@ ADMIN_NAME: Chris Dutton
 ADMIN_EMAIL: chris@aquatic-edge.com
 ADMIN_PASSWORD: 05test05
 ROLES: [admin, silver, gold, platinum]
-STRIPE_API_KEY: Your_Stripe_API_key
-STRIPE_PUBLIC_KEY: Your_Stripe_Public_Key
+STRIPE_API_KEY: sk_live_UyCk8CQd1HvLZjzO0Cs06GEX
+STRIPE_PUBLIC_KEY: pk_live_GpRpRJm5lLT9gh9GIvNKW6Cr
 amazon_access_key_id: AKIAJRZOY2M5T5IPZSKA
 amazon_secret_access_key: b0LxrlvB4f8OG6HLmsNDEAmtuAGZNoi5IvSPP+Os
 #amazon_access_key_id: AKIAJNOGJIXZ6YT34HUA
