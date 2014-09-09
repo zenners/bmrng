@@ -23,11 +23,13 @@ BMRNG::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.middleware.use ExceptionNotifier,
+  config.middleware.use ExceptionNotification::Rack,
+  :email => {
     :email_prefix => "[BOOM CRASH] ",
     :sender_address => %{"no-reply@boomerangproof.com" <no-reply@boomerangproof.com>},
     :exception_recipients => %w{chris@boomerangproof.com},
     :ignore_crawlers => %w{Googlebot bingbot Ezooms AhrefsBot SiteExplorer}
+  }
     
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
