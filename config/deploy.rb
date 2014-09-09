@@ -1,8 +1,45 @@
 # config valid only for Capistrano 3.1
 lock '3.2.1'
+def current_git_branch
+  $git_branch ||= begin
+    branch = `git symbolic-ref HEAD 2> /dev/null`.strip.gsub(/^refs\/heads\//, '')
+    puts "Deploying branch #{branch}"
+    branch
+  end
+end
+
+def default_stage_from_git
+  ({"master"=>"production"}[current_git_branch]) || current_git_branch
+end
 
 set :application, 'boom'
 set :repo_url, 'git@bitbucket.org:boomerangproof/bmrng.git'
+set :branch, current_git_branch
+set :deploy_via, :remote_cache
+set :rails_env, default_stage_from_git
+set :test_log, "log/capistrano.test.log"
+set :stages, %w(staging production)
+set :default_stage, default_stage_from_git
+set :user, 'deployer'
+set :keep_releases, 3
+
+role :web, 'boomerangproof.com'
+role :app, 'boomerangproof.com'
+role :db,  'boomerangproof.com', :primary => true
+
+#The server command must be below the definition of roles. This is to fix
+#authentication where otherwise connection is attempted with 'user'
+server 'boomerangproof.com', user:fetch(:user), roles:%w{web app db}
+
+# SSH Options
+# See the example commented out section in the file
+# for more options.
+set :ssh_options, {
+    forward_agent: false,
+    auth_methods: %w(password),
+    password: 'Boot9Lak',
+    user: 'deployer',
+}
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
@@ -23,7 +60,7 @@ set :repo_url, 'git@bitbucket.org:boomerangproof/bmrng.git'
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml}
+#set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}

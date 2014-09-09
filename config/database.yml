@@ -29,11 +29,20 @@ test:
   password:
   host: localhost
 
+staging:
+  adapter: mysql2
+  encoding: utf8
+  database: BMRNG_production
+  pool: 5
+  username: bmrng
+  password: HollaBack222
+  host: localhost
+
 production:
   adapter: mysql2
   encoding: utf8
   database: BMRNG_production
   pool: 5
-  username: root
-  password:
+  username: bmrng
+  password: HollaBack222
   host: localhost
