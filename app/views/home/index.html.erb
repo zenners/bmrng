@@ -185,11 +185,17 @@
         </div>
         <div class="span5">
           <div class='sign_up'>
-            <%= image_tag('home/logo_w_tag.png') %>
-            <div class='cc'>
-                <div class='card_title'>START YOUR FIRST MONTH</div>
-                <%= render  partial: 'devise/registrations/form', locals: {btn_value: 'SUBMIT, LETS DO THIS'} %>
-            </div>
+              <% if Rails.env.production? %>
+                    <%= image_tag('home/logo_w_tag.png') %>
+                    <div class='cc'>
+                        <div class='card_title'>START YOUR FIRST MONTH</div>
+                        <%= render  partial: 'devise/registrations/form', locals: {btn_value: 'SUBMIT, LETS DO THIS'} %>
+                    </div>
+              <% else %>
+                <div style='padding-top: 40%;padding-left:15%;'>
+                    SIGN UP COMING SOON!
+                </div>
+              <% end %>
           </div>
         </div>
       </div>

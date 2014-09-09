@@ -25,13 +25,13 @@ set :user, 'www-data'
 set :password, ask('Server password',nil)
 set :keep_releases, 3
 
-role :web, 'web.boomerangproof.com'
-role :app, 'web.boomerangproof.com'
-role :db,  'db.boomerangproof.com', :primary => true
+role :web, 'boomerangproof.com'
+role :app, 'boomerangproof.com'
+role :db,  'boomerangproof.com', :primary => true
 
 #The server command must be below the definition of roles. This is to fix
 #authentication where otherwise connection is attempted with 'user'
-server 'web.boomerangproof.com', user:fetch(:user), password:fetch(:password), roles:%w{web app db}
+server 'boomerangproof.com', user:fetch(:user), password:fetch(:password), roles:%w{web app db}
 # Default branch is :master
 #ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
@@ -51,7 +51,7 @@ server 'web.boomerangproof.com', user:fetch(:user), password:fetch(:password), r
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{config/database.yml config/secrets.yml}
+set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}

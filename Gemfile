@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
+gem 'capistrano', '>= 3.2'#, require: false, group: :debugger
+gem 'capistrano-bundler', '~> 1.1.2'#, require: false, group: :debugger
+gem 'capistrano-rails', '~> 1.1'#, require: false, group: :debugger
+gem 'net-ssh', '>= 2.9.1'#, require: false, group: :debugger #2.9.1 fixes auth issue
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
 # Use mysql as the database for Active Record
@@ -61,9 +65,6 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
-# Use Capistrano for deployment
-gem 'capistrano', group: :development
 
 # Use debugger
 gem 'byebug', group: [:development, :test]
