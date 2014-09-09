@@ -31,6 +31,7 @@ gem 'fancybox2-rails'
 gem 'impressionist', github: 'Loremaster/impressionist'
 gem 'masonry-rails'
 gem 'paperclip'
+gem 'exception_notification'
 gem 'protected_attributes' #TODO: this is a hack gem to allow attr_accessible
 gem 'jquery-fileupload-rails'
 gem 'figaro' #TODO: Instead of in source this should be a system file
