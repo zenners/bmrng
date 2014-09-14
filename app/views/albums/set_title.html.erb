@@ -1,6 +1,10 @@
 <div class="session_start">
-  <%= image_tag('upload_cloud.png') %>
-  <h1>NEW SESSION</h1>
+      <% if @album.status == 'created' %>
+      <%= image_tag('upload_cloud.png') %>
+      <h1>NEW SESSION</h1>
+    <% else %>
+      <h1>CHANGE TITLE</h1>
+    <% end %>
 </div>
 <div class="session_start">
 	<%= simple_form_for @album, url: 'set_title' do |f| %>
@@ -17,10 +21,9 @@
 
 	</div>
 	<%= javascript_include_tag 'fancyInput' %>
-	<script>
-		$('section :input').val('').fancyInput()[0].focus();
-	</script>
-    <%= render 'layouts/progress_circles', number: 4, active: 2 %>
+    <% if @album.status == 'created' %>
+        <%= render 'layouts/progress_circles', number: 4, active: 2 %>
+    <% end %>
 </div>
 <script>
       $("#album_title").trigger('focus');

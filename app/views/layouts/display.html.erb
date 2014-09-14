@@ -13,6 +13,9 @@
     <%= javascript_include_tag "jquery.grid-a-licious.min" %>
     <%= csrf_meta_tags %>
     <%= yield(:head) %>
+    <style>
+      body.albums{padding-top: 0px;}
+    </style>
   </head>
   <body id='body' class="<%= controller_name %> <%= action_name %>">
     <div id="main" role="main">

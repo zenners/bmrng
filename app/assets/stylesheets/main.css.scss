@@ -18,6 +18,9 @@ $white: #ffffff;
 //    padding: 7px;
 //  }
 //}
+body.sessions, body.albums {
+  padding-top: 100px;
+}
 
 .login_logo{
   text-align: center;
@@ -54,6 +57,7 @@ $white: #ffffff;
 .big_input input.string.optional[type="text"] {
   border: 0px;
   height: 80px;
+  min-width: 700px;
   line-height: 70px;
   font-size: 70px;
   background: #353535;

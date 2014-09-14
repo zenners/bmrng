@@ -32,6 +32,7 @@
 			  <%= f.button :submit, "CONTINUE" %>
 	<% end %>
 	</div>
-
-    <%= render 'layouts/progress_circles', number: 4, active: 4 %>
+    <% if @album.status == 'created' %>
+      <%= render 'layouts/progress_circles', number: 4, active: 4 %>
+    <% end %>
 </div>

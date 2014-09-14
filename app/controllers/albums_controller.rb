@@ -112,7 +112,11 @@ class AlbumsController < ApplicationController
       if resource.valid?
         resource.save
         respond_to do |format|
-          format.html { redirect_to resource }
+          if resource.status == 'created'
+            format.html { redirect_to resource }
+          else
+            format.html {redirect_to resource.user}
+          end
         end
       end
     end
