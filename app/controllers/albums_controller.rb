@@ -108,11 +108,12 @@ class AlbumsController < ApplicationController
       resource.social = params[:album][:social]
       #@resource.watermark = params[:album][:watermark] #TODO: future feature
       resource.password = params[:album][:social]
+      status = resource.status
       resource.status = 'active'
       if resource.valid?
         resource.save
         respond_to do |format|
-          if resource.status == 'created'
+          if status == 'created'
             format.html { redirect_to resource }
           else
             format.html {redirect_to resource.user}

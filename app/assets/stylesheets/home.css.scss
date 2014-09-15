@@ -82,8 +82,9 @@ body.home .btn{
     @media(min-width: 980px){
      top: 40px;
     }
-    width: 15%;
+    width: 150px;
     z-index: 100;
+    top: 0px;
   }
   .title{
     width: 70%;
@@ -295,6 +296,7 @@ body.home .btn{
     }
     p{
         font-size: 24px;
+        padding-top: 50px;
       }
   }
   .sign_up {

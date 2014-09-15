@@ -19,7 +19,9 @@ $white: #ffffff;
 //  }
 //}
 body.sessions, body.albums {
-  padding-top: 100px;
+  @media(min-width: 980px){
+    padding-top: 100px;
+  }
 }
 
 .login_logo{
