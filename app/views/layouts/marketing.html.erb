@@ -13,11 +13,13 @@
     <%= stylesheet_link_tag "bootstrap.min", "bootstrap-responsive.min" %>
   </head>
   <body class="<%= controller_name %> <%= action_name %>" data-spy="scroll" data-target=".navbar">
-    <div class="navbar navbar-fixed-top fixed animated fadeInDownBig  no-print">
-      <nav class="navbar-inner">
-        <%= render 'layouts/home_navigation' %>
-      </nav>
-    </div>
+    <% if request.domain.split('.').first != ENV['DISPLAY_DOMAIN'].split('.').first %>
+      <div class="navbar navbar-fixed-top fixed animated fadeInDownBig  no-print">
+        <nav class="navbar-inner">
+          <%= render 'layouts/home_navigation' %>
+        </nav>
+      </div>
+    <% end %>
     <div id="main" role="main">
         <div class="content">
               <%= yield %>
