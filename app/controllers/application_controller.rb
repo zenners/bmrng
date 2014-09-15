@@ -52,7 +52,11 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if resource.active?
-      users_path
+      if resource.admin?
+        users_path
+      else
+        user_path(resource)
+      end
     elsif resource.expired?
       #TODO: expired_path
     elsif resource.created?
