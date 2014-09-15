@@ -6,8 +6,8 @@
     <title><%= content_for?(:title) ? yield(:title) : "BOOMERANG" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "BOOMERANG" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
-    <%# javascript_include_tag "application" %>
-    <%= javascript_include_tag "jquery", "bootstrap.min", "scroller.js", "modernizer.custom" %>
+    <%= javascript_include_tag "application" %>
+    <%# javascript_include_tag "jquery", "bootstrap.min", "scroller.js", "modernizer.custom" %>
     <%# TODO: Should not need fancyInput, but wasn't looking in asset pipeline %>
     <%= javascript_include_tag "fancyInput" %>
     <%= csrf_meta_tags %>
