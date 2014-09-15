@@ -1,4 +1,4 @@
-<%= link_to image_tag(@album.user.logo.url(:thumb), height: '50px'), @album.user.link, :target => "blank"%>
+<%= link_to image_tag(@album.user.logo.url(:thumb), class: 'nav_img'), @album.user.link, :target => "blank"%>
 <span class="album_title">
   <%= @album.title %>
 </span>
