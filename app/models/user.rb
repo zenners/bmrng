@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
       :thumb    => ['200x30',   :jpg]
     },
     #:convert_options => { :all => '-background white -flatten +matte' },
-    :default_url => "/images/missing.png"
+    :default_url => "/images/original/missing.png"
   validates_attachment_content_type :logo, :content_type => ["image/jpg",
                                                              "image/jpeg",
                                                              "image/png",
