@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   has_attached_file :logo,
     :styles => {
       :original => ['400x400', :jpg],
-      :thumb    => ['200x30',   :jpg]
+      :thumb    => ['200x50',   :jpg]
     },
     #:convert_options => { :all => '-background white -flatten +matte' },
     :default_url => "/images/original/missing.png"
