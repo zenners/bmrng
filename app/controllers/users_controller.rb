@@ -168,6 +168,7 @@ class UsersController < ApplicationController
   def analytics
 		@most_viewed_albums = Album.where(user_id: current_user.id).where('impressions_count is not null').
                     order(:impressions_count).limit(10)
+    # BUGBUG CHRISDO TODO: This doesn't work...
     photos = Photo.includes(:album).where('albums.user_id = ?', current_user.id)
     @popular_pic_albums = photos.where(&:followers_count > 0).sort_by(&:followers_count).map{|p| p.album}.uniq![0..4] rescue []
   end

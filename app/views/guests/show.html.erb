@@ -20,36 +20,36 @@
 
   <input type="button" value="PRINT" onclick="printpage()" class="btn short">
 </div>
-<div class="span5 set_5">
+<div class="span5">
   <h2>FAVES<%= image_tag('heart_red.png', :width => "40px") %></h2>
-  <% @guest.all_follows.each do |photo| %>
-    <div class="image_box">
+  <% @guest.all_follows.each do |follow| %>
+    <div class="report_image_box">
+      <%= image_tag(follow.followable.photo.url(:medium)) %>
       <div class="image_title">
-        <%= photo.photo_file_name[0..10] %>
+        <%= follow.followable.photo_file_name %>
       </div>
-      <%= image_tag(photo.photo.url(:thumb), :width => "200px") %>
-    </div>
-    <div class="extras_container">
-      <div class="fave_heart">
-        <%= image_tag('heart_red.png', :width => "40px") %>
-      </div>
-      <div class="grey_ball">
-        <%= photo.followers_count %>
+      <div class='raves'>
+          <div class="grey_ball">
+            <%= follow.followable.followers_count %>
+          </div>
+          RAVES
       </div>
     </div>
   <% end %>
 </div>
-<div class="span3 set_5 raves pull-right">
+<div class="span3">
   <h2>RAVES <span class="top5">TOP 5</span></h2>
   <% @popular_pics.each do |rave| %>
-    <div class="image_box">
-      <%= image_tag(rave.photo.url, :width => "200px") %>
-    </div>
-    <div class="extras_container">
-      <div class="grey_ball">
-        <%= rave.followers_count %>
+    <div class='row'>
+        <div class="report_image_box">
+          <%= image_tag(rave.photo.url(:medium)) %>
+          <div class='side_raves'>
+            <div class="grey_ball">
+              <%= rave.followers_count %>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
   <% end %>
 </div>
 

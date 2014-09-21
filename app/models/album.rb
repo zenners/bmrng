@@ -48,10 +48,18 @@ class Album < ActiveRecord::Base
     "http://www.#{ENV['DISPLAY_DOMAIN']}/#{user.url_name}/#{name}"
   end
 
+  def top_photos
+    #MAJOR HACK!!! BAD PERF!!! THIS SHOULD BE A SCOPE
+    photos.map{|p| p.followers_count > 0 ? [p.id, p.followers.count] : nil}.
+           compact.sort_by{|p| -p[1]}[0..4].map{|p| Photo.find p[0]}
+  end
+
   private
 
   def ensure_url_save_name
     self.name = name.gsub(' ', '_')
   end
+
+
 
 end
