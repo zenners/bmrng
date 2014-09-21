@@ -32,10 +32,10 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		$(".fancybox").fancybox({
-            openEffect  : 'none',
-            closeEffect : 'none',
-            nextEffect  : 'none',
-            prevEffect  : 'none',
+//            openEffect  : 'none',
+//            closeEffect : 'none',
+//            nextEffect  : 'none',
+//            prevEffect  : 'none',
             padding     : 0,
             margin      : [20, 60, 20, 60], // Increase left/right margin
             beforeShow: function () {
@@ -44,11 +44,18 @@
                         // New line
                         this.title += '<br />';
 
+                        // Add Facebook like button
+                        this.title += '<a href="http://www.facebook.com/sharer.php?s=100&p[url]=' + '<%= @album.url %>' + '&p[images][0]=' + this.href + '&p[title]=Proof of recent photoshoot">Face</a>'
+                        //this.title += '<iframe src="//www.facebook.com/plugins/like.php?href=' + this.href + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
+
                         // Add tweet button
                         this.title += '<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-url="' + this.href + '">Tweet</a> ';
 
-                        // Add FaceBook like button
-                        this.title += '<iframe src="//www.facebook.com/plugins/like.php?href=' + this.href + '&amp;layout=button_count&amp;show_faces=true&amp;width=500&amp;action=like&amp;font&amp;colorscheme=light&amp;height=23" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:23px;" allowTransparency="true"></iframe>';
+                        // Pintrest
+                        this.title += '<a href="https://pinterest.com/pin/create/bookmarklet/?media=' + this.href + '&url=' + '<%= @album.url %>' + '&is_video=false&description=Proof of recent photoshoot">PIN</a>'
+
+                        // tumblr
+                        this.title += '<a href="http://www.tumblr.com/share/link?url=' + '<%= @album.url %>' + '&name=' + '<%= @album.title %>' + '&description=Proof of recent photoshoot">TUMBLR</a>'
                     <% end %>
                 }
                 /* Disable right click */
@@ -58,7 +65,7 @@
             },
             afterShow: function() {
                 // Render tweet button
-                twttr.widgets.load();
+                //twttr.widgets.load();
 
                 $(".fancybox-title").wrapInner('<div />').show();
 
