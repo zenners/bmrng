@@ -11,7 +11,7 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require fancybox
+//= require jquery.fancybox
 //= require jquery_ujs
 //= require bootstrap.min
 //= require dropzone
