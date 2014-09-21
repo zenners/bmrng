@@ -42,7 +42,7 @@
                 if (this.title) {
                     <% if @album.social %>
                         // New line
-                        this.title += '<br />';
+                        this.title += '<span class="social">';
 
                         // Add Facebook like button
                         this.title += '<a href="http://www.facebook.com/sharer.php?s=100&p[url]=' + '<%= @album.url %>' + '&p[images][0]=' + this.href + '&p[title]=Proof of recent photoshoot">Face</a>'
@@ -56,6 +56,8 @@
 
                         // tumblr
                         this.title += '<a href="http://www.tumblr.com/share/link?url=' + '<%= @album.url %>' + '&name=' + '<%= @album.title %>' + '&description=Proof of recent photoshoot">TUMBLR</a>'
+
+                        this.title += '</span>'
                     <% end %>
                 }
                 /* Disable right click */
