@@ -135,7 +135,7 @@ a.btn {
 		bottom: 0px;
 		width: 0;
 		height: 0; 
-		border-bottom: 35px solid $red; 
+		border-bottom: 35px solid $red;
 		border-right: 35px solid transparent;
 		color: $white;
 		cursor: pointer;
@@ -178,8 +178,58 @@ a.btn {
 	}
 }
 
+.fancybox-title {
+  .fave_controls{
+		position: absolute;
+		bottom: 50px;
+		width: 30;
+		height: 0;
+		border-bottom: 50px solid transparent; // Should be red
+		border-right: 50px solid transparent;
+		color: $white;
+		cursor: pointer;
+		.fave_heart{
+            img{
+              padding-left: 10px;
+            }
+            //margin-top: 30px;
+            //margin-left: 10px;
+            //margin-bottom: 20px;
+			p{
+				//margin: -20px 20px 0px 0px;
+				a{
+					color: $white;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.fave_controls:hover{
+		border-bottom: 50px solid transparent;
+		border-right: 50px solid transparent;
+	}
+	.fave_count{
+		position: absolute;
+		bottom: 65px;
+		right: 15px;
+		background: #000;
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+        opacity: 0.75;
+		font-size: 15px;
+		p{
+			margin-top: 10px;
+            padding-left: 12px;
+            color: white;
+            font-family: 'GothamMedium';
+		}
+	}
+}
+
 .social{
   float: right;
+  font-size: medium;
 }
 
 .welcome_screen{
