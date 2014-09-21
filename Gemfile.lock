@@ -97,8 +97,6 @@ GEM
       actionmailer (>= 3.0.4)
       activesupport (>= 3.0.4)
     execjs (2.2.1)
-    fancybox2-rails (0.2.8)
-      railties (>= 3.1.0, < 5.0)
     figaro (0.7.0)
       bundler (~> 1.0)
       rails (>= 3, < 5)
@@ -227,7 +225,6 @@ DEPENDENCIES
   devise
   dropzonejs-rails
   exception_notification
-  fancybox2-rails
   figaro
   impressionist!
   jquery-fileupload-rails
