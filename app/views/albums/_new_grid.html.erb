@@ -2,7 +2,7 @@
     <section class="grid-wrap">
         <ul class="grid">
             <li class="grid-sizer"></li>
-            <% for photo in @album.photos %>
+            <% for photo in @photos %>
               <li class="image_container">
                 <figure>
                     <a title='<%=photo.photo_file_name.split('.').first%>' class='fancybox' rel='group' href='<%= photo.photo.url(:original) %>' data-photo-id="fave-<%= photo.id %>">

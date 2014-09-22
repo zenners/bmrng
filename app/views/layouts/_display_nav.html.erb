@@ -4,5 +4,10 @@
 </span>
 
 <span class="pull-right">
-    <%= link_to image_tag('cloud.png', :width => "50") + " SAVE", save_guests_path(album_id: @album.id) %>
+  <% if params[:faves] == "true" %>
+    <%= link_to(image_tag('x.png', width: 50) + " VIEW ALL", url_for())%>
+  <% else %>
+    <%= link_to(image_tag('heart.png', width: 50) + " VIEW FAVES", url_for(faves: true)) %>
+  <% end %>
+  <%= link_to image_tag('cloud.png', width: 50) + " SAVE", save_guests_path(album_id: @album.id) %>
 </span>

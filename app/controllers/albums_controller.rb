@@ -38,6 +38,11 @@ class AlbumsController < ApplicationController
     end
     raise ActiveRecord::RecordNotFound unless @album
     session[:guest_id] = Guest.create.id unless current_guest
+    @photos = if params[:faves] == "true"
+      current_guest.all_following
+    else
+      @album.photos
+    end
   end
 
   def new
