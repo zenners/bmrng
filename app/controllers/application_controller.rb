@@ -76,7 +76,6 @@ class ApplicationController < ActionController::Base
 
   def current_guest
     @current_guest ||= Guest.find(session[:guest_id]) rescue nil if session[:guest_id]
-
   end
   
 end

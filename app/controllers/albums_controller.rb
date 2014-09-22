@@ -37,7 +37,7 @@ class AlbumsController < ApplicationController
       end
     end
     raise ActiveRecord::RecordNotFound unless @album
-    session[:guest_id] = Guest.create unless current_guest
+    session[:guest_id] = Guest.create.id unless current_guest
   end
 
   def new

@@ -3,7 +3,7 @@
 
 		<h1>WELCOME!</h1>
 		<h3>IS THIS YOUR FIRST TIME HERE?<br> WHAT DO YOU WANT US TO CALL YOU?</h3>
-		<%= simple_form_for(Guest.new, html: { class: 'super_focus' }) do |f| %>
+		<%= simple_form_for(@guest, html: { class: 'super_focus' }) do |f| %>
 		  <%= f.error_notification %>
 		  <%= f.hidden_field :album_id, :value => @album.id %>
 		  <%= f.hidden_field :album_url, :value => request.original_url %>

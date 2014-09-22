@@ -9,15 +9,14 @@ class GuestsController < ApplicationController
     end
   end
 
-  def create
-    @guest = Guest.new(params[:guest])
-
+  def update
+    current_guest.attributes = params[:guest]
 
     get_questions(params[:guest][:album_id])
 
-    if @guest.save
-      session[:guest_name] = @guest.name
-      session[:guest_id] = @guest.id
+    if current_guest.save
+      session[:guest_name] = current_guest.name
+      #session[:guest_id] = current_guest.id
       @album = Album.find(params[:guest][:album_id])
       if @question
         render 'guests/ask_questions' and return
@@ -48,6 +47,8 @@ class GuestsController < ApplicationController
   def start_session
     @guest = Guest.find(params[:guest_id])
     @album = Album.find(params[:album_id])
+    #add the follows that may have been created in this session
+    @guest.follows << current_user.all_follows
     session[:guest_name] = @guest.name
     session[:guest_id] = @guest.id
     get_questions(params[:album_id])
@@ -66,6 +67,7 @@ class GuestsController < ApplicationController
 
   def save
     @album = Album.find(params[:album_id])
+    @guest = current_guest || Guest.new
     @guests = Guest.where(album_id: @album.id).
                       where(last_sign_in_ip: request.remote_ip)
       render 'guests/welcome' and return
