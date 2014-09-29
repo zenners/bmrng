@@ -183,7 +183,10 @@ a.btn {
 .fancybox-title {
   .fave_controls{
 		position: absolute;
-		bottom: 115px;
+        bottom: 115px;
+        @media (max-width: 768px) {
+          bottom: 92px;
+        }
 		width: 30;
 		height: 0;
 		color: $white;
@@ -207,6 +210,9 @@ a.btn {
 	.fave_count{
 		position: absolute;
 		bottom: 65px;
+        @media (max-width: 768px) {
+          bottom: 42px;
+        }
 		right: 15px;
 		background: #000;
 		width: 50px;
