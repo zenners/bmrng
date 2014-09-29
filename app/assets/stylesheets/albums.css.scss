@@ -1,6 +1,6 @@
 // ============= COLORS =================
 
-$red: rgb(199,70,61);
+$red: #ff3300; //rgb(199,70,61);
 $blue: rgb(123,186,179);
 $black: rgb(24,25,23);
 $grey: rgb(50,52,51);
@@ -15,7 +15,7 @@ a.btn {
   cursor: pointer;
   display: inline-block;
   width: 75px;
-  color: red;
+  color: $red;
 }
 
 .session_start{
@@ -135,13 +135,14 @@ a.btn {
 		bottom: 0px;
 		width: 0;
 		height: 0; 
-		border-bottom: 35px solid $red;
-		border-right: 35px solid transparent;
+		border-bottom: 90px solid $red;
+		border-right: 90px solid transparent;
 		color: $white;
 		cursor: pointer;
 		.fave_heart{
             img{
-              padding-left: 3px;
+              padding-left: 13px;
+              padding-top: 40px;
             }
             //margin-top: 30px;
             //margin-left: 10px;
@@ -156,24 +157,25 @@ a.btn {
 		}
 	}
 	.fave_controls:hover{
-		border-bottom: 35px solid $grey; 
-		border-right: 35px solid transparent;
+		border-bottom: 90px solid $red;
+		border-right: 90px solid transparent;
 	}
 	.fave_count{
 		position: absolute;
 		bottom: 15px;
 		right: 15px;
 		background: #000;
-		width: 35px;
-		height: 35px;
+		width: 50px;
+		height: 50px;
 		border-radius: 50%;
         opacity: 0.75;
 		font-size: 15px;
 		p{
-			margin-top: 10px;
-            padding-left: 12px;
+            font-size: x-large;
+			margin-top: 17px;
+            padding-left: 17px;
             color: white;
-            font-family: 'GothamMedium';
+            font-family: 'GothamThin';
 		}
 	}
 }
