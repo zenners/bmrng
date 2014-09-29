@@ -1,8 +1,8 @@
 <% photo ||= @photo %>
-<span class="fave_heart">
+<span class="fave_corner">
 <%= link_to fave_photo_path(:id => photo.id), :remote => true do %>
-	<%= image_tag('heart.png', :class => "small-heart") %>
-    <%# image_tag('heart.png', :class => "small-heart") %>
+	<%# image_tag('heart.png', :class => "small-heart") %>
+    <%= image_tag('corner.png') %>
 <% end %>
 </span>
 <script>

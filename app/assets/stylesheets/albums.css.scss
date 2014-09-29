@@ -132,11 +132,11 @@ a.btn {
     //padding: 12px;
 	.fave_controls{
 		position: absolute;
-		bottom: 0px;
+		bottom: 65px;
 		width: 0;
-		height: 0; 
-		border-bottom: 90px solid $red;
-		border-right: 90px solid transparent;
+		height: 0;
+		//border-bottom: 90px solid $red;
+		//border-right: 90px solid transparent;
 		color: $white;
 		cursor: pointer;
 		.fave_heart{
@@ -156,10 +156,10 @@ a.btn {
 			}
 		}
 	}
-	.fave_controls:hover{
-		border-bottom: 90px solid $red;
-		border-right: 90px solid transparent;
-	}
+	//.fave_controls:hover{
+	//	border-bottom: 90px solid $red;
+	//	border-right: 90px solid transparent;
+	//}
 	.fave_count{
 		position: absolute;
 		bottom: 15px;
@@ -172,8 +172,8 @@ a.btn {
 		font-size: 15px;
 		p{
             font-size: x-large;
-			margin-top: 17px;
-            padding-left: 17px;
+			margin-top: 15px;
+            padding-left: 20px;
             color: white;
             font-family: 'GothamThin';
 		}
@@ -183,16 +183,14 @@ a.btn {
 .fancybox-title {
   .fave_controls{
 		position: absolute;
-		bottom: 50px;
+		bottom: 115px;
 		width: 30;
 		height: 0;
-		border-bottom: 50px solid transparent; // Should be red
-		border-right: 50px solid transparent;
 		color: $white;
 		cursor: pointer;
-		.fave_heart{
+		.fave_corner{
             img{
-              padding-left: 10px;
+              width: 150%;
             }
             //margin-top: 30px;
             //margin-left: 10px;
@@ -206,32 +204,32 @@ a.btn {
 			}
 		}
 	}
-	.fave_controls:hover{
-		border-bottom: 50px solid transparent;
-		border-right: 50px solid transparent;
-	}
 	.fave_count{
 		position: absolute;
 		bottom: 65px;
 		right: 15px;
 		background: #000;
-		width: 35px;
-		height: 35px;
+		width: 50px;
+		height: 50px;
 		border-radius: 50%;
         opacity: 0.75;
 		font-size: 15px;
 		p{
-			margin-top: 10px;
-            padding-left: 12px;
+            font-size: x-large;
+			margin-top: 15px;
+            padding-left: 18px;
             color: white;
-            font-family: 'GothamMedium';
+            font-family: 'GothamThin';
 		}
 	}
 }
 
 .social{
   float: right;
-  font-size: medium;
+  img{
+    width: 20px;
+    padding: 5px;
+  }
 }
 
 .welcome_screen{

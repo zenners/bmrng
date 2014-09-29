@@ -1,9 +1,4 @@
-span.album_title{
-    color: white;
-    padding-top: 8px;
-    font-size: 18pt;
-    padding-left: 60px;
-}
+
 
 body.display{
     padding-top: 0px;
@@ -17,9 +12,4 @@ body.display{
 
 li.image_container:hover .fave_options{
     display: block;
-}
-
-.faves_saves{
-    padding-top: 5px;
-    font-size: 18pt;
 }

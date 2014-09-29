@@ -1,7 +1,7 @@
 <% photo ||= @photo %>
-<span class="fave_heart">
+<span class="fave_corner">
 <%= link_to defave_photo_path(:id => photo.id), :remote => true do %>
-    <%= image_tag('heart.png', :class => "small-heart") %>
+    <%= image_tag('corner.png') %>
 <% end %>
 </span>
 <script>

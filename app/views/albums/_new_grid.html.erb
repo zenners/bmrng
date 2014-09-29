@@ -44,7 +44,7 @@
                     if (id) {
                         el = $('#' + id);
                         if (el.length) {
-                            this.title += el.html();
+                            this.title += '<span class="lightbox-corner">' + el.html() + '</span>';
                         }
                     }
                     // Add in the social  parts of title
@@ -63,7 +63,7 @@
                         this.title += '<a href="https://pinterest.com/pin/create/bookmarklet/?media=' + this.href + '&url=' + '<%= @album.url %>' + '&is_video=false&description=Proof of recent photoshoot"><%= image_tag("pinterest.png") %></a>';
 
                         // tumblr
-                        this.title += '<a href="http://www.tumblr.com/share/link?url=' + '<%= @album.url %>' + '&name=' + '<%= @album.title %>' + '&description=Proof of recent photoshoot">TUMBLR</a>';
+                        //this.title += '<a href="http://www.tumblr.com/share/link?url=' + '<%= @album.url %>' + '&name=' + '<%= @album.title %>' + '&description=Proof of recent photoshoot">TUMBLR</a>';
 
                         this.title += '</span>';
                     <% end %>
@@ -74,16 +74,12 @@
                 });
             },
             afterShow: function() {
-                // Render tweet button
-                //twttr.widgets.load();
-
                 $(".fancybox-title").wrapInner('<div />').show();
-
-                $(".fancybox-wrap").hover(function() {
-                    $(".fancybox-title").show();
-                }, function() {
-                    $(".fancybox-title").hide();
-                });
+//                $(".fancybox-wrap").hover(function() {
+//                    $(".fancybox-title").show();
+//                }, function() {
+//                    $(".fancybox-title").hide();
+//                });
             },
             helpers : {
                 title : {

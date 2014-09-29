@@ -6,3 +6,31 @@ body{
   height: 50px;
   width: 200px;
 }
+.faves_saves{
+    padding-top: 5px;
+    font-size: 18pt;
+    float: right;
+}
+
+.album_title{
+    color: white;
+    padding-top: 8px;
+    font-size: 18pt;
+    padding-left: 60px;
+  }
+
+@media(max-width: 768px){
+  .navbar-fixed-bottom{
+    .album_title{
+      display:none;
+    }
+
+  }
+  .faves_saves{
+    font-size: 0pt;
+    img{
+      padding: 5px;
+    }
+  }
+
+}

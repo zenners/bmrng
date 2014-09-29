@@ -4,12 +4,12 @@
 </span>
 
 <span class="pull-right">
-  <div class="faves_saves">
+  <span class="faves_saves">
       <% if params[:faves] == "true" %>
         <%= link_to(image_tag('heart.png', width: 40) + " all", url_for())%>
       <% else %>
         <%= link_to(image_tag('red_heart.png', width: 40) + " fave", url_for(faves: true)) %>
       <% end %>
       <%= link_to image_tag('cloud.png', width: 40) + " save", save_guests_path(album_id: @album.id) %>
-  </div>
+  </span>
 </span>
