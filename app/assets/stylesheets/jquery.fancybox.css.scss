@@ -206,7 +206,11 @@
 .fancybox-title {
 	visibility: hidden;
     font-family: GothamThin;
-	font-size: xx-large;
+    font-size: xx-large;
+    @media (max-width: 768px) {
+      font-size: small;
+    }
+
 	position: relative;
 	text-shadow: none;
 	z-index: 8050;
