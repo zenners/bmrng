@@ -48,7 +48,7 @@ class GuestsController < ApplicationController
     @guest = Guest.find(params[:guest_id])
     @album = Album.find(params[:album_id])
     #add the follows that may have been created in this session
-    @guest.follows << current_user.all_follows
+    @guest.follows << current_guest.all_follows
     session[:guest_name] = @guest.name
     session[:guest_id] = @guest.id
     get_questions(params[:album_id])
