@@ -22,6 +22,8 @@ class SubscriptionsController < ApplicationController
     else
       current_user.subscription
     end
+    @subscription_ends = @subscription.stripe_current_period_end
+    @subscription_ends = @subscription_ends < Time.now.utc ? "EXPIRED" : @subscription_ends.strftime("%m-%d-%Y")
   end
 
   def update

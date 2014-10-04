@@ -22,6 +22,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update_plan
     @user = current_user
+    redirect_to current_user and return if current_user.admin?
     role = Role.find(params[:user][:role_ids]) unless params[:user][:role_ids].nil?
     if @user.update_plan(role)
       redirect_to edit_user_registration_path, :notice => 'Updated plan'

@@ -1,7 +1,7 @@
 <h1 class='thin'>Update Subscription</h1>
 <% customer = Stripe::Customer.retrieve(@subscription.user.stripe_customer_token) %>
 <h4>Current Subscription: <%= customer.subscription.plan.name %></h4>
-<h4>Current subscription ends: <%= @subscription.stripe_current_period_end.strftime("%m-%d-%Y") %></h4>
+<h4>Current subscription ends: <%= @subscription_ends %></h4>
 <br/>
 <br/>
 <h2 class='thin'>Update Card / Subscription</h2>

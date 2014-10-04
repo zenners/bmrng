@@ -32,6 +32,7 @@ BMRNG::Application.routes.draw do
       match :set_logo, via: [:get, :post]
       match :set_questions, via: [:get, :post]
       match :welcome_complete, via: [:get]
+      match :edit_subscription, via: [:get]
     end
   end
 

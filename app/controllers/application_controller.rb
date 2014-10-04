@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   before_filter :setup_mailer_host
 
+  before_filter :ensure_not_expired
+
   rescue_from RuntimeError,     with: :rescue_visible_error_in_public
 
   rescue_from CanCan::AccessDenied do |exception|
@@ -38,6 +40,21 @@ class ApplicationController < ActionController::Base
     ActionMailer::Base.default_url_options[:host] = request.host_with_port
   end
 
+  def ensure_not_expired
+    if (request.params["what"] == "subscription") or request.path.include?('sign_out')
+      nil
+    elsif current_user and current_user.expired? and !current_user.admin? and (!request.path.include?('subscriptions'))
+      redirect_to change_user_path(current_user, what: 'subscription')
+    elsif request.domain.split('.').first == ENV['DISPLAY_DOMAIN'].split('.').first
+      if user_id = request.params['user_id']
+        user = User.find_by_name_or_id(user_id)
+        if user.expired? and !user.admin?
+          redirect_to '/contact_studio.html'
+        end
+      end
+    end
+  end
+
   def determine_layout
     domain, tld = request.domain.split(".") rescue [nil, nil]
     domain ||= 'localhost'
@@ -58,7 +75,7 @@ class ApplicationController < ActionController::Base
         user_path(resource)
       end
     elsif resource.expired?
-      #TODO: expired_path
+      edit_subscription_user_path(resource)
     elsif resource.created?
       welcome_user_path(resource)
     else
