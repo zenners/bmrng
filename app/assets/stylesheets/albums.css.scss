@@ -232,6 +232,10 @@ a.btn {
 
 .social{
   float: right;
+  font-size: 16pt;
+  //@media (max-width: 768){
+  //  font-size: 12pt;
+  //}
   img{
     width: 20px;
     padding: 5px;
