@@ -11,6 +11,9 @@
                     <div id="fave-<%= photo.id%>" class='fave_options animated flipInX <%= photo.id %>'>
                         <%= render partial: 'photos/fave_options', locals: {photo: photo} %>
                     </div>
+                    <% if photo.followers_count > 0 %>
+                        <div class="fave_count <%= photo.id %>"><p><%= photo.followers_count %></p></div>
+                    <% end %>
                 </figure>
               </li>
             <% end %>
