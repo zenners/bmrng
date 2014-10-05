@@ -64,10 +64,10 @@ h1{
 .navbar-inverse .nav-collapse .nav  li a:hover{
   background-color: $grey;
 }
-//.navbar-fixed-bottom{
-//  position: absolute;
-//  bottom: 0px;
-//}
+
+.navbar-fixed-bottom{
+  position: fixed;
+}
 
 .dropdown-menu {
 	position: absolute;
