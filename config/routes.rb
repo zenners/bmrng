@@ -28,6 +28,7 @@ BMRNG::Application.routes.draw do
       match :welcome, via: [:get]
       match :set_human_name, via: [:patch, :post]
       match :set_studio, via: [:get, :post]
+      match :set_studio_url, via: [:get, :post]
       match :set_url, via: [:get, :post]
       match :set_logo, via: [:get, :post]
       match :set_questions, via: [:get, :post]

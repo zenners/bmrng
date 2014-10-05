@@ -1,0 +1,23 @@
+<div class="session_start">
+  <h1>Studio Url</h1>
+</div>
+<p class='session_start'>
+  Great. May we get the url to your studio website? This is so guests may
+  click your logo to visit your site.
+</p>
+<div class="session_start">
+	<%= simple_form_for resource, url: 'set_studio_url' do |f| %>
+			  <div class="form-inputs big_input">
+				<%= f.input :link, :label => false %>
+			  </div>
+			  <br>
+			  <%= f.button :submit, "CONTINUE" %>
+	<% end %>
+
+	</div>
+    <%= render 'layouts/progress_circles', number: 7, active: 3 %>
+</div>
+<script>
+        $("#user_link").trigger('focus');
+
+</script>

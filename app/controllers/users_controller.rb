@@ -125,9 +125,20 @@ class UsersController < ApplicationController
     if request.post?
       resource.studio_name = params[:user][:studio_name]
       if resource.save
-        redirect_to set_url_user_path(resource)
+        redirect_to set_studio_url_user_path(resource)
       else
         render :set_studio
+      end
+    end
+  end
+
+  def set_studio_url
+    if request.post?
+      resource.link = params[:user][:link]
+      if resource.save
+        redirect_to set_url_user_path(resource)
+      else
+        render :set_studio_url
       end
     end
   end
@@ -159,7 +170,7 @@ class UsersController < ApplicationController
       if resource.update(params[:user].merge(status: 'active'))
         redirect_to welcome_complete_user_path(resource)
       else
-        @questions = []#Question.create(content: "May we please get your name?")
+        @questions = [] #Question.create(content: "May we please get your name?")
         render :set_questions
       end
     end

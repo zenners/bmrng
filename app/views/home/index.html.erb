@@ -182,7 +182,7 @@
         </div>
         <div class="span5">
           <div class='sign_up'>
-              <% if Rails.env.production? %>
+              <% if Rails.env.production? or Rails.env.development? %>
                     <%= image_tag('home/logo_w_tag.png') %>
                     <div class='cc'>
                         <div class='card_title'>START YOUR FIRST MONTH</div>

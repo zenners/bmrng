@@ -9,7 +9,7 @@
   “Are you looking at any packages yet? Which ones?” as starters.
 </p>
 <div class="session_start">
-	<%= nested_form_for resource, url: 'set_initial_questions' do |f| %>
+	<%= nested_form_for resource, url: 'set_questions' do |f| %>
         <%= f.fields_for :questions do |q_form| %>
           <%= q_form.text_field :content %>
           <%= q_form.link_to_remove "Remove this question" %>
@@ -22,6 +22,6 @@
 	</div>
 	<%= javascript_include_tag 'fancyInput' %>
     <% if resource.status == 'created' %>
-        <%= render 'layouts/progress_circles', number: 6, active: 5 %>
+        <%= render 'layouts/progress_circles', number: 7, active: 6 %>
     <% end %>
 </div>
