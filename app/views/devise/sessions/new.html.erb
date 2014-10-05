@@ -10,10 +10,10 @@
   <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'bmrng_sign_in' }) do |f| %>
     <%= f.input :email, :autofocus => true, :label => false, :placeholder => "EMAIL" %>
     <%= f.input :password, :label => false, :placeholder => "PASSWORD" %>
-    <%= f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
+    <div class="sign_up_form_links">
+      <%= render "devise/shared/links" %>
+    </div>
+    <%# f.input :remember_me, :as => :boolean if devise_mapping.rememberable? %>
     <%= f.button :submit, "Sign in", :class => 'btn-primary' %>
   <% end %>
-  <div class="sign_up_form_links">
-    <%= render "devise/shared/links" %>
-  </div>
 </div>
