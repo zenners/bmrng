@@ -283,6 +283,6 @@ span.nav-close:before {
 
 @media screen and (max-width: 24em) {
 	.grid li {
-		width: 100%;
+		width: 50%;
 	}
 }
