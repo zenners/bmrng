@@ -6,7 +6,9 @@
 <% end %>
 </span>
 <script>
-//  $('.fave_options.<%= photo.id%>').hide();
-//  $('.fave_options.<%= photo.id%>').attr('style', 'display:block');
-  $('.fave_options.<%= photo.id%>').addClass("animated flipInX");
+  //$('.fave_options.<%= photo.id%>').attr('style', 'display:none');
+
+  $('.fave_options.<%= photo.id %>').addClass("animated flipInX");
+  $('.fave_options.<%= photo.id %>').attr('style', '');
+  //$('.fave_options.<%= photo.id%>').hide();
 </script>

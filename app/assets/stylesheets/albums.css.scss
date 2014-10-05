@@ -132,13 +132,31 @@ a.btn {
     //padding: 12px;
 	.fave_controls{
 		position: absolute;
-		bottom: 66px;
+		bottom: 65px;
 		width: 0;
 		height: 0;
 		//border-bottom: 90px solid $red;
 		//border-right: 90px solid transparent;
 		color: $white;
 		cursor: pointer;
+
+        .fave_corner{
+          position: relative;
+          bottom: 1.5px;
+              img{
+                width: 150%;
+              }
+              //margin-top: 30px;
+              //margin-left: 10px;
+              //margin-bottom: 20px;
+              p{
+                  //margin: -20px 20px 0px 0px;
+                  a{
+                      color: $white;
+                      text-decoration: none;
+                  }
+              }
+        }
 		.fave_heart{
             img{
               padding-left: 13px;
