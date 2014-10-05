@@ -7,9 +7,12 @@ body{
   width: 200px;
 }
 .faves_saves{
-    padding-top: 5px;
+    padding-top: 9px;
     font-size: 18pt;
     float: right;
+    .heart{
+      padding-right: 25px;
+    }
 }
 
 .album_title{
