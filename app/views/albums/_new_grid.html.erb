@@ -5,7 +5,7 @@
             <% for photo in @photos %>
               <li class="image_container">
                 <figure>
-                    <a title='<%=photo.photo_file_name.split('.').first%>' class='fancybox' rel='group' href='<%= photo.photo.url(:original) %>' data-photo-id="fave-<%= photo.id %>">
+                    <a alt='<%=photo.photo_file_name.split('.').first%>' class='fancybox' rel='group' href='<%= photo.photo.url(:original) %>' data-photo-id="fave-<%= photo.id %>">
                         <%= image_tag(photo.photo.url(:original), class: 'image') %>
                     </a>
                     <div id="fave-<%= photo.id%>" class='fave_options animated flipInX <%= photo.id %>'>
@@ -32,6 +32,7 @@
 <%= stylesheet_link_tag "jquery.fancybox.css?v=2.1.5", "jquery.fancybox-buttons.css?v=1.0.5", "jquery.fancybox-thumbs.css?v=1.0.7" %>
 
 <script type="text/javascript">
+
 	$(document).ready(function() {
 		$(".fancybox").fancybox({
 //            openEffect  : 'none',
@@ -40,6 +41,9 @@
 //            prevEffect  : 'none',
             padding     : 0,
             margin      : [20, 60, 20, 60], // Increase left/right margin
+            beforeLoad: function() {
+                this.title = $(this.element).attr('alt');
+            },
             beforeShow: function () {
                 if (this.title) {
                     //Bring in the extra data that passes the fave controls
