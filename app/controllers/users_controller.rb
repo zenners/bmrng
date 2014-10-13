@@ -79,9 +79,9 @@ class UsersController < ApplicationController
       end
       if resource.update_attributes(params[:user])
         flash[:notice] = 'Saved Successfully'
-        redirect_to users_path
+        redirect_to users_path and return
       end
-      render 'users/change', what: params[:what]
+      render 'users/change', what: params[:what] and return
     end
     if params[:what] == 'subscription'
       if current_user.stripe_customer_token
