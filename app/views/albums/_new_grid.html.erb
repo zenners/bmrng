@@ -36,10 +36,6 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-//        $(".fancybox").click(this, function(){
-//            this.find('.fave_action').trigger('click');
-//            return false;
-//        });
 		$(".fancybox").fancybox({
 //            openEffect  : 'none',
 //            closeEffect : 'none',
@@ -57,7 +53,7 @@
                     if (id) {
                         el = $('#' + id);
                         if (el.length) {
-                            this.title += '<span class="lightbox-corner">' + el.html() + '</span>';
+                            this.title += '<div class="lightbox-corner">' + el.html() + '</div>';
                         }
                     }
                     // Add in the social  parts of title
