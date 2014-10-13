@@ -11,8 +11,11 @@
                     <div id="fave-<%= photo.id%>" class='fave_options animated flipInX <%= photo.id %>'>
                         <%= render partial: 'photos/fave_options', locals: {photo: photo} %>
                     </div>
-                    <% if photo.followers_count > 0 %>
-                        <div class="fave_count <%= photo.id %>"><p><%= photo.followers_count %></p></div>
+                    <div class="fave_count <%= photo.id %>"><p><%= photo.followers_count %></p></div>
+                    <% if (photo.followers_count == 0) %>
+                        <script type='text/javascript'>
+                          $('.fave_count.<%= photo.id %>').hide();
+                        </script>
                     <% end %>
                 </figure>
               </li>
@@ -32,8 +35,11 @@
 <%= stylesheet_link_tag "jquery.fancybox.css?v=2.1.5", "jquery.fancybox-buttons.css?v=1.0.5", "jquery.fancybox-thumbs.css?v=1.0.7" %>
 
 <script type="text/javascript">
-
 	$(document).ready(function() {
+//        $(".fancybox").click(this, function(){
+//            this.find('.fave_action').trigger('click');
+//            return false;
+//        });
 		$(".fancybox").fancybox({
 //            openEffect  : 'none',
 //            closeEffect : 'none',

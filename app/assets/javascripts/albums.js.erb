@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    // Single click to fave/defave a photo
+    $(".fancybox").click(this, function(){
+        $.ajax($(this).parent().find('.fave_action')[0].href, {'dataType':'script'});
+        return false;
+    });
+
 	// disable auto discover
 	Dropzone.autoDiscover = false;
 	// grap our upload form by its id

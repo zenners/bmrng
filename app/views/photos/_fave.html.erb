@@ -1,14 +1,14 @@
 <% photo ||= @photo %>
 <span class="fave_corner">
-<%= link_to fave_photo_path(:id => photo.id), :remote => true do %>
+<%= link_to fave_photo_path(:id => photo.id), :remote => true, class: 'fave_action' do %>
 	<%# image_tag('heart.png', :class => "small-heart") %>
     <%= image_tag('corner.png') %>
 <% end %>
 </span>
 <script>
-  //$('.fave_options.<%= photo.id%>').attr('style', 'display:none');
-
   $('.fave_options.<%= photo.id %>').addClass("animated flipInX");
   $('.fave_options.<%= photo.id %>').attr('style', '');
-  //$('.fave_options.<%= photo.id%>').hide();
+  <% if photo.followers_count == 0 %>
+      $('.fave_count.<%= photo.id %>').hide();
+  <% end %>
 </script>
