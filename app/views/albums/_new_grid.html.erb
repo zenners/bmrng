@@ -24,6 +24,7 @@
     </section>
 
  </div>
+
 <%= javascript_include_tag "imagesloaded.pkgd.min.js", "masonry.pkgd.min.js", "classie.js", "cbpGridGallery.js" %>
 <script>
     new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
@@ -53,13 +54,13 @@
                     if (id) {
                         el = $('#' + id);
                         if (el.length) {
-                            this.title += '<div class="lightbox-corner">' + el.html() + '</div>';
+                            this.title += '<span class="lightbox-corner">' + el.html() + '</span>';
                         }
                     }
                     // Add in the social  parts of title
                     <% if @album.social %>
                         // New line
-                        this.title += '<span class="social">Share this image: ';
+                        this.title += '<span class="social"><span class="info">Share this image:</span> ';
 
                         // Add Facebook like button
                         this.title += '<a href="http://www.facebook.com/sharer.php?s=100&p[url]=' + '<%= @album.url %>' + '&p[images][0]=' + this.href + '&p[title]=Proof of recent photoshoot"><%= image_tag('facebook.png') %></a>';
