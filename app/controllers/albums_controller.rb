@@ -39,7 +39,7 @@ class AlbumsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @album
     session[:guest_id] = Guest.create.id unless current_guest
     @photos = if params[:faves] == "true"
-      current_guest.all_following
+      current_guest.all_following.map{|p| @album.photos.include?(p) ? p : nil}.flatten
     else
       @album.photos
     end

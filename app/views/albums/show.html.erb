@@ -1,8 +1,11 @@
 <div class="session_start">
-	<%= image_tag('upload_cloud.png') %>
-    <h1>UPLOAD PHOTOS</h1>
-    <h4>Found at: <a href="<%= @album.url %>"><%= @album.url %></a></h4>
-    <br>
+  <%= image_tag('upload_cloud.png') %>
+  <h1>UPLOAD PHOTOS</h1>
+  <h4>Found at: <a href="<%= @album.url %>"><%= @album.url %></a></h4>
+  <br>
+  <div class="complete">
+    <%= link_to "Upload Complete!", user_path(@album.user) %>
+  </div>
   <%= form_for(Photo.new, html: { multipart: true, class: 'dropzone'}) do |f|  %>
         <%= f.hidden_field :user_id, :value => current_user.id %>
         <%= f.hidden_field :album_id, :value => @album.id %>
@@ -10,14 +13,5 @@
         <%= f.file_field :photo %><br>
         <%= f.submit "Upload" %>
     </div>
-<% end %>
-
+  <% end %>
 </div>
-
-<%# render 'grid_view', faves: false %>
-<script>
- $(window).load(function(){
-    var photos = <%= @photos %>;
-    alert("Photos found");
- });
-</script>

@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    $(".complete").hide();
+
     // Single click to fave/defave a photo
     $(".fancybox").click(this, function(){
         $.ajax($(this).parent().find('.fave_action')[0].href, {'dataType':'script'});
@@ -17,6 +19,14 @@ $(document).ready(function(){
 		// show remove links on each image upload
 		addRemoveLinks: true,
 		// if the upload was successful
+
+        init: function () {
+            this.on("complete", function (file) {
+              if (this.getUploadingFiles().length === 0 && this.getQueuedFiles().length === 0) {
+                $(".complete").show();
+              }
+            });
+          },
 
 		success: function(file, response){
 			// find the remove button link of the uploaded file and give it an id

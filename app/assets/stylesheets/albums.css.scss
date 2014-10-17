@@ -133,7 +133,7 @@ a.btn {
 	.fave_controls{
 		position: absolute;
 		bottom: 65px;
-		width: 0;
+		//width: 0;
 		height: 0;
 		//border-bottom: 90px solid $red;
 		//border-right: 90px solid transparent;
@@ -250,7 +250,11 @@ a.btn {
 
 .social{
   float: right;
-  font-size: 16pt;
+  font-size: 13px;
+  .info{
+    position: relative;
+    top: 3px;
+  }
   //@media (max-width: 768){
   //  font-size: 12pt;
   //}
@@ -275,4 +279,10 @@ a.btn {
 	.beautiful_people a{
 		color: #fff;
 	}
+}
+
+.complete{
+  padding: 20px;
+  font-family: 'GothamMedium';
+  font-size: 24pt;
 }
