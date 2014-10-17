@@ -22,15 +22,15 @@
 </div>
 <div class="span5">
   <h2>FAVES<%= image_tag('heart_red.png', :width => "40px") %></h2>
-  <% @guest.all_follows.each do |follow| %>
+  <% @guest.all_following.map{|p| @album.photos.include?(p) ? p : nil}.flatten.each do |p| %>
     <div class="report_image_box">
-      <%= image_tag(follow.followable.photo.url(:medium)) %>
+      <%= image_tag(p.photo.url(:medium)) %>
       <div class="image_title">
-        <%= follow.followable.photo_file_name %>
+        <%= p.photo_file_name %>
       </div>
       <div class='raves'>
           <div class="grey_ball">
-            <%= follow.followable.followers_count %>
+            <%= p.followers_count %>
           </div>
           RAVES
       </div>
