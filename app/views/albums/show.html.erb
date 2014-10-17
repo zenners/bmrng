@@ -3,6 +3,15 @@
   <h1>UPLOAD PHOTOS</h1>
   <h4>Found at: <a href="<%= @album.url %>"><%= @album.url %></a></h4>
   <br>
+  <div>
+    Boomerang does not currently offer an in-app watermarking function. We'd
+    like to leave this feature up to the photographer (for now) to ensure that
+    photos are marked to their liking pre-upload. Also, we've set a limit of
+    10mb per file upload to help us keep image quality high and fast for
+    anyone viewing your work. Thanks!
+  </div>
+  <br>
+  <br>
   <div class="complete">
     <%= link_to "Upload Complete!", user_path(@album.user) %>
   </div>
