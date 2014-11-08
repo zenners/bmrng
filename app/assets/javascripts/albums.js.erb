@@ -2,10 +2,10 @@ $(document).ready(function(){
     $(".complete").hide();
 
     // Single click to fave/defave a photo
-//    $(".fancybox").click(this, function(){
-//        $.ajax($(this).parent().find('.fave_action')[0].href, {'dataType':'script'});
-//        return false;
-//    });
+    $(".main_image").click(this, function(){
+        $.ajax($(this).parent().find('.fave_action')[0].href, {'dataType':'script'});
+        return false;
+    });
 
 	// disable auto discover
 	Dropzone.autoDiscover = false;

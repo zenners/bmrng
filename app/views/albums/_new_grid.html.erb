@@ -5,10 +5,10 @@
             <% for photo in @photos %>
               <li class="image_container">
                 <figure>
+                    <%= image_tag(photo.photo.url(:original), class: 'main_image') %>
                     <a alt='<%=photo.photo_file_name.split('.').first%>' class='fancybox' rel='group' href='<%= photo.photo.url(:original) %>' data-photo-id="fave-<%= photo.id %>">
-                        <%= image_tag(photo.photo.url(:original), class: 'image') %>
+                      <div class="image_zoom"><%= image_tag('search.png')%></div>
                     </a>
-                    <div class="image_zoom"><%= image_tag('search.png')%></div>
                     <div id="fave-<%= photo.id%>" class='fave_options animated flipInX <%= photo.id %>'>
                         <%= render partial: 'photos/fave_options', locals: {photo: photo} %>
                     </div>
