@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
     </list>
     <ignored path="BMRNG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -573,15 +573,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/_form.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="61" selection-start="2026" selection-end="2049" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/subscriptions/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="31" column="68" selection-start="1366" selection-end="1389" vertical-scroll-proportion="0.0">
@@ -649,10 +640,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_new_grid.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_new_grid.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="78" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.33255813">
+            <state line="34" column="78" selection-start="1622" selection-end="1622" vertical-scroll-proportion="-5.9583335">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="albums.js.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -667,15 +667,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.fancybox.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="jquery.fancybox.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="2371" column="133" selection-start="56234" selection-end="56234" vertical-scroll-proportion="0.47429907">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1359537800000" expanded="false" signature="53839:53875" placeholder="..." />
-                <marker date="1359537800000" expanded="false" signature="54186:54238" placeholder="..." />
-                <marker date="1359537800000" expanded="true" signature="55005:55019" placeholder="{...}" />
+                <marker date="1415481087000" expanded="false" signature="53839:53875" placeholder="..." />
+                <marker date="1415481087000" expanded="false" signature="54186:54238" placeholder="..." />
+                <marker date="1415481087000" expanded="true" signature="55005:55019" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -788,7 +788,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/albums/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/albums/set_password.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/albums_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/albums/settings.html.erb" />
@@ -804,6 +803,7 @@
         <option value="$PROJECT_DIR$/app/views/subscriptions/edit.html.erb" />
         <option value="$PROJECT_DIR$/.ruby-version" />
         <option value="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
       </list>
     </option>
   </component>
@@ -1327,11 +1327,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navigation_bottom.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="240" selection-end="240" vertical-scroll-proportion="0.13947695" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/set_questions.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="41" selection-start="975" selection-end="975" vertical-scroll-proportion="0.44552058" />
@@ -1509,18 +1504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1359537800000" expanded="false" signature="53839:53875" placeholder="..." />
-            <marker date="1359537800000" expanded="false" signature="54186:54238" placeholder="..." />
-            <marker date="1359537800000" expanded="true" signature="55005:55019" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.pack.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1532,8 +1515,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="78" selection-start="1622" selection-end="1622" vertical-scroll-proportion="0.33255813">
+        <state line="34" column="78" selection-start="1622" selection-end="1622" vertical-scroll-proportion="-5.9583335">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2371" column="133" selection-start="56234" selection-end="56234" vertical-scroll-proportion="0.47429907">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1415481087000" expanded="false" signature="53839:53875" placeholder="..." />
+            <marker date="1415481087000" expanded="false" signature="54186:54238" placeholder="..." />
+            <marker date="1415481087000" expanded="true" signature="55005:55019" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

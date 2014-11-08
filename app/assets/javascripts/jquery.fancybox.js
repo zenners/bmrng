@@ -2369,7 +2369,7 @@
 		options = options || {};
 
 		if (live) {
-			D.undelegate(selector, 'click.fb-start').delegate(selector + ":not('.fancybox-close,.fancybox-nav,.fancybox-wrap')", 'click.fb-start', handler);
+			D.undelegate(selector, 'click.fb-start').delegate(selector + ":not('.fancybox-close,.fancybox-nav,.fancybox-wrap')", 'dblclick.fb-start', handler);
 
 		} else {
 			that.unbind('click.fb-start').bind('click.fb-start', handler);
