@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photos/_fave_options.html.erb" afterPath="$PROJECT_DIR$/app/views/photos/_fave_options.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
     </list>
     <ignored path="BMRNG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -529,7 +525,7 @@
     <file path="/albums.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408232334004" ignored="false" />
     <file path="/dropzone_override.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410057859399" ignored="false" />
     <file path="/subscriptions.js.coffee" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408232382070" ignored="false" />
-    <file path="/albums.js.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415483103611" ignored="false" />
+    <file path="/albums.js.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415502047590" ignored="false" />
     <file path="/display.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409549525758" ignored="false" />
     <file path="/user.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408258885237" ignored="false" />
     <file path="$PROJECT_DIR$/../rose_point/rpsf_clean/app/views/contacts/_statistics.html.haml" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409669495319" ignored="false" />
@@ -576,30 +572,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="jquery.fancybox.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="196" column="0" selection-start="3258" selection-end="3300" vertical-scroll-proportion="-10.735849">
-              <folding>
-                <element signature="e#3488#9211#2" expanded="true" />
-                <element signature="e#11166#17097#2" expanded="true" />
-                <element signature="e#17493#28860#2" expanded="true" />
-                <element signature="e#29042#34461#2" expanded="true" />
-                <element signature="e#35142#48673#2" expanded="true" />
-                <element signature="e#48859#54106#2" expanded="true" />
-                <element signature="e#54576#65967#2" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="_new_grid.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="69" selection-start="694" selection-end="694" vertical-scroll-proportion="-6.875">
+            <state line="11" column="69" selection-start="682" selection-end="694" vertical-scroll-proportion="-6.875">
               <folding />
             </state>
           </provider>
@@ -623,10 +599,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="component.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="component.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="285" column="16" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.85524726">
+            <state line="285" column="16" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -659,10 +635,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="albums.js.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="albums.js.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="114" selection-end="114" vertical-scroll-proportion="-0.625">
+            <state line="6" column="51" selection-start="205" selection-end="205" vertical-scroll-proportion="0.111801244">
               <folding />
             </state>
           </provider>
@@ -705,12 +681,12 @@
         <option value="$PROJECT_DIR$/app/views/subscriptions/edit.html.erb" />
         <option value="$PROJECT_DIR$/.ruby-version" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
         <option value="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
         <option value="$PROJECT_DIR$/app/views/photos/_fave_options.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/component.css" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
       </list>
     </option>
   </component>
@@ -812,6 +788,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rails_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rails_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1257,13 +1255,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="114" selection-end="114" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/album_display.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1292,9 +1283,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="285" column="16" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="232" column="39" selection-start="4335" selection-end="4335" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="0" selection-start="3258" selection-end="3300" vertical-scroll-proportion="-10.735849">
+        <state line="196" column="0" selection-start="3258" selection-end="3300" vertical-scroll-proportion="0.7457405">
           <folding>
             <element signature="e#3488#9211#2" expanded="true" />
             <element signature="e#11166#17097#2" expanded="true" />
@@ -1312,21 +1317,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="69" selection-start="694" selection-end="694" vertical-scroll-proportion="-6.875">
+        <state line="11" column="69" selection-start="682" selection-end="694" vertical-scroll-proportion="-6.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="39" selection-start="4335" selection-end="4335" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="285" column="16" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.85524726">
+        <state line="6" column="51" selection-start="205" selection-end="205" vertical-scroll-proportion="0.111801244">
           <folding />
         </state>
       </provider>

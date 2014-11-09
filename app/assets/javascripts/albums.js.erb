@@ -1,13 +1,26 @@
 $(document).ready(function(){
     $(".complete").hide();
 
+
     // Single click to fave/defave a photo
+    $('#main_image').on('touchstart', function(e) {
+        alert("E: " + e + ", Target: " + e.target);
+        $(e.target).parent().find('.fave_action')[0].addClass('animate');
+        $(e.target).parent().find('.fave_action')[0].show();
+    }).mouseenter( function(e) {
+        $(e.target).parent().find('.fave_action')[0].addClass('animate');
+        $(e.target).parent().find('.fave_action')[0].show();
+    }).mouseleave( function(e) {
+        $(e.target).parent().find('.fave_action')[0].removeClass('animate');
+        $(e.target).parent().find('.fave_action')[0].hide();
+    });
+
     $(".main_image").click(this, function(){
         $.ajax($(this).parent().find('.fave_action')[0].href, {'dataType':'script'});
         return false;
     });
 
-	// disable auto discover
+    // disable auto discover
 	Dropzone.autoDiscover = false;
 	// grap our upload form by its id
 	$("#new_photo").dropzone({
