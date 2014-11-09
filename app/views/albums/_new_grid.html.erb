@@ -46,6 +46,7 @@
             padding     : 0,
             margin      : [20, 30, 20, 30], // Increase left/right margin
             beforeLoad: function() {
+                //BUGBUG: this should be in beforeShow but v3 is broken for setting title in beforeShow
                 this.title = $(this.element).attr('alt');
                 if (this.title) {
                     //Bring in the extra data that passes the fave controls
@@ -58,7 +59,7 @@
                     }
                     // Add in the social  parts of title
                     <% if @album.social %>
-                        this.title += '<span class="social"><span class="info">Share this image:</span> ';
+                        this.title += '<span class="social"><span class="info">Share:</span> ';
 
                         // Add Facebook like button
                         this.title += '<a href="http://www.facebook.com/sharer.php?s=100&p[url]=' + '<%= @album.url %>' + '&p[images][0]=' + this.href + '&p[title]=Proof of recent photoshoot"><%= image_tag('facebook.png') %></a>';
@@ -86,11 +87,6 @@
             },
             afterShow: function() {
                 $(".fancybox-title").wrapInner('<div />').show();
-//                $(".fancybox-wrap").hover(function() {
-//                    $(".fancybox-title").show();
-//                }, function() {
-//                    $(".fancybox-title").hide();
-//                });
             },
             helpers : {
                 title : {
