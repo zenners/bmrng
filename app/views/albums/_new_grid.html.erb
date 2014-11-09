@@ -10,14 +10,14 @@
                       <div class="image_zoom"><%= image_tag('search.png')%></div>
                     </a>
                     <div id="fave-<%= photo.id%>" class='fave_options <%= photo.id %>'>
-                        <%= render partial: 'photos/fave_options', locals: {photo: photo} %>
+                      <%= render partial: 'photos/fave_options', locals: {photo: photo} %>
+                      <div class="fave_count <%= photo.id %>"><p><%= photo.followers_count %></p></div>
+                      <% if (photo.followers_count == 0) %>
+                          <script type='text/javascript'>
+                              $('.fave_count.<%= photo.id %>').hide();
+                          </script>
+                      <% end %>
                     </div>
-                    <div class="fave_count <%= photo.id %>"><p><%= photo.followers_count %></p></div>
-                    <% if (photo.followers_count == 0) %>
-                        <script type='text/javascript'>
-                          $('.fave_count.<%= photo.id %>').hide();
-                        </script>
-                    <% end %>
                 </figure>
               </li>
             <% end %>
@@ -80,9 +80,9 @@
             beforeShow: function () {
 
                 /* Disable right click */
-//                $.fancybox.wrap.bind("contextmenu", function (e) {
-//                        return false;
-//                });
+                $.fancybox.wrap.bind("contextmenu", function (e) {
+                        return false;
+                });
             },
             afterShow: function() {
                 $(".fancybox-title").wrapInner('<div />').show();
