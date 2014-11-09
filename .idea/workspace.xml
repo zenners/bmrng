@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BMRNG.iws" />
@@ -550,7 +552,7 @@
     <file path="/cbpGridGallery.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409601014664" ignored="false" />
     <file path="/component.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409591531639" ignored="false" />
     <file path="/jquery.fancybox.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409602714395" ignored="false" />
-    <file path="/jquery.fancybox.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415487443952" ignored="false" />
+    <file path="/jquery.fancybox.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415555160777" ignored="false" />
     <file path="/20140907032248_add_password_to_albums.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410060190286" ignored="false" />
     <file path="/set_password.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410061383338" ignored="false" />
     <file path="/set_questions.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410064804560" ignored="false" />
@@ -576,8 +578,25 @@
       <file leaf-file-name="_new_grid.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="89" selection-start="624" selection-end="624" vertical-scroll-proportion="-6.25">
+            <state line="39" column="34" selection-start="1997" selection-end="1997" vertical-scroll-proportion="-10.416667">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.fancybox.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="119" column="10" selection-start="1916" selection-end="1916" vertical-scroll-proportion="-7.1923075">
+              <folding>
+                <element signature="e#3488#9211#2" expanded="true" />
+                <element signature="e#11166#17097#2" expanded="true" />
+                <element signature="e#17493#28860#2" expanded="true" />
+                <element signature="e#29042#34461#2" expanded="true" />
+                <element signature="e#35142#48673#2" expanded="true" />
+                <element signature="e#48859#54106#2" expanded="true" />
+                <element signature="e#54576#65967#2" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -591,28 +610,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="animate.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/animate.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="14" selection-start="35" selection-end="60" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="component.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/component.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="285" column="16" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0">
+            <state line="165" column="24" selection-start="2689" selection-end="2690" vertical-scroll-proportion="-12.576923">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="albums.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="jquery.fancybox.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="3" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1415558001000" expanded="true" signature="53839:53875" placeholder="..." />
+                <marker date="1415558001000" expanded="true" signature="54186:54238" placeholder="..." />
+                <marker date="1415558001000" expanded="true" signature="55005:55019" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="albums.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="188" column="24" selection-start="3507" selection-end="3507" vertical-scroll-proportion="0.0">
+            <state line="241" column="15" selection-start="4571" selection-end="4571" vertical-scroll-proportion="0.13704497">
               <folding>
                 <element signature="e#192#327#0" expanded="false" />
                 <element signature="e#343#471#0" expanded="false" />
@@ -645,24 +668,20 @@
                 <element signature="e#3706#4039#0" expanded="false" />
                 <element signature="e#3879#4036#0" expanded="false" />
                 <element signature="e#4055#4143#0" expanded="false" />
-                <element signature="e#4163#5378#0" expanded="false" />
-                <element signature="e#4181#4960#0" expanded="false" />
-                <element signature="e#4262#4297#0" expanded="false" />
-                <element signature="e#4374#4868#0" expanded="false" />
-                <element signature="e#4616#4658#0" expanded="false" />
-                <element signature="e#4763#4864#0" expanded="false" />
-                <element signature="e#4804#4859#0" expanded="false" />
-                <element signature="e#4895#4957#0" expanded="false" />
-                <element signature="e#4973#5376#0" expanded="false" />
-                <element signature="e#5047#5082#0" expanded="false" />
-                <element signature="e#5216#5373#0" expanded="false" />
-                <element signature="e#5387#5580#0" expanded="false" />
-                <element signature="e#5431#5474#0" expanded="false" />
-                <element signature="e#5538#5578#0" expanded="false" />
-                <element signature="e#5597#5801#0" expanded="false" />
-                <element signature="e#5734#5759#0" expanded="false" />
-                <element signature="e#5780#5799#0" expanded="false" />
-                <element signature="e#5812#5882#0" expanded="false" />
+                <element signature="e#4457#4492#0" expanded="false" />
+                <element signature="e#4734#4835#0" expanded="false" />
+                <element signature="e#4775#4830#0" expanded="false" />
+                <element signature="e#4866#4928#0" expanded="false" />
+                <element signature="e#5205#5608#0" expanded="false" />
+                <element signature="e#5279#5314#0" expanded="false" />
+                <element signature="e#5448#5605#0" expanded="false" />
+                <element signature="e#5619#5812#0" expanded="false" />
+                <element signature="e#5663#5706#0" expanded="false" />
+                <element signature="e#5770#5810#0" expanded="false" />
+                <element signature="e#5829#6033#0" expanded="false" />
+                <element signature="e#5966#5991#0" expanded="false" />
+                <element signature="e#6012#6031#0" expanded="false" />
+                <element signature="e#6044#6114#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -695,22 +714,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="albums.js.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="albums.js.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="107" selection-end="345" vertical-scroll-proportion="0.16930023">
-              <folding>
-                <marker date="1415553410000" expanded="true" signature="149:233" placeholder="{...}" />
-                <marker date="1415553410000" expanded="true" signature="256:343" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="108" selection-start="2406" selection-end="2406" vertical-scroll-proportion="0.0">
+            <state line="32" column="7" selection-start="1281" selection-end="1281" vertical-scroll-proportion="-16.583334">
               <folding />
             </state>
           </provider>
@@ -739,16 +746,16 @@
         <option value="$PROJECT_DIR$/app/views/users/send_feedback.html.erb" />
         <option value="$PROJECT_DIR$/app/views/subscriptions/edit.html.erb" />
         <option value="$PROJECT_DIR$/.ruby-version" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/component.css" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
         <option value="$PROJECT_DIR$/app/views/photos/_fave_options.html.erb" />
         <option value="$PROJECT_DIR$/app/views/photos/_defave.html.erb" />
         <option value="$PROJECT_DIR$/app/views/photos/_fave.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/album_display.css" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
+        <option value="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
       </list>
     </option>
@@ -1287,31 +1294,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="658" column="39" selection-start="15559" selection-end="15574" vertical-scroll-proportion="-10.115385">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="196" column="0" selection-start="3258" selection-end="3300" vertical-scroll-proportion="0.7457405">
-          <folding>
-            <element signature="e#3488#9211#2" expanded="true" />
-            <element signature="e#11166#17097#2" expanded="true" />
-            <element signature="e#17493#28860#2" expanded="true" />
-            <element signature="e#29042#34461#2" expanded="true" />
-            <element signature="e#35142#48673#2" expanded="true" />
-            <element signature="e#48859#54106#2" expanded="true" />
-            <element signature="e#54576#65967#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="78" column="108" selection-start="2406" selection-end="2406" vertical-scroll-proportion="0.0">
@@ -1326,13 +1308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/component.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="285" column="16" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/photos/defave.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1343,13 +1318,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/photos/fave.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="89" selection-start="624" selection-end="624" vertical-scroll-proportion="-6.25">
           <folding />
         </state>
       </provider>
@@ -1382,9 +1350,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="165" column="24" selection-start="2689" selection-end="2690" vertical-scroll-proportion="-12.576923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="10" selection-start="1916" selection-end="1916" vertical-scroll-proportion="-7.1923075">
+          <folding>
+            <element signature="e#3488#9211#2" expanded="true" />
+            <element signature="e#11166#17097#2" expanded="true" />
+            <element signature="e#17493#28860#2" expanded="true" />
+            <element signature="e#29042#34461#2" expanded="true" />
+            <element signature="e#35142#48673#2" expanded="true" />
+            <element signature="e#48859#54106#2" expanded="true" />
+            <element signature="e#54576#65967#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="3" selection-start="272" selection-end="272" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1415558001000" expanded="true" signature="53839:53875" placeholder="..." />
+            <marker date="1415558001000" expanded="true" signature="54186:54238" placeholder="..." />
+            <marker date="1415558001000" expanded="true" signature="55005:55019" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="34" selection-start="1997" selection-end="1997" vertical-scroll-proportion="-10.416667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="7" selection-start="1281" selection-end="1281" vertical-scroll-proportion="-16.583334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="24" selection-start="3507" selection-end="3507" vertical-scroll-proportion="0.0">
+        <state line="241" column="15" selection-start="4571" selection-end="4571" vertical-scroll-proportion="0.13704497">
           <folding>
             <element signature="e#192#327#0" expanded="false" />
             <element signature="e#343#471#0" expanded="false" />
@@ -1417,34 +1435,20 @@
             <element signature="e#3706#4039#0" expanded="false" />
             <element signature="e#3879#4036#0" expanded="false" />
             <element signature="e#4055#4143#0" expanded="false" />
-            <element signature="e#4163#5378#0" expanded="false" />
-            <element signature="e#4181#4960#0" expanded="false" />
-            <element signature="e#4262#4297#0" expanded="false" />
-            <element signature="e#4374#4868#0" expanded="false" />
-            <element signature="e#4616#4658#0" expanded="false" />
-            <element signature="e#4763#4864#0" expanded="false" />
-            <element signature="e#4804#4859#0" expanded="false" />
-            <element signature="e#4895#4957#0" expanded="false" />
-            <element signature="e#4973#5376#0" expanded="false" />
-            <element signature="e#5047#5082#0" expanded="false" />
-            <element signature="e#5216#5373#0" expanded="false" />
-            <element signature="e#5387#5580#0" expanded="false" />
-            <element signature="e#5431#5474#0" expanded="false" />
-            <element signature="e#5538#5578#0" expanded="false" />
-            <element signature="e#5597#5801#0" expanded="false" />
-            <element signature="e#5734#5759#0" expanded="false" />
-            <element signature="e#5780#5799#0" expanded="false" />
-            <element signature="e#5812#5882#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="107" selection-end="345" vertical-scroll-proportion="0.16930023">
-          <folding>
-            <marker date="1415553410000" expanded="true" signature="149:233" placeholder="{...}" />
-            <marker date="1415553410000" expanded="true" signature="256:343" placeholder="{...}" />
+            <element signature="e#4457#4492#0" expanded="false" />
+            <element signature="e#4734#4835#0" expanded="false" />
+            <element signature="e#4775#4830#0" expanded="false" />
+            <element signature="e#4866#4928#0" expanded="false" />
+            <element signature="e#5205#5608#0" expanded="false" />
+            <element signature="e#5279#5314#0" expanded="false" />
+            <element signature="e#5448#5605#0" expanded="false" />
+            <element signature="e#5619#5812#0" expanded="false" />
+            <element signature="e#5663#5706#0" expanded="false" />
+            <element signature="e#5770#5810#0" expanded="false" />
+            <element signature="e#5829#6033#0" expanded="false" />
+            <element signature="e#5966#5991#0" expanded="false" />
+            <element signature="e#6012#6031#0" expanded="false" />
+            <element signature="e#6044#6114#0" expanded="false" />
           </folding>
         </state>
       </provider>

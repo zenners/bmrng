@@ -224,8 +224,13 @@ a.btn {
 
 .fancybox-title {
   .fave_controls{
+    opacity: 0;  filter: alpha(opacity=0);
+    -webkit-transition: opacity .5s ease;
+    -moz-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease;
 		position: absolute;
-        bottom: 115px;
+        bottom: 112px;
         @media (max-width: 768px) {
           bottom: 92px;
         }
@@ -234,11 +239,7 @@ a.btn {
 		color: $white;
 		cursor: pointer;
 		.fave_corner{
-          opacity: 0;  filter: alpha(opacity=0);
-          -webkit-transition: opacity .5s ease;
-          -moz-transition: opacity .5s ease;
-          -o-transition: opacity .5s ease;
-          transition: opacity .5s ease;
+
             img{
               width: 150%;
             }
@@ -257,6 +258,17 @@ a.btn {
           opacity: 1;  filter: alpha(opacity=100);
         }
 	}
+  .fave_controls:hover{
+    opacity: 1;  filter: alpha(opacity=100);
+  }
+  .fave_controls.visible{
+    display: block;
+    opacity: 1;  filter: alpha(opacity=100);
+  }
+  .fave_controls.hover{
+    display: block;
+    opacity: 1;  filter: alpha(opacity=100);
+  }
 	.fave_count{
 		position: absolute;
 		bottom: 65px;
