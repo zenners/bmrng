@@ -1,12 +1,13 @@
 $(document).ready(function(){
+    var timeout;
     $(".complete").hide();
 
     // Grid view hover effect
-    $(".main_image").mouseenter(function(){
-        $($(this).parent().find(".fave_controls")[0]).addClass('hover');
-    }).mouseleave(function(){
-        $($(this).parent().find(".fave_controls")[0]).removeClass('hover');
-    });
+//    $(".main_image").mouseenter(function(){
+//        $($(this).parent().find(".fave_controls")[0]).addClass('hover');
+//    }).mouseleave(function(){
+//        $($(this).parent().find(".fave_controls")[0]).removeClass('hover');
+//    });
 
     // Grid view fave on single click
     $(".main_image").click(this, function(){

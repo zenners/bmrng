@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photos/_defave.html.erb" afterPath="$PROJECT_DIR$/app/views/photos/_defave.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photos/_fave.html.erb" afterPath="$PROJECT_DIR$/app/views/photos/_fave.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photos/_fave_options.html.erb" afterPath="$PROJECT_DIR$/app/views/photos/_fave_options.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/album_display.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/album_display.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
     </list>
     <ignored path="BMRNG.iws" />
@@ -531,7 +525,7 @@
     <file path="/albums.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408232334004" ignored="false" />
     <file path="/dropzone_override.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410057859399" ignored="false" />
     <file path="/subscriptions.js.coffee" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408232382070" ignored="false" />
-    <file path="/albums.js.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415550035786" ignored="false" />
+    <file path="/albums.js.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415552159585" ignored="false" />
     <file path="/display.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409549525758" ignored="false" />
     <file path="/user.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408258885237" ignored="false" />
     <file path="$PROJECT_DIR$/../rose_point/rpsf_clean/app/views/contacts/_statistics.html.haml" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409669495319" ignored="false" />
@@ -703,7 +697,7 @@
       <file leaf-file-name="albums.js.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="37" selection-start="357" selection-end="357" vertical-scroll-proportion="0.33860046">
+            <state line="5" column="0" selection-start="107" selection-end="345" vertical-scroll-proportion="0.16930023">
               <folding />
             </state>
           </provider>
@@ -1443,7 +1437,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="37" selection-start="357" selection-end="357" vertical-scroll-proportion="0.33860046">
+        <state line="5" column="0" selection-start="107" selection-end="345" vertical-scroll-proportion="0.16930023">
           <folding />
         </state>
       </provider>
