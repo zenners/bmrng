@@ -1,6 +1,6 @@
 <% faves ||= true if faves.nil? %>
 <% if current_guest and faves %>
-    <div class="fave_controls <%= photo.id %> animated">
+    <div class="fave_controls <%= photo.id %>">
       <% if current_guest %>
         <% if current_guest.following?(photo) %>
             <%= render 'photos/defave', :photo => photo %>

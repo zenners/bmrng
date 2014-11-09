@@ -5,11 +5,11 @@ body.display{
     margin-top: 0px;
 }
 
-.fave_options{
-    display: none;
-    z-index: 1000;
-}
+/*.fave_options{*/
+    /*display: none;*/
+    /*z-index: 1000;*/
+/*}*/
 
-li.image_container:hover .fave_options{
-    display: block;
-}
+/*li.image_container:hover .fave_controls{*/
+    /*display: block;*/
+/*}*/

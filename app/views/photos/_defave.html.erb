@@ -5,9 +5,10 @@
 <% end %>
 </span>
 <script>
-  $('.fave_options.<%= photo.id%>').removeClass("animated flipInX");
+  //$('.fave_options.<%= photo.id%>').removeClass("animated flipInX");
+  $('.fave_controls.<%= photo.id%>').addClass("visible");
  // $('.fave_options.<%= photo.id%>').show();
-  $('.fave_options.<%= photo.id%>').attr('style', 'display:block');
+  //$('.fave_options.<%= photo.id%>').attr('style', 'display:block');
   $('.fave_count.<%= photo.id %>').html('<p><%= photo.followers_count %></p>');
   $('.fave_count.<%= photo.id %>').attr('style', '');
 </script>

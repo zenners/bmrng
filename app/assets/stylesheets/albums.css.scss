@@ -131,6 +131,11 @@ a.btn {
 	//width: 200px;
     //padding: 12px;
 	.fave_controls{
+      opacity: 0;  filter: alpha(opacity=0);
+      -webkit-transition: opacity .5s ease;
+      -moz-transition: opacity .5s ease;
+      -o-transition: opacity .5s ease;
+      transition: opacity .5s ease;
 		position: absolute;
 		bottom: 65px;
 		//width: 0;
@@ -174,6 +179,19 @@ a.btn {
 			}
 		}
 	}
+    .fave_controls:hover{
+      opacity: 1;  filter: alpha(opacity=100);
+    }
+    .fave_controls.visible{
+      display: block;
+      opacity: 1;  filter: alpha(opacity=100);
+    }
+    .fave_controls.hover{
+      display: block;
+      opacity: 1;  filter: alpha(opacity=100);
+    }
+
+
 	//.fave_controls:hover{
 	//	border-bottom: 90px solid $red;
 	//	border-right: 90px solid transparent;
@@ -299,27 +317,4 @@ a.btn {
   padding: 20px;
   font-family: 'GothamMedium';
   font-size: 24pt;
-}
-
-@media (max-width: 400px) {
-  * {
-    /*CSS transitions*/
-    -o-transition-property: none !important;
-    -moz-transition-property: none !important;
-    -ms-transition-property: none !important;
-    -webkit-transition-property: none !important;
-    transition-property: none !important;
-    /*CSS transforms*/
-    -o-transform: none !important;
-    -moz-transform: none !important;
-    -ms-transform: none !important;
-    -webkit-transform: none !important;
-    transform: none !important;
-    /*CSS animations*/
-    -webkit-animation: none !important;
-    -moz-animation: none !important;
-    -o-animation: none !important;
-    -ms-animation: none !important;
-    animation: none !important;
-  }
 }
