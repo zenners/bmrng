@@ -1,15 +1,15 @@
 $(document).ready(function(){
     $(".complete").hide();
 
-
     // Single click to fave/defave a photo
     $('#main_image').on('touchstart', function(e) {
-        alert("E: " + e + ", Target: " + e.target);
-        $(e.target).parent().find('.fave_action')[0].addClass('animate');
-        $(e.target).parent().find('.fave_action')[0].show();
+        setTimeout(function() {
+            $(e.target).parent().find('.fave_action')[0].hide('blind', {}, 500)
+        }, 5000);
     }).mouseenter( function(e) {
-        $(e.target).parent().find('.fave_action')[0].addClass('animate');
-        $(e.target).parent().find('.fave_action')[0].show();
+        setTimeout(function() {
+            $(e.target).parent().find('.fave_action')[0].hide('blind', {}, 500)
+        }, 5000);
     }).mouseleave( function(e) {
         $(e.target).parent().find('.fave_action')[0].removeClass('animate');
         $(e.target).parent().find('.fave_action')[0].hide();
