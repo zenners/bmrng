@@ -21,17 +21,6 @@ $(document).ready(function(){
         return false;
     });
 
-    $(".fancybox-image").click(this, function(){
-        $.ajax($(this).parent().find('.fave_action')[0].href, {'dataType':'script'})
-                .beforeSend(function(){
-                    $($(this).parent().find(".fave_controls")[0]).addClass('hover');
-                })
-                .done(function(){
-                    $($(this).parent().find(".fave_controls")[0]).removeClass('hover');
-                });
-        return false;
-    });
-
     // disable auto discover
 	Dropzone.autoDiscover = false;
 	// grap our upload form by its id

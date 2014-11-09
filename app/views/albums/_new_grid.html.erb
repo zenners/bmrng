@@ -83,7 +83,17 @@
                 }
             },
             beforeShow: function () {
-
+                /* Enable fave from click on image */
+                $.fancybox.wrap.bind("click", function(e){
+                    $.ajax($(this).parent().find('.fave_action')[0].href, {'dataType':'script'})
+                            .beforeSend(function(){
+                                $($(this).parent().find(".fave_controls")[0]).addClass('hover');
+                            })
+                            .done(function(){
+                                $($(this).parent().find(".fave_controls")[0]).removeClass('hover');
+                            });
+                    return false;
+                });
                 /* Disable right click */
                 $.fancybox.wrap.bind("contextmenu", function (e) {
                         return false;
