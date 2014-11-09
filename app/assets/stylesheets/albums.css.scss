@@ -231,9 +231,6 @@ a.btn {
         transition: opacity .5s ease;
 		position: absolute;
         bottom: 112px;
-        @media (max-width: 768px) {
-          bottom: 92px;
-        }
 		width: 30;
 		height: 0;
 		color: $white;
@@ -268,9 +265,6 @@ a.btn {
   .fave_count{
     position: absolute;
     bottom: 55px;
-    @media (max-width: 768px) {
-      bottom: 42px;
-    }
     right: 15px;
     background: #000;
     width: 35px;
