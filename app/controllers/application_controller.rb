@@ -47,9 +47,12 @@ class ApplicationController < ActionController::Base
       redirect_to change_user_path(current_user, what: 'subscription')
     elsif request.domain.split('.').first == ENV['DISPLAY_DOMAIN'].split('.').first
       if user_id = request.params['user_id']
-        user = User.find_by_name_or_id(user_id)
-        if user.expired? and !user.admin?
-          redirect_to '/contact_studio.html'
+        if user = User.find_by_name_or_id(user_id)
+          if user.expired? and !user.admin?
+            redirect_to '/contact_studio.html'
+          end
+        else
+          redirect_to '/'
         end
       end
     end
