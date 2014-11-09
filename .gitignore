@@ -16,5 +16,6 @@
 /tmp
 
 #ignore ideas
+/.idea/*
 .idea
 .idea/*
