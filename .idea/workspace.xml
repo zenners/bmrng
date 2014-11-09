@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/display.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/display.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -22,7 +22,7 @@
     <file path="/Dummy.txt" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415485145029" ignored="false" />
     <file path="/account.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1404774189523" ignored="false" />
     <file path="$PROJECT_DIR$/../wishinawell/app/models/account.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394337705547" ignored="false" />
-    <file path="/a.dummy" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415508871914" ignored="false" />
+    <file path="/a.dummy" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415566960515" ignored="false" />
     <file path="/devise.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394338790441" ignored="false" />
     <file path="/routes.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410060692766" ignored="false" />
     <file path="/application.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1405886384680" ignored="false" />
@@ -252,7 +252,7 @@
     <file path="$PROJECT_DIR$/../rpsf/config/secrets.yml" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1401228279117" ignored="false" />
     <file path="$PROJECT_DIR$/../rpsf/config/secrets.yml.example" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1401228342048" ignored="false" />
     <file path="$PROJECT_DIR$/../rpsf/.gitignore" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1401230510398" ignored="false" />
-    <file path="/.gitignore" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1401229840373" ignored="false" />
+    <file path="/.gitignore" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415562476234" ignored="false" />
     <file path="$PROJECT_DIR$/../rpsf/config.ru" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1401229825905" ignored="false" />
     <file path="$PROJECT_DIR$/../rpsf/config/initializers/load_secrets.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1401228557620" ignored="false" />
     <file path="/load_secrets.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1401808229458" ignored="false" />
@@ -529,7 +529,7 @@
     <file path="/dropzone_override.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410057859399" ignored="false" />
     <file path="/subscriptions.js.coffee" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408232382070" ignored="false" />
     <file path="/albums.js.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415553363000" ignored="false" />
-    <file path="/display.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409549525758" ignored="false" />
+    <file path="/display.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415566197378" ignored="false" />
     <file path="/user.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408258885237" ignored="false" />
     <file path="$PROJECT_DIR$/../rose_point/rpsf_clean/app/views/contacts/_statistics.html.haml" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409669495319" ignored="false" />
     <file path="$PROJECT_DIR$/../rose_point/rpsf_clean/db/migrate/034_subdivide_types.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408391552478" ignored="false" />
@@ -552,7 +552,7 @@
     <file path="/cbpGridGallery.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409601014664" ignored="false" />
     <file path="/component.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409591531639" ignored="false" />
     <file path="/jquery.fancybox.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409602714395" ignored="false" />
-    <file path="/jquery.fancybox.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415559160239" ignored="false" />
+    <file path="/jquery.fancybox.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415566690127" ignored="false" />
     <file path="/20140907032248_add_password_to_albums.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410060190286" ignored="false" />
     <file path="/set_password.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410061383338" ignored="false" />
     <file path="/set_questions.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410064804560" ignored="false" />
@@ -576,22 +576,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_new_grid.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_new_grid.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="12" selection-start="4635" selection-end="4747" vertical-scroll-proportion="0.18316832">
+            <state line="43" column="11" selection-start="2134" selection-end="2134" vertical-scroll-proportion="-26.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.colorbox.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.colorbox.js">
+      <file leaf-file-name="display.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/display.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="694" column="61" selection-start="18202" selection-end="18202" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="3" column="21" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="6" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -599,15 +606,15 @@
       <file leaf-file-name="jquery.fancybox.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="20" selection-start="2822" selection-end="2822" vertical-scroll-proportion="-6.0384617">
+            <state line="159" column="8" selection-start="2545" selection-end="2551" vertical-scroll-proportion="-10.115385">
               <folding>
-                <element signature="e#3510#9233#2" expanded="true" />
-                <element signature="e#11188#17119#2" expanded="true" />
-                <element signature="e#17515#28882#2" expanded="true" />
-                <element signature="e#29064#34483#2" expanded="true" />
-                <element signature="e#35164#48695#2" expanded="true" />
-                <element signature="e#48881#54128#2" expanded="true" />
-                <element signature="e#54598#65989#2" expanded="true" />
+                <element signature="e#3732#9455#2" expanded="true" />
+                <element signature="e#11410#17341#2" expanded="true" />
+                <element signature="e#17737#29104#2" expanded="true" />
+                <element signature="e#29286#34705#2" expanded="true" />
+                <element signature="e#35386#48917#2" expanded="true" />
+                <element signature="e#49103#54350#2" expanded="true" />
+                <element signature="e#54820#66211#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -625,7 +632,7 @@
       <file leaf-file-name="albums.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="243" column="13" selection-start="4648" selection-end="4648" vertical-scroll-proportion="0.0">
+            <state line="266" column="17" selection-start="5098" selection-end="5098" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#192#327#0" expanded="false" />
                 <element signature="e#343#471#0" expanded="false" />
@@ -656,49 +663,30 @@
                 <element signature="e#3192#3293#0" expanded="false" />
                 <element signature="e#3233#3288#0" expanded="false" />
                 <element signature="e#4055#4143#0" expanded="false" />
-                <element signature="e#4477#4512#0" expanded="false" />
-                <element signature="e#4653#4754#0" expanded="false" />
-                <element signature="e#4694#4749#0" expanded="false" />
-                <element signature="e#4785#4847#0" expanded="false" />
-                <element signature="e#5522#5715#0" expanded="false" />
-                <element signature="e#5566#5609#0" expanded="false" />
-                <element signature="e#5673#5713#0" expanded="false" />
-                <element signature="e#5732#5936#0" expanded="false" />
-                <element signature="e#5869#5894#0" expanded="false" />
-                <element signature="e#5915#5934#0" expanded="false" />
-                <element signature="e#5947#6017#0" expanded="false" />
+                <element signature="e#4583#4684#0" expanded="false" />
+                <element signature="e#4624#4679#0" expanded="false" />
+                <element signature="e#4715#4777#0" expanded="false" />
+                <element signature="e#5394#5587#0" expanded="false" />
+                <element signature="e#5438#5481#0" expanded="false" />
+                <element signature="e#5545#5585#0" expanded="false" />
+                <element signature="e#5604#5808#0" expanded="false" />
+                <element signature="e#5741#5766#0" expanded="false" />
+                <element signature="e#5787#5806#0" expanded="false" />
+                <element signature="e#5819#5889#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.fancybox.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="jquery.fancybox.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1785" column="37" selection-start="43416" selection-end="43416" vertical-scroll-proportion="0.0">
+            <state line="1400" column="41" selection-start="34150" selection-end="34155" vertical-scroll-proportion="0.921519">
               <folding>
-                <marker date="1415561259000" expanded="true" signature="53839:53875" placeholder="..." />
-                <marker date="1415561259000" expanded="true" signature="54186:54238" placeholder="..." />
-                <marker date="1415561259000" expanded="true" signature="55005:55019" placeholder="{...}" />
+                <marker date="1415567375000" expanded="true" signature="53839:53875" placeholder="..." />
+                <marker date="1415567375000" expanded="true" signature="54186:54238" placeholder="..." />
+                <marker date="1415567375000" expanded="true" signature="55005:55019" placeholder="{...}" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_fave.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/photos/_fave.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="19" selection-start="346" selection-end="346" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_defave.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/photos/_defave.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="19" selection-start="294" selection-end="294" vertical-scroll-proportion="-5.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -760,8 +748,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/_navigation_bottom.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/subscriptions/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/send_feedback.html.erb" />
         <option value="$PROJECT_DIR$/app/views/subscriptions/edit.html.erb" />
         <option value="$PROJECT_DIR$/.ruby-version" />
@@ -772,10 +758,12 @@
         <option value="$PROJECT_DIR$/app/views/photos/_fave.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/album_display.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
         <option value="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/display.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
       </list>
     </option>
   </component>
@@ -1220,10 +1208,10 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41136363" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27727273" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15266708" sideWeight="0.58863634" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15266708" sideWeight="0.7227273" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1299,20 +1287,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.ruby-version">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="108" selection-start="2406" selection-end="2406" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/animate.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="14" selection-start="35" selection-end="60" vertical-scroll-proportion="0.0">
@@ -1348,13 +1322,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/album_display.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="136" selection-end="206" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="7" selection-start="1281" selection-end="1281" vertical-scroll-proportion="-16.583334">
@@ -1383,27 +1350,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/component.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="20" selection-start="2822" selection-end="2822" vertical-scroll-proportion="-6.0384617">
+        <state line="165" column="24" selection-start="2689" selection-end="2690" vertical-scroll-proportion="0.7414966">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/photos/_fave_options.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="45" selection-start="113" selection-end="113" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.colorbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="694" column="61" selection-start="18202" selection-end="18202" vertical-scroll-proportion="0.2957265">
           <folding>
-            <element signature="e#3510#9233#2" expanded="true" />
-            <element signature="e#11188#17119#2" expanded="true" />
-            <element signature="e#17515#28882#2" expanded="true" />
-            <element signature="e#29064#34483#2" expanded="true" />
-            <element signature="e#35164#48695#2" expanded="true" />
-            <element signature="e#48881#54128#2" expanded="true" />
-            <element signature="e#54598#65989#2" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="6" selection-start="510" selection-end="510" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="11" selection-start="2134" selection-end="2134" vertical-scroll-proportion="-26.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/album_display.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="136" selection-end="206" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="13" selection-start="4648" selection-end="4648" vertical-scroll-proportion="0.0">
+        <state line="266" column="17" selection-start="5098" selection-end="5098" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#192#327#0" expanded="false" />
             <element signature="e#343#471#0" expanded="false" />
@@ -1434,59 +1427,53 @@
             <element signature="e#3192#3293#0" expanded="false" />
             <element signature="e#3233#3288#0" expanded="false" />
             <element signature="e#4055#4143#0" expanded="false" />
-            <element signature="e#4477#4512#0" expanded="false" />
-            <element signature="e#4653#4754#0" expanded="false" />
-            <element signature="e#4694#4749#0" expanded="false" />
-            <element signature="e#4785#4847#0" expanded="false" />
-            <element signature="e#5522#5715#0" expanded="false" />
-            <element signature="e#5566#5609#0" expanded="false" />
-            <element signature="e#5673#5713#0" expanded="false" />
-            <element signature="e#5732#5936#0" expanded="false" />
-            <element signature="e#5869#5894#0" expanded="false" />
-            <element signature="e#5915#5934#0" expanded="false" />
-            <element signature="e#5947#6017#0" expanded="false" />
+            <element signature="e#4583#4684#0" expanded="false" />
+            <element signature="e#4624#4679#0" expanded="false" />
+            <element signature="e#4715#4777#0" expanded="false" />
+            <element signature="e#5394#5587#0" expanded="false" />
+            <element signature="e#5438#5481#0" expanded="false" />
+            <element signature="e#5545#5585#0" expanded="false" />
+            <element signature="e#5604#5808#0" expanded="false" />
+            <element signature="e#5741#5766#0" expanded="false" />
+            <element signature="e#5787#5806#0" expanded="false" />
+            <element signature="e#5819#5889#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/component.css">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/display.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="24" selection-start="2689" selection-end="2690" vertical-scroll-proportion="0.7414966">
+        <state line="3" column="21" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/photos/_fave_options.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="45" selection-start="113" selection-end="113" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.colorbox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="694" column="61" selection-start="18202" selection-end="18202" vertical-scroll-proportion="0.0">
+        <state line="159" column="8" selection-start="2545" selection-end="2551" vertical-scroll-proportion="-10.115385">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#3732#9455#2" expanded="true" />
+            <element signature="e#11410#17341#2" expanded="true" />
+            <element signature="e#17737#29104#2" expanded="true" />
+            <element signature="e#29286#34705#2" expanded="true" />
+            <element signature="e#35386#48917#2" expanded="true" />
+            <element signature="e#49103#54350#2" expanded="true" />
+            <element signature="e#54820#66211#2" expanded="true" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1785" column="37" selection-start="43416" selection-end="43416" vertical-scroll-proportion="0.0">
+        <state line="1400" column="41" selection-start="34150" selection-end="34155" vertical-scroll-proportion="0.921519">
           <folding>
-            <marker date="1415561259000" expanded="true" signature="53839:53875" placeholder="..." />
-            <marker date="1415561259000" expanded="true" signature="54186:54238" placeholder="..." />
-            <marker date="1415561259000" expanded="true" signature="55005:55019" placeholder="{...}" />
+            <marker date="1415567375000" expanded="true" signature="53839:53875" placeholder="..." />
+            <marker date="1415567375000" expanded="true" signature="54186:54238" placeholder="..." />
+            <marker date="1415567375000" expanded="true" signature="55005:55019" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="12" selection-start="4635" selection-end="4747" vertical-scroll-proportion="0.18316832">
-          <folding />
         </state>
       </provider>
     </entry>

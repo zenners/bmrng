@@ -38,6 +38,10 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
+        /* Disable right click */
+        $(document).bind("contextmenu",function(e) {
+            return false;
+        });
 		$(".fancybox").fancybox({
 //            openEffect  : 'none',
 //            closeEffect : 'none',

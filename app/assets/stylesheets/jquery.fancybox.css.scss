@@ -114,6 +114,17 @@ a.fancybox-close {
   z-index: 8040;
 }
 
+.fancybox-mobile a.fancybox-close {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 46px;
+  height: 46px;
+  cursor: pointer;
+  background-position: 0 0;
+  z-index: 8040;
+}
+
 a.fancybox-nav {
   position: absolute;
   top: 0;
@@ -162,7 +173,9 @@ a.fancybox-next span {
 }
 
 .fancybox-mobile  a.fancybox-nav {
-  max-width: 80px;
+  width: 0;
+  //max-width: 80px;
+  visibility: hidden;
 }
 
 .fancybox-desktop  a.fancybox-nav {

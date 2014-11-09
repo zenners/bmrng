@@ -1,5 +1,7 @@
 body{
   margin-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .nav_img{
@@ -18,8 +20,9 @@ body{
 
 .album_title{
     color: white;
-    padding-top: 8px;
-    font-size: 18pt;
+    position: relative;
+    bottom: -3px;
+    font-size: 14pt;
     padding-left: 60px;
   }
 
