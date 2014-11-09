@@ -105,8 +105,8 @@ a.fancybox-nav span,
 
 a.fancybox-close {
   position: absolute;
-  top: -23px;
-  right: -23px;
+  top: -35px;
+  right: -35px;
   width: 46px;
   height: 46px;
   cursor: pointer;
@@ -130,15 +130,15 @@ a.fancybox-nav {
 .fancybox-type-inline a.fancybox-nav,
 .fancybox-type-html a.fancybox-nav
 {
-  width: 70px;
+  width: 40px;
 }
 
 a.fancybox-prev {
-  left: -70px;
+  left: -35px;
 }
 
 a.fancybox-next {
-  right: -70px;
+  right: -35px;
 }
 
 a.fancybox-nav span {

@@ -216,6 +216,11 @@ a.btn {
 		color: $white;
 		cursor: pointer;
 		.fave_corner{
+          opacity: 0;  filter: alpha(opacity=0);
+          -webkit-transition: opacity .5s ease;
+          -moz-transition: opacity .5s ease;
+          -o-transition: opacity .5s ease;
+          transition: opacity .5s ease;
             img{
               width: 150%;
             }
@@ -230,6 +235,9 @@ a.btn {
 				}
 			}
 		}
+        .fave_corner:hover{
+          opacity: 1;  filter: alpha(opacity=100);
+        }
 	}
 	.fave_count{
 		position: absolute;

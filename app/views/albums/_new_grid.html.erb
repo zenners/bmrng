@@ -9,7 +9,7 @@
                     <a alt='<%=photo.photo_file_name.split('.').first%>' class='fancybox' rel='group' href='<%= photo.photo.url(:original) %>' data-photo-id="fave-<%= photo.id %>">
                       <div class="image_zoom"><%= image_tag('search.png')%></div>
                     </a>
-                    <div id="fave-<%= photo.id%>" class='fave_options animated flipInX <%= photo.id %>'>
+                    <div id="fave-<%= photo.id%>" class='fave_options <%= photo.id %>'>
                         <%= render partial: 'photos/fave_options', locals: {photo: photo} %>
                     </div>
                     <div class="fave_count <%= photo.id %>"><p><%= photo.followers_count %></p></div>
@@ -44,11 +44,9 @@
 //            nextEffect  : 'none',
 //            prevEffect  : 'none',
             padding     : 0,
-            margin      : [20, 60, 20, 60], // Increase left/right margin
+            margin      : [20, 30, 20, 30], // Increase left/right margin
             beforeLoad: function() {
                 this.title = $(this.element).attr('alt');
-            },
-            beforeShow: function () {
                 if (this.title) {
                     //Bring in the extra data that passes the fave controls
                     var el, id = $(this.element).data('photo-id');
@@ -60,7 +58,6 @@
                     }
                     // Add in the social  parts of title
                     <% if @album.social %>
-                        // New line
                         this.title += '<span class="social"><span class="info">Share this image:</span> ';
 
                         // Add Facebook like button
@@ -79,10 +76,13 @@
                         this.title += '</span>';
                     <% end %>
                 }
+            },
+            beforeShow: function () {
+
                 /* Disable right click */
-                $.fancybox.wrap.bind("contextmenu", function (e) {
-                        return false;
-                });
+//                $.fancybox.wrap.bind("contextmenu", function (e) {
+//                        return false;
+//                });
             },
             afterShow: function() {
                 $(".fancybox-title").wrapInner('<div />').show();
