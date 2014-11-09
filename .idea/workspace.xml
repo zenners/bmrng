@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
     </list>
     <ignored path="BMRNG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -526,7 +527,7 @@
     <file path="/albums.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408232334004" ignored="false" />
     <file path="/dropzone_override.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410057859399" ignored="false" />
     <file path="/subscriptions.js.coffee" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408232382070" ignored="false" />
-    <file path="/albums.js.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415502253858" ignored="false" />
+    <file path="/albums.js.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415504750808" ignored="false" />
     <file path="/display.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409549525758" ignored="false" />
     <file path="/user.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408258885237" ignored="false" />
     <file path="$PROJECT_DIR$/../rose_point/rpsf_clean/app/views/contacts/_statistics.html.haml" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409669495319" ignored="false" />
@@ -546,7 +547,7 @@
     <file path="/ask_questions.js.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408936041418" ignored="false" />
     <file path="/_question_form.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409511313584" ignored="false" />
     <file path="/animate.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409012633253" ignored="false" />
-    <file path="/_new_grid.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415497628120" ignored="false" />
+    <file path="/_new_grid.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415505987207" ignored="false" />
     <file path="/cbpGridGallery.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409601014664" ignored="false" />
     <file path="/component.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409591531639" ignored="false" />
     <file path="/jquery.fancybox.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409602714395" ignored="false" />
@@ -576,7 +577,7 @@
       <file leaf-file-name="_new_grid.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="69" selection-start="682" selection-end="694" vertical-scroll-proportion="-6.875">
+            <state line="108" column="0" selection-start="5392" selection-end="5392" vertical-scroll-proportion="-30.5">
               <folding />
             </state>
           </provider>
@@ -609,10 +610,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="albums.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="albums.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="232" column="39" selection-start="4335" selection-end="4335" vertical-scroll-proportion="0.0">
+            <state line="301" column="8" selection-start="5392" selection-end="5392" vertical-scroll-proportion="0.5114596">
               <folding />
             </state>
           </provider>
@@ -639,16 +640,16 @@
       <file leaf-file-name="albums.js.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="640" selection-end="640" vertical-scroll-proportion="-10.625">
+            <state line="1" column="26" selection-start="56" selection-end="56" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="11" selection-start="1868" selection-end="1868" vertical-scroll-proportion="0.5609168">
+            <state line="78" column="108" selection-start="2406" selection-end="2406" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -691,12 +692,12 @@
         <option value="$PROJECT_DIR$/.ruby-version" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
         <option value="$PROJECT_DIR$/app/views/photos/_fave_options.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/component.css" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
       </list>
     </option>
   </component>
@@ -1267,13 +1268,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/animate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="14" selection-start="35" selection-end="60" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/photos/_fave_options.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="54" selection-start="122" selection-end="122" vertical-scroll-proportion="-1.25">
@@ -1291,13 +1285,6 @@
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/component.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="285" column="16" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="232" column="39" selection-start="4335" selection-end="4335" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1320,23 +1307,37 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="69" selection-start="682" selection-end="694" vertical-scroll-proportion="-6.875">
+        <state line="78" column="108" selection-start="2406" selection-end="2406" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="14" selection-start="35" selection-end="60" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="640" selection-end="640" vertical-scroll-proportion="-10.625">
+        <state line="1" column="26" selection-start="56" selection-end="56" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="11" selection-start="1868" selection-end="1868" vertical-scroll-proportion="0.5609168">
+        <state line="108" column="0" selection-start="5392" selection-end="5392" vertical-scroll-proportion="-30.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="301" column="8" selection-start="5392" selection-end="5392" vertical-scroll-proportion="0.5114596">
           <folding />
         </state>
       </provider>
