@@ -131,11 +131,11 @@ a.btn {
 	//width: 200px;
     //padding: 12px;
 	.fave_controls{
-      opacity: 0;  filter: alpha(opacity=0);
-      -webkit-transition: opacity .5s ease;
-      -moz-transition: opacity .5s ease;
-      -o-transition: opacity .5s ease;
-      transition: opacity .5s ease;
+        opacity: 0;  filter: alpha(opacity=0);
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        transition: all 1s ease;
 		position: absolute;
 		bottom: 65px;
 		//width: 0;
@@ -181,6 +181,10 @@ a.btn {
 	}
     .fave_controls:hover{
       opacity: 1;  filter: alpha(opacity=100);
+      -webkit-transform: rotateY(360deg);
+      -moz-transform: rotateY(360deg);
+      -o-transform: rotateY(360deg);
+      transform: rotateY(360deg);
     }
     .fave_controls.visible{
       display: block;
@@ -189,6 +193,10 @@ a.btn {
     .fave_controls.hover{
       display: block;
       opacity: 1;  filter: alpha(opacity=100);
+      -webkit-transform: rotateY(360deg);
+      -moz-transform: rotateY(360deg);
+      -o-transform: rotateY(360deg);
+      transform: rotateY(360deg);
     }
 
 
@@ -216,10 +224,10 @@ a.btn {
 	}
     .image_zoom{
       opacity: 0;  filter: alpha(opacity=0);
-      -webkit-transition: opacity .5s ease;
-      -moz-transition: opacity .5s ease;
-      -o-transition: opacity .5s ease;
-      transition: opacity .5s ease;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all 1s ease;
       width: 20px;
       position: absolute;
       top: 0px;
@@ -228,6 +236,10 @@ a.btn {
     }
     .image_zoom.hover{
       opacity: 1;  filter: alpha(opacity=100);
+      -webkit-transform: rotateX(360deg);
+      -moz-transform: rotateX(360deg);
+      -o-transform: rotateX(360deg);
+      transform: rotateX(360deg);
     }
     .image_zoom.visible{
       display: block;
