@@ -37,7 +37,19 @@ class AlbumsController < ApplicationController
       end
     end
     raise ActiveRecord::RecordNotFound unless @album
-    session[:guest_id] = Guest.create.id unless current_guest
+    unless current_guest
+      #verify password if necessary
+      if request.get? and @album.password_toggle
+        render :sign_in and return
+      elsif request.post?
+        unless @album.password == params[:album][:password]
+          render :not_authorized and return
+        end
+      end
+      #create session
+      session[:guest_id] = Guest.create.id
+    end
+
     @photos = if params[:faves] == "true"
       current_guest.all_following.map{|p| @album.photos.include?(p) ? p : nil}.flatten
     else
