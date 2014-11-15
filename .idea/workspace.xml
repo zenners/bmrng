@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/set_password.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/set_password.html.erb" />
     </list>
     <ignored path="BMRNG.iws" />
@@ -641,11 +640,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="set_password.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="set_password.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/albums/set_password.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="2" selection-start="793" selection-end="793" vertical-scroll-proportion="-15.583333">
-              <folding />
+            <state line="27" column="2" selection-start="793" selection-end="793" vertical-scroll-proportion="0.6572935">
+              <folding>
+                <marker date="1416087990000" expanded="true" signature="794:1068" placeholder="..." />
+                <marker date="1416087990000" expanded="true" signature="881:1000" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -659,10 +661,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.fancybox.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jquery.fancybox.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2332" column="39" selection-start="55122" selection-end="55122" vertical-scroll-proportion="0.33275864">
+            <state line="2332" column="39" selection-start="55122" selection-end="55122" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1416087233000" expanded="false" signature="53839:53875" placeholder="..." />
                 <marker date="1416087233000" expanded="false" signature="54186:54238" placeholder="..." />
@@ -713,8 +715,8 @@
         <option value="$PROJECT_DIR$/app/views/albums/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/manage/_options.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/photos_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/albums/set_password.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
+        <option value="$PROJECT_DIR$/app/views/albums/set_password.html.erb" />
       </list>
     </option>
   </component>
@@ -1371,13 +1373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/albums/set_password.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="2" selection-start="793" selection-end="793" vertical-scroll-proportion="-15.583333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/staging.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1387,11 +1382,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2332" column="39" selection-start="55122" selection-end="55122" vertical-scroll-proportion="0.33275864">
+        <state line="2332" column="39" selection-start="55122" selection-end="55122" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1416087233000" expanded="false" signature="53839:53875" placeholder="..." />
             <marker date="1416087233000" expanded="false" signature="54186:54238" placeholder="..." />
             <marker date="1416087233000" expanded="true" signature="55005:55019" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/albums/set_password.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="2" selection-start="793" selection-end="793" vertical-scroll-proportion="0.6572935">
+          <folding>
+            <marker date="1416087990000" expanded="true" signature="794:1068" placeholder="..." />
+            <marker date="1416087990000" expanded="true" signature="881:1000" placeholder="..." />
           </folding>
         </state>
       </provider>
