@@ -7,7 +7,7 @@
             <%= f.error_notification %>
 	    	<div class="session_start">
 				<h4>Where do you want the session to live? Type it below, all one word.</h4>
-				<h4>ex. www.<%= ENV['DISPLAY_DOMAIN'] %>/<%= current_user.name %>/<span id="session_name3">___________________</span></h4>
+				<h4>ex. <%= ENV['DISPLAY_SUBDOMAIN'] %>.boomerangproof.com/<%= current_user.name %>/<span id="session_name3">___________________</span></h4>
 			</div>
 			  <div class="form-inputs big_input">
 			  	<%= f.hidden_field :user_id, :value => current_user.id %>

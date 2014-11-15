@@ -1,0 +1,17 @@
+<div class="session_start">
+      <h1>PASSWORD REQUIRED</h1>
+</div>
+<div class="session_start">
+  <%= simple_form_for :album, url: request.url do |f| %>
+  <div class="form-inputs">
+    <%= f.input :password, :placeholder => "PASSWORD", label: false %>
+  </div>
+  <br>
+  <%= f.button :submit, "CONTINUE" %>
+  <% end %>
+</div>
+<%= javascript_include_tag 'fancyInput' %>
+<script>
+    $('section :input').val('').fancyInput()[0].focus();
+    $("#password").trigger('focus');
+</script>

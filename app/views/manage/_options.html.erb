@@ -1,8 +1,8 @@
 <div class="row">
 	<div class="span3 option_links animated fadeInUp">
-        <h4><%= link_to 'UPLOAD PHOTOS', @album %></h4>
+        <h4><%= link_to 'MANAGE PHOTOS', @album %></h4>
         <h4><%= link_to 'CHANGE TITLE', set_title_album_path(@album) %></h4>
-        <h4><%= link_to (@album.password_toggle ? 'CHANGE PASSWORD' : 'SET PASSWORD'), set_password_album_path(@album) %></h4>
+        <h4><%= link_to (@album.password_toggle ? 'MANAGE PASSWORD' : 'SET PASSWORD'), set_password_album_path(@album) %></h4>
         <h4><%= link_to 'SOCIAL SHARE', settings_album_path(@album) %></h4>
 		<!--<h4><a data-toggle="modal" href="#name">CHANGE VANITY URL</a></h4>-->
 		<!--<h4><a data-toggle="modal" href="#title">CHANGE TITLE</a></h4>-->

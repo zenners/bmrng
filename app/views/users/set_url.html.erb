@@ -6,9 +6,9 @@
   the name of your studio and will be part of the URL that you’ll give clients
   to view their photos. Like the rest of your info, you can change this later
   too as long as it’s not already taken. One rule: it needs to be all one
-  word. For example, www.<%= ENV['DISPLAY_DOMAIN'] %>/yourvanityurl/sessionname
+  word. For example, <%= ENV['DISPLAY_SUBDOMAIN'] %>.boomerangproof.com/yourvanityurl/sessionname
 </p>
-<h4 class='session_start'>ex. www.<%= ENV['DISPLAY_DOMAIN'] %>/<span id="url_name3">___________________</span></h4>
+<h4 class='session_start'>ex. <%= ENV['DISPLAY_SUBDOMAIN'].boomerangproof.com %>/<span id="url_name3">___________________</span></h4>
 <div class="session_start">
 	<%= simple_form_for resource, url: 'set_url' do |f| %>
 			  <div class="form-inputs big_input">

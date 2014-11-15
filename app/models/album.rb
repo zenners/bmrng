@@ -45,7 +45,7 @@ class Album < ActiveRecord::Base
 
   #REVIEW: THIS IS NOT DYNAMIC AT ALL
   def url
-    "http://www.#{ENV['DISPLAY_DOMAIN']}/#{user.url_name}/#{name}"
+    "http://#{ENV['DISPLAY_SUBDOMAIN']}.boomerangproof.com/#{user.url_name}/#{name}"
   end
 
   def top_photos

@@ -50,7 +50,7 @@ BMRNG::Application.routes.draw do
 
   resources :albums do
     member do
-      get :display
+      match :display, via: [:get, :post]
       match :set_title, via: [:get, :post, :patch]
       match :set_password, via: [:get, :patch]
       match :settings, via: [:get, :post, :patch]
@@ -79,12 +79,25 @@ BMRNG::Application.routes.draw do
 
   get '/admin/become' => 'admin#become'
 
-  constraints DomainConstraint.new ['myalbumviewer.dev', 'myalbumviewer.com'] do
-    root to: 'home#viewer', as: :viewer
-    resources :users, path: '/' do
-      get '/:album_id' => 'albums#display'
+  #constraints DomainConstraint.new ['myalbumviewer.dev', 'myalbumviewer.com'] do
+  #  root to: 'home#viewer', as: :viewer
+  #  resources :users, path: '/' do
+  #    get '/:album_id' => 'albums#display'
+  #  end
+  #end
+
+  constraints SubdomainConstraint.new ['cp'] do
+    devise_scope :user do
+      root to: "devise/sessions#new"
     end
   end
 
-  root :to => 'home#index', as: :home
+  constraints SubdomainConstraint.new ['www'] do
+    root to: 'home#index', as: :home
+    resources :users, path: '/' do
+      match '/:album_id' => 'albums#display', via: [:get, :post]
+    end
+  end
+
+  root to: 'home#index', as: :default
 end

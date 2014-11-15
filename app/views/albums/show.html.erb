@@ -24,3 +24,60 @@
     </div>
   <% end %>
 </div>
+
+<script>
+    // disable auto discover
+    Dropzone.autoDiscover = false;
+    // grap our upload form by its id
+    $("#new_photo").dropzone({
+        // restrict image size to a maximum 10MB
+        maxFilesize: 10,
+        // changed the passed param to one accepted by
+        // our rails app
+        paramName: "photo[photo]",
+        // show remove links on each image upload
+        addRemoveLinks: true,
+        // if the upload was successful
+
+        init: function () {
+            <% @album.photos.each do |photo| %>
+                var id = <%= photo.id %>
+                var file = { name: "<%= photo.photo_file_name %>", size: <%= photo.photo_file_size || 0 %>, type: "<%= photo.photo_content_type %>" };
+                this.options.addedfile.call(this, file);
+                this.options.thumbnail.call(this, file, "<%= photo.photo.url(:medium) %>");
+                $(file.previewTemplate).find('.dz-remove').attr('id', id);
+            <% end %>
+            this.on("complete", function (file) {
+                if (this.getUploadingFiles().length === 0 && this.getQueuedFiles().length === 0) {
+                    $(".complete").show();
+                }
+            });
+        },
+
+        success: function(file, response){
+            // find the remove button link of the uploaded file and give it an id
+            // based of the fileID response from the server
+            $(file.previewTemplate).find('.dz-remove').attr('id', response.fileID);
+            // add the dz-success class (the green tick sign)
+            $(file.previewElement).addClass("dz-success");
+        },
+        //when the remove button is clicked
+        removedfile: function(file){
+            // grap the id of the uploaded file we set earlier
+            var id = $(file.previewTemplate).find('.dz-remove').attr('id');
+            if(id == null){
+                $(file.previewElement).addClass('hidden');
+            }else{
+                // make a DELETE ajax request to delete the file
+                $.ajax({
+                    type: 'DELETE',
+                    url: '/photos/' + id,
+                    success: function(data){
+                        console.log(data.message);
+                        $(file.previewElement).addClass('hidden');
+                    }
+                });
+            };
+        }
+    });
+</script>

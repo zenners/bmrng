@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
 
   before_filter :ensure_not_expired
 
+  before_filter :ensure_subdomain
+
   rescue_from RuntimeError,     with: :rescue_visible_error_in_public
 
   rescue_from CanCan::AccessDenied do |exception|
@@ -45,7 +47,7 @@ class ApplicationController < ActionController::Base
       nil
     elsif current_user and current_user.expired? and !current_user.admin? and (!request.path.include?('subscriptions'))
       redirect_to change_user_path(current_user, what: 'subscription')
-    elsif request.domain.split('.').first == ENV['DISPLAY_DOMAIN'].split('.').first
+    elsif request.subdomain == ENV['DISPLAY_SUBDOMAIN']
       if user_id = request.params['user_id']
         if user = User.find_by_name_or_id(user_id)
           if user.expired? and !user.admin?
@@ -59,14 +61,21 @@ class ApplicationController < ActionController::Base
   end
 
   def determine_layout
-    domain, tld = request.domain.split(".") rescue [nil, nil]
-    domain ||= 'localhost'
-    if [ENV['PRIMARY_DOMAIN'].split('.').first, 'localhost'].include? domain
+    subdomain = request.subdomain rescue 'www'
+    #domain, tld = request.domain.split(".") rescue [nil, nil]
+    #domain ||= 'localhost'
+    if ENV['PRIMARY_SUBDOMAIN'] == subdomain
       'application'
-    elsif domain == ENV['DISPLAY_DOMAIN'].split('.').first
+    elsif ENV['DISPLAY_SUBDOMAIN'] == subdomain
       'display'
     else
       raise "Seems like the wrong url... Sorry."
+    end
+  end
+
+  def ensure_subdomain
+    if request.path.include? new_user_session_path and request.subdomain != ENV['PRIMARY_SUBDOMAIN']
+      redirect_to('http://' + ENV['PRIMARY_SUBDOMAIN'] + '.' + request.domain + request.path)
     end
   end
 
