@@ -7,7 +7,7 @@
                 <figure>
                     <%= image_tag(photo.photo.url(:original), class: 'main_image') %>
                     <a alt='<%=photo.photo_file_name.split('.').first%>' class='fancybox' rel='group' href='<%= photo.photo.url(:original) %>' data-photo-id="fave-<%= photo.id %>">
-                      <div class="image_zoom"><%= image_tag('search.png')%></div>
+                      <div class="image_zoom <%= photo.id %>"><%= image_tag('search.png')%></div>
                     </a>
                     <div id="fave-<%= photo.id%>" class='fave_options <%= photo.id %>'>
                       <%= render partial: 'photos/fave_options', locals: {photo: photo} %>

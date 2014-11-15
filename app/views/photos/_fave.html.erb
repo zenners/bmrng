@@ -8,6 +8,7 @@
 <script>
   //$('.fave_options.<%= photo.id %>').addClass("animated flipInX");
   $('.fave_controls.<%= photo.id %>').removeClass("visible");
+  $('.image_zoom.<%= photo.id %>').removeClass("visible");
   //$('.fave_options.<%= photo.id %>').attr('style', '');
   <% if photo.followers_count == 0 %>
       $('.fave_count.<%= photo.id %>').hide();

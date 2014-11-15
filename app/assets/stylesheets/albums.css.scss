@@ -215,10 +215,23 @@ a.btn {
 		}
 	}
     .image_zoom{
+      opacity: 0;  filter: alpha(opacity=0);
+      -webkit-transition: opacity .5s ease;
+      -moz-transition: opacity .5s ease;
+      -o-transition: opacity .5s ease;
+      transition: opacity .5s ease;
       width: 20px;
       position: absolute;
-      top: 15px;
-      right: 15px;
+      top: 0px;
+      right: 0px;
+      padding: 25px;
+    }
+    .image_zoom.hover{
+      opacity: 1;  filter: alpha(opacity=100);
+    }
+    .image_zoom.visible{
+      display: block;
+      opacity: 1;  filter: alpha(opacity=100);
     }
 }
 

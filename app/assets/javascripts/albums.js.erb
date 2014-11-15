@@ -1,5 +1,13 @@
 $(document).ready(function(){
-    var timeout;
+    $(".image_zoom").mouseenter(function(e){
+        $(this).addClass("hover");
+        $(this).parent().parent().find(".fave_controls").addClass("hover");
+    });
+    $(".image_zoom").mouseleave(function(e){
+        $(this).removeClass("hover");
+        $(this).parent().parent().find(".fave_controls").removeClass("hover");
+    });
+
     $(".complete").hide();
 
     // Grid view hover effect
