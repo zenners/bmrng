@@ -18,16 +18,16 @@ class Photo < ActiveRecord::Base
 
 ## ================================= IMAGES ====================================
 
-  #TODO: Bad image sizes
   has_attached_file :photo,
     :styles => {
-      :original => ['800x800', :jpg],
-      :small    => ['30x30',   :jpg],
-      :medium   => ['100x100',    :jpg],
-      :large => ['400x400', :jpg],
-      :thumb    => ['200x200>',   :jpg]
+      :original => ['1200x1200>', :jpg],
+      :thumb   => ['100x100>',    :jpg],
+      :large => ['400x400>', :jpg],
     },
-    :convert_options => { :all => '-background white -flatten +matte' },
+    :convert_options => { :all => '-background white -flatten +matte',
+                          :thumb => '-strip -quality 50',
+                          :large => '-strip -quality 80',
+                          :original => '-quality 75'},
     :default_url => "/images/missing.png"
   validates_attachment_content_type :photo, :content_type => ["image/jpg",
                                                               "image/jpeg",
