@@ -307,6 +307,10 @@ a.btn {
  .image_container:hover {
     .fave_controls {
       opacity: 1;  filter: alpha(opacity=100);
+      -webkit-transform: rotateY(360deg);
+      -moz-transform: rotateY(360deg);
+      -o-transform: rotateY(360deg);
+      transform: rotateY(360deg);
     }
     .image_zoom{
       opacity: 1; filter: alpha(opacity=100);

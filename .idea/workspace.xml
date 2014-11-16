@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
     </list>
     <ignored path="BMRNG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -576,10 +575,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_new_grid.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_new_grid.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="10" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.24242425">
+            <state line="47" column="10" selection-start="2219" selection-end="2219" vertical-scroll-proportion="-8.0">
               <folding />
             </state>
           </provider>
@@ -630,10 +629,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="albums.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="albums.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="311" column="45" selection-start="6285" selection-end="6285" vertical-scroll-proportion="0.0">
+            <state line="312" column="33" selection-start="6368" selection-end="6368" vertical-scroll-proportion="0.63329315">
               <folding />
             </state>
           </provider>
@@ -704,10 +703,10 @@
         <option value="$PROJECT_DIR$/app/controllers/guests_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/album_display.css" />
         <option value="$PROJECT_DIR$/app/models/photo.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
         <option value="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
       </list>
     </option>
   </component>
@@ -1383,13 +1382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="311" column="45" selection-start="6285" selection-end="6285" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="107" column="9" selection-start="1738" selection-end="1738" vertical-scroll-proportion="-13.0">
@@ -1414,7 +1406,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="10" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.24242425">
+        <state line="47" column="10" selection-start="2219" selection-end="2219" vertical-scroll-proportion="-8.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="312" column="33" selection-start="6368" selection-end="6368" vertical-scroll-proportion="0.63329315">
           <folding />
         </state>
       </provider>
