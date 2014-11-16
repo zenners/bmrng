@@ -40,14 +40,12 @@
 <script type="text/javascript">
   $(document).ready(function() {
       /* Disable right click */
-//      $(document).bind("contextmenu",function(e) {
-//          return false;
-//      });
+      $(document).bind("contextmenu",function(e) {
+          return false;
+      });
       $(".fancybox").fancybox({
-            openEffect  : 'fade',
-            closeEffect : 'fade',
-//            nextEffect  : 'none',
-//            prevEffect  : 'none',
+          openEffect  : 'fade',
+          closeEffect : 'fade',
           padding     : 0,
           margin      : [20, 30, 20, 30], // Increase left/right margin
           beforeLoad: function() {
@@ -102,6 +100,12 @@
           },
           afterShow: function() {
               $(".fancybox-title").wrapInner('<div />').show();
+              // Grid view hover effect
+              $(".fancybox-inner").mouseover(function(){
+                  $($(this).parent().find(".fave_controls")[0]).addClass('hover');
+              }).mouseleave(function(){
+                          $($(this).parent().find(".fave_controls")[0]).removeClass('hover');
+                      });
           },
           helpers : {
               title : {

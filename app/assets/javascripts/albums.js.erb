@@ -10,13 +10,6 @@ $(document).ready(function(){
 
     $(".complete").hide();
 
-    // Grid view hover effect
-//    $(".main_image").mouseenter(function(){
-//        $($(this).parent().find(".fave_controls")[0]).addClass('hover');
-//    }).mouseleave(function(){
-//        $($(this).parent().find(".fave_controls")[0]).removeClass('hover');
-//    });
-
     // Grid view fave on single click
     $(".main_image").click(this, function(){
         $.ajax($(this).parent().find('.fave_action')[0].href, {'dataType':'script'})
