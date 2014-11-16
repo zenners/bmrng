@@ -578,7 +578,7 @@
       <file leaf-file-name="_new_grid.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="9" selection-start="4038" selection-end="4038" vertical-scroll-proportion="0.9621212">
+            <state line="110" column="9" selection-start="1515" selection-end="5417" vertical-scroll-proportion="0.86742425">
               <folding />
             </state>
           </provider>
@@ -1411,7 +1411,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="9" selection-start="4038" selection-end="4038" vertical-scroll-proportion="0.9621212">
+        <state line="110" column="9" selection-start="1515" selection-end="5417" vertical-scroll-proportion="0.86742425">
           <folding />
         </state>
       </provider>
