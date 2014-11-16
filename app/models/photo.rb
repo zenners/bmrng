@@ -26,8 +26,7 @@ class Photo < ActiveRecord::Base
     },
     :convert_options => { :all => '-background white -flatten +matte',
                           :thumb => '-strip -quality 50',
-                          :large => '-strip -quality 80',
-                          :original => '-quality 75'},
+                          :large => '-strip'},
     :default_url => "/images/missing.png"
   validates_attachment_content_type :photo, :content_type => ["image/jpg",
                                                               "image/jpeg",

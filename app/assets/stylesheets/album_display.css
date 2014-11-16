@@ -5,6 +5,10 @@ body.display{
     margin-top: 0px;
 }
 
+.navbar-fixed-bottom .navbar-inner .container{
+    width: 100%;
+}
+
 /*.fave_options{*/
     /*display: none;*/
     /*z-index: 1000;*/

@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/search.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/fancybox/fancybox_sprite@2x.png" afterPath="$PROJECT_DIR$/app/assets/images/fancybox/fancybox_sprite@2x.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/album_display.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/album_display.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/guests_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/guests_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/photo.rb" afterPath="$PROJECT_DIR$/app/models/photo.rb" />
     </list>
     <ignored path="BMRNG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,7 +57,7 @@
     <file path="/paperclip.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394386412536" ignored="false" />
     <file path="/silver.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1399692616974" ignored="false" />
     <file path="/paperclip_defaults.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394390143195" ignored="false" />
-    <file path="/guests_controller.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409008138423" ignored="false" />
+    <file path="/guests_controller.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416115009830" ignored="false" />
     <file path="/_fave_options.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415508665557" ignored="false" />
     <file path="/_reports_modal.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408938153546" ignored="false" />
     <file path="/follow.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394395340931" ignored="false" />
@@ -60,7 +67,7 @@
     <file path="/new.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410057175378" ignored="false" />
     <file path="/bootstrap_and_overrides.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409549392439" ignored="false" />
     <file path="/styles.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1400462311311" ignored="false" />
-    <file path="/albums.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416093225038" ignored="false" />
+    <file path="/albums.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416116231066" ignored="false" />
     <file path="/_numbers.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1399694947046" ignored="false" />
     <file path="/_display_nav.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408902575047" ignored="false" />
     <file path="/show.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416080329322" ignored="false" />
@@ -202,7 +209,7 @@
     <file path="/nested_grid.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1400222569699" ignored="false" />
     <file path="/jquery.nested.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1400223958833" ignored="false" />
     <file path="/stripe.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1405800306284" ignored="false" />
-    <file path="/album_display.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415509950908" ignored="false" />
+    <file path="/album_display.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416115290419" ignored="false" />
     <file path="$PROJECT_DIR$/app/assets/stylesheets/dynamic_grid/album_display.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1400475776187" ignored="false" />
     <file path="$PROJECT_DIR$/app/assets/stylesheets/dynamic_grid/main.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1400474418385" ignored="false" />
     <file path="/main.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1402288326673" ignored="false" />
@@ -545,11 +552,11 @@
     <file path="/ask_questions.js.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408936041418" ignored="false" />
     <file path="/_question_form.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409511313584" ignored="false" />
     <file path="/animate.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416089992579" ignored="false" />
-    <file path="/_new_grid.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416090560812" ignored="false" />
+    <file path="/_new_grid.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416114285867" ignored="false" />
     <file path="/cbpGridGallery.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409601014664" ignored="false" />
     <file path="/component.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409591531639" ignored="false" />
     <file path="/jquery.fancybox.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409602714395" ignored="false" />
-    <file path="/jquery.fancybox.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1415566690127" ignored="false" />
+    <file path="/jquery.fancybox.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416115842704" ignored="false" />
     <file path="/20140907032248_add_password_to_albums.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410060190286" ignored="false" />
     <file path="/set_password.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416086448461" ignored="false" />
     <file path="/set_questions.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410064804560" ignored="false" />
@@ -575,10 +582,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_new_grid.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_new_grid.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="3" selection-start="1960" selection-end="5862" vertical-scroll-proportion="0.17045455">
+            <state line="100" column="17" selection-start="5361" selection-end="5462" vertical-scroll-proportion="-37.375">
+              <folding>
+                <marker date="1416114870000" expanded="true" signature="5348:5462" placeholder="//..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="guests_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/guests_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="7" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="album_display.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/album_display.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="35" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="29" selection-start="238" selection-end="252" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -602,28 +638,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_fave.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/photos/_fave.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="58" selection-start="447" selection-end="447" vertical-scroll-proportion="-6.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_defave.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/photos/_defave.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="16" selection-start="349" selection-end="349" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="albums.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="albums.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="31" selection-start="2325" selection-end="2325" vertical-scroll-proportion="0.0">
+            <state line="311" column="45" selection-start="6285" selection-end="6285" vertical-scroll-proportion="0.86851627">
               <folding />
             </state>
           </provider>
@@ -632,8 +650,24 @@
       <file leaf-file-name="photo.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/photo.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="44" selection-start="916" selection-end="916" vertical-scroll-proportion="0.0">
+            <state line="28" column="44" selection-start="974" selection-end="974" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.fancybox.css.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="325" column="22432" selection-start="33791" selection-end="33791" vertical-scroll-proportion="-13.0">
+              <folding>
+                <element signature="e#11379#33790#2" expanded="true" />
+                <element signature="e#34186#56597#2" expanded="true" />
+                <element signature="e#56779#62198#2" expanded="true" />
+                <element signature="e#62879#76410#2" expanded="true" />
+                <element signature="e#76596#81843#2" expanded="true" />
+                <element signature="e#82313#93704#2" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -643,27 +677,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="24" column="41" selection-start="1273" selection-end="1547" vertical-scroll-proportion="-11.692307">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_fave_options.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/photos/_fave_options.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="set_password.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/albums/set_password.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="2" selection-start="793" selection-end="793" vertical-scroll-proportion="-15.583333">
-              <folding>
-                <marker date="1416087990000" expanded="true" signature="794:1068" placeholder="..." />
-                <marker date="1416087990000" expanded="true" signature="881:1000" placeholder="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -686,9 +699,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/albums/not_authorized.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/albums/sign_in.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/albums_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/manage/_options.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/photos_controller.rb" />
@@ -698,10 +708,13 @@
         <option value="$PROJECT_DIR$/app/views/photos/_defave.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/animate.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/albums.js.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
         <option value="$PROJECT_DIR$/app/views/albums/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/photo.rb" />
         <option value="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/guests_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/album_display.css" />
+        <option value="$PROJECT_DIR$/app/models/photo.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
       </list>
     </option>
   </component>
@@ -1286,45 +1299,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/photos_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="13" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/application-1d46354e7745f3e8cbc4a3522bd3e995.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19086" column="3245" selection-start="603355" selection-end="603355" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1416084590000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1416084590000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1416084590000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1416084590000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1416084590000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1416084590000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1416084590000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1416084590000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/bootstrap-switch.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="2" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/bootstrap-switch.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/staging.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1347,8 +1321,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="2" selection-start="793" selection-end="793" vertical-scroll-proportion="-15.583333">
           <folding>
-            <marker date="1416087990000" expanded="true" signature="794:1068" placeholder="..." />
-            <marker date="1416087990000" expanded="true" signature="881:1000" placeholder="..." />
+            <marker date="1416087990000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1416087990000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1381,13 +1355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="31" selection-start="2325" selection-end="2325" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/albums.js.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="37" selection-start="275" selection-end="275" vertical-scroll-proportion="-3.75">
@@ -1402,16 +1369,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/photo.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="44" selection-start="916" selection-end="916" vertical-scroll-proportion="0.0">
+        <state line="11" column="29" selection-start="238" selection-end="252" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/albums/_new_grid.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="3" selection-start="1960" selection-end="5862" vertical-scroll-proportion="0.17045455">
+        <state line="100" column="17" selection-start="5361" selection-end="5462" vertical-scroll-proportion="-37.375">
+          <folding>
+            <marker date="1416114870000" expanded="true" signature="5348:5462" placeholder="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/guests_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="7" selection-start="1450" selection-end="1450" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/album_display.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="35" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/photo.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="44" selection-start="974" selection-end="974" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="325" column="22432" selection-start="33791" selection-end="33791" vertical-scroll-proportion="-13.0">
+          <folding>
+            <element signature="e#11379#33790#2" expanded="true" />
+            <element signature="e#34186#56597#2" expanded="true" />
+            <element signature="e#56779#62198#2" expanded="true" />
+            <element signature="e#62879#76410#2" expanded="true" />
+            <element signature="e#76596#81843#2" expanded="true" />
+            <element signature="e#82313#93704#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="311" column="45" selection-start="6285" selection-end="6285" vertical-scroll-proportion="0.86851627">
           <folding />
         </state>
       </provider>

@@ -21,7 +21,7 @@ class GuestsController < ApplicationController
       if @question
         render 'guests/ask_questions' and return
       else
-        reset_session
+        #reset_session
         redirect_to "/#{@album.user.name}/#{@album.name}"
       end
     else
@@ -55,7 +55,7 @@ class GuestsController < ApplicationController
     if @question
       render 'guests/ask_questions' and return
     else
-      reset_session
+      #reset_session
       redirect_to "/#{@album.user.name}/#{@album.name}"
     end
   end

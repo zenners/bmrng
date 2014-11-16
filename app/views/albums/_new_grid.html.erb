@@ -7,7 +7,7 @@
                 <figure>
                     <%= image_tag(photo.photo.url(:large), class: 'main_image') %>
                     <a alt='<%=photo.photo_file_name.split('.').first%>' class='fancybox' rel='group' href='<%= photo.photo.url(:original) %>' data-photo-id="fave-<%= photo.id %>">
-                      <div class="image_zoom <%= photo.id %>"><%= image_tag('search.png')%></div>
+                      <div class="image_zoom <%= photo.id %>"><%= image_tag('magnifier.png')%></div>
                     </a>
                     <div id="fave-<%= photo.id%>" class='fave_options <%= photo.id %>'>
                       <%= render partial: 'photos/fave_options', locals: {photo: photo} %>
@@ -40,12 +40,12 @@
 <script type="text/javascript">
   $(document).ready(function() {
       /* Disable right click */
-      $(document).bind("contextmenu",function(e) {
-          return false;
-      });
+//      $(document).bind("contextmenu",function(e) {
+//          return false;
+//      });
       $(".fancybox").fancybox({
-//            openEffect  : 'none',
-//            closeEffect : 'none',
+            openEffect  : 'fade',
+            closeEffect : 'fade',
 //            nextEffect  : 'none',
 //            prevEffect  : 'none',
           padding     : 0,
