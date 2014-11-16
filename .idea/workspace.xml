@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/images/search.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/fancybox/fancybox_sprite@2x.png" afterPath="$PROJECT_DIR$/app/assets/images/fancybox/fancybox_sprite@2x.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/_new_grid.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/album_display.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/album_display.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/guests_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/guests_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/photo.rb" afterPath="$PROJECT_DIR$/app/models/photo.rb" />
     </list>
     <ignored path="BMRNG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -556,7 +549,7 @@
     <file path="/cbpGridGallery.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409601014664" ignored="false" />
     <file path="/component.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409591531639" ignored="false" />
     <file path="/jquery.fancybox.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409602714395" ignored="false" />
-    <file path="/jquery.fancybox.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416115842704" ignored="false" />
+    <file path="/jquery.fancybox.css.scss" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416117872678" ignored="false" />
     <file path="/20140907032248_add_password_to_albums.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410060190286" ignored="false" />
     <file path="/set_password.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416086448461" ignored="false" />
     <file path="/set_questions.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1410064804560" ignored="false" />
@@ -638,10 +631,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="albums.css.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="albums.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="311" column="45" selection-start="6285" selection-end="6285" vertical-scroll-proportion="0.86851627">
+            <state line="311" column="45" selection-start="6285" selection-end="6285" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -656,17 +649,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jquery.fancybox.css.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="jquery.fancybox.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="325" column="22432" selection-start="33791" selection-end="33791" vertical-scroll-proportion="-13.0">
+            <state line="107" column="9" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.4278481">
               <folding>
-                <element signature="e#11379#33790#2" expanded="true" />
-                <element signature="e#34186#56597#2" expanded="true" />
-                <element signature="e#56779#62198#2" expanded="true" />
-                <element signature="e#62879#76410#2" expanded="true" />
-                <element signature="e#76596#81843#2" expanded="true" />
-                <element signature="e#82313#93704#2" expanded="true" />
+                <element signature="e#3734#9457#2" expanded="true" />
+                <element signature="e#11381#33792#2" expanded="true" />
+                <element signature="e#34188#56599#2" expanded="true" />
+                <element signature="e#56781#62200#2" expanded="true" />
+                <element signature="e#62881#76412#2" expanded="true" />
+                <element signature="e#76598#81845#2" expanded="true" />
+                <element signature="e#82315#93706#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -713,8 +707,8 @@
         <option value="$PROJECT_DIR$/app/controllers/guests_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/album_display.css" />
         <option value="$PROJECT_DIR$/app/models/photo.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss" />
       </list>
     </option>
   </component>
@@ -1406,24 +1400,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="325" column="22432" selection-start="33791" selection-end="33791" vertical-scroll-proportion="-13.0">
-          <folding>
-            <element signature="e#11379#33790#2" expanded="true" />
-            <element signature="e#34186#56597#2" expanded="true" />
-            <element signature="e#56779#62198#2" expanded="true" />
-            <element signature="e#62879#76410#2" expanded="true" />
-            <element signature="e#76596#81843#2" expanded="true" />
-            <element signature="e#82313#93704#2" expanded="true" />
-          </folding>
+        <state line="311" column="45" selection-start="6285" selection-end="6285" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/jquery.fancybox.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="311" column="45" selection-start="6285" selection-end="6285" vertical-scroll-proportion="0.86851627">
-          <folding />
+        <state line="107" column="9" selection-start="1738" selection-end="1738" vertical-scroll-proportion="0.4278481">
+          <folding>
+            <element signature="e#3734#9457#2" expanded="true" />
+            <element signature="e#11381#33792#2" expanded="true" />
+            <element signature="e#34188#56599#2" expanded="true" />
+            <element signature="e#56781#62200#2" expanded="true" />
+            <element signature="e#62881#76412#2" expanded="true" />
+            <element signature="e#76598#81845#2" expanded="true" />
+            <element signature="e#82315#93706#2" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

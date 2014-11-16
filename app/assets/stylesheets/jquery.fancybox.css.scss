@@ -105,12 +105,12 @@ a.fancybox-nav span,
 
 a.fancybox-close {
   position: absolute;
-  top: -35px;
-  right: -35px;
+  top: -15px;
+  right: -55px;
   width: 46px;
   height: 46px;
   cursor: pointer;
-  background-position: 0 0;
+  //background-position: 0 0;
   z-index: 8040;
 }
 
@@ -145,11 +145,11 @@ a.fancybox-nav {
 }
 
 a.fancybox-prev {
-  left: -35px;
+  left: -75px;
 }
 
 a.fancybox-next {
-  right: -35px;
+  right: -75px;
 }
 
 a.fancybox-nav span {
