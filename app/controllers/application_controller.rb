@@ -69,7 +69,7 @@ class ApplicationController < ActionController::Base
     elsif ENV['DISPLAY_SUBDOMAIN'] == subdomain
       'display'
     else
-      raise "Seems like the wrong url... Sorry."
+      'application'
     end
   end
 

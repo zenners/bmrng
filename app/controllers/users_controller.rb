@@ -149,17 +149,26 @@ class UsersController < ApplicationController
       if resource.save
         redirect_to set_logo_user_path(resource)
       else
+        flash[:error] = "url already in use. Please try again."
         render :set_url
       end
     end
   end
 
   def set_logo
+    @user = resource
     if request.post?
-      if resource.update(params[:user])
-        redirect_to set_questions_user_path(resource)
+      resource.logo = params[:file]
+      if resource.save
+        respond_to do |format|
+          format.html { redirect_to set_questions_user_path(resource) }
+          format.json {render json: { message: "success"}, :status => 200}
+        end
       else
-        render :set_logo
+        respond_to do |format|
+          format.html { render :set_logo }
+          format.json { render json: { message: "failed"}, :status => 500}
+        end
       end
     end
   end

@@ -1,4 +1,6 @@
+<% if @album.user and @album.user.logo %>
 <%= link_to image_tag(@album.user.logo.url(:thumb), class: 'nav_img'), @album.user.link, :target => "blank"%>
+<%end %>
 <span class="album_title">
   <%= @album.title %>
 </span>

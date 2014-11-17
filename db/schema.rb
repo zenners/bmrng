@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140720074208) do
+ActiveRecord::Schema.define(version: 20141116231104) do
 
   create_table "albums", force: true do |t|
     t.integer  "user_id"
@@ -128,20 +128,23 @@ ActiveRecord::Schema.define(version: 20140720074208) do
 
   create_table "subscriptions", force: true do |t|
     t.integer  "user_id"
+    t.string   "stripe_subscription_token"
     t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "stripe_subscription_token"
-    t.datetime "stripe_current_period_end"
+    t.string   "stripe_current_period_end"
   end
 
   create_table "users", force: true do |t|
     t.string   "name"
+    t.string   "human_name"
+    t.string   "studio_name"
     t.string   "watermark_image"
     t.string   "link"
     t.string   "email",                               null: false
-    t.string   "stripe_customer_id"
+    t.string   "stripe_customer_token"
     t.string   "last_4_digits"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "logo_file_name"
@@ -157,8 +160,6 @@ ActiveRecord::Schema.define(version: 20140720074208) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "subscription_id"
-    t.string   "stripe_customer_token"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

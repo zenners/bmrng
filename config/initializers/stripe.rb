@@ -1,7 +1,7 @@
 #REVIEW: These should be in application.yml
 if Rails.env.development?
-  Stripe.api_key = "sk_test_N9jcRhTJ0pQB78HtSOpAs3Jf"
-  STRIPE_PUBLIC_KEY = "pk_test_8cuWJKwYw2wM893BTHEPP4Ty"
+  Stripe.api_key = "sk_test_yfsRj3fGXlTOybn5j56OWNvF"
+  STRIPE_PUBLIC_KEY = "pk_test_HqAK6GT66wFTl6EGLqFRzHcy"
 end
 if Rails.env.production? or Rails.env.staging?
   Stripe.api_key = "sk_live_UyCk8CQd1HvLZjzO0Cs06GEX"

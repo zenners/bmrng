@@ -1,5 +1,5 @@
 class Subscription < ActiveRecord::Base
-  attr_accessible :user_id, :stripe_subscription_token, :stripe_card_token, :plan
+  attr_accessible :user_id, :stripe_subscription_token, :stripe_current_period_end, :plan
   attr_accessor :stripe_card_token, :plan
 
   belongs_to :user

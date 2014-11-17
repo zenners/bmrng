@@ -132,10 +132,10 @@ a.btn {
     //padding: 12px;
 	.fave_controls{
         opacity: 0;  filter: alpha(opacity=0);
-        -webkit-transition: all .5s ease;
-        -moz-transition: all .5s ease;
-        -o-transition: all .5s ease;
-        transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        transition: all 1s ease-out;
 		position: absolute;
 		bottom: 65px;
 		//width: 0;
@@ -192,11 +192,11 @@ a.btn {
     }
     .fave_controls.hover{
       display: block;
-      opacity: 1;  filter: alpha(opacity=100);
-      -webkit-transform: rotateY(360deg);
-      -moz-transform: rotateY(360deg);
-      -o-transform: rotateY(360deg);
-      transform: rotateY(360deg);
+      //opacity: 1;  filter: alpha(opacity=100);
+      //-webkit-transform: rotateY(360deg);
+      //-moz-transform: rotateY(360deg);
+      //-o-transform: rotateY(360deg);
+      //transform: rotateY(360deg);
     }
 
 
@@ -307,10 +307,10 @@ a.btn {
  .image_container:hover {
     .fave_controls {
       opacity: 1;  filter: alpha(opacity=100);
-      -webkit-transform: rotateY(360deg);
-      -moz-transform: rotateY(360deg);
-      -o-transform: rotateY(360deg);
-      transform: rotateY(360deg);
+      //-webkit-transform: rotateY(360deg);
+      //-moz-transform: rotateY(360deg);
+      //-o-transform: rotateY(360deg);
+      //transform: rotateY(360deg);
     }
     .image_zoom{
       opacity: 1; filter: alpha(opacity=100);

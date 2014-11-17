@@ -4,15 +4,18 @@
 <p class='session_start'>
   Perfect. Now, we need a logo from you to use to brand your galleries.
   It needs to be 75 pixels high by 200 pixels wide max. It also needs to be a
-  jpeg or a png. When you have that ready, drop it anywhere on this page. 
+  jpeg or a png. When you have that ready, drop it anywhere in the box below. 
 </p>
+
 <div class="session_start">
-	<%= simple_form_for resource, url: 'set_logo', html: {:multipart => true} do |f| %>
-            <%= f.error_notification %>
-			  <%= f.file_field :logo %>
-			  <br>
-			  <%= f.button :submit, "CONTINUE" %>
-	<% end %>
+  <%= form_for(url_for(resource), html: { multipart: true, class: 'dropzone'}) do |f|  %>
+      <div class="fallback">
+        <%= f.file_field :logo %><br>
+        <%= f.submit "CONTINUE" %>
+      </div>
+  <% end %>
+
+  <h3><%= link_to "CONTINUE", set_questions_user_url(@user), class: 'btn', style: 'color: white' %></h3>
 
 	</div>
 	<%= javascript_include_tag 'fancyInput' %>
@@ -21,8 +24,23 @@
 	</script>
     <%= render 'layouts/progress_circles', number: 7, active: 5 %>
 </div>
+
 <script>
-    $(document).ready(function(){
-      $("#user_name").trigger('focus');
+    // disable auto discover
+    //Dropzone.autoDiscover = false;
+    // grap our upload form by its id
+    $("#user_logo").dropzone({
+        // restrict image size to a maximum 10MB
+        maxFilesize: 10,
+        // changed the passed param to one accepted by
+        // our rails app
+        paramName: "user[logo]",
+        // show remove links on each image upload
+        addRemoveLinks: false,
+        // if the upload was successful
+        success: function(file, response){
+            $("#continue_link").show();
+        }
+
     });
 </script>

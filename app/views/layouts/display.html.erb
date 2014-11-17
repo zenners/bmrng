@@ -3,7 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <% if @album %>
-        <title><%= @album.name %> by <%= @album.user.name %></title>
+        <title><%= "#{@album.name} by #{@album.user.name}" rescue "BOOMERANG"%></title>
     <% else %>
         <title>Boomerang Proof Album Viewer Portal</title>
     <% end %>

@@ -44,7 +44,7 @@
                 var id = <%= photo.id %>
                 var file = { name: "<%= photo.photo_file_name %>", size: <%= photo.photo_file_size || 0 %>, type: "<%= photo.photo_content_type %>" };
                 this.options.addedfile.call(this, file);
-                this.options.thumbnail.call(this, file, "<%= photo.photo.url(:thumb) %>");
+                this.options.thumbnail.call(this, file, "<%= photo.photo.url(:medium) %>");
                 $(file.previewTemplate).find('.dz-remove').attr('id', id);
             <% end %>
             this.on("complete", function (file) {
