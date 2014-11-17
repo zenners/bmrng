@@ -1,5 +1,5 @@
 class Subscription < ActiveRecord::Base
-  attr_accessible :user_id, :stripe_subscription_token, :stripe_current_period_end, :plan
+  attr_accessible :user_id, :stripe_subscription_token, :stripe_current_period_end, :plan, :stripe_card_token
   attr_accessor :stripe_card_token, :plan
 
   belongs_to :user
@@ -11,6 +11,7 @@ class Subscription < ActiveRecord::Base
 
   def save_with_payment
     if valid?
+      logger.info "Creating Stripe customer with user_id: #{user_id}, plan: #{plan}, card: #{stripe_card_token}"
       customer = Stripe::Customer.create(description: user_id, plan: plan, card: stripe_card_token)
       user.update stripe_customer_token: customer.id
       self.stripe_subscription_token = customer.subscriptions.first.id

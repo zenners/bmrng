@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_navigation_bottom.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_navigation_bottom.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/user_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/subscription.rb" afterPath="$PROJECT_DIR$/app/models/subscription.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BMRNG.iws" />
@@ -24,7 +20,7 @@
     <file path="/Dummy.txt" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416184826060" ignored="false" />
     <file path="/account.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1404774189523" ignored="false" />
     <file path="$PROJECT_DIR$/../wishinawell/app/models/account.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394337705547" ignored="false" />
-    <file path="/a.dummy" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416187436917" ignored="false" />
+    <file path="/a.dummy" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416201212633" ignored="false" />
     <file path="/devise.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394338790441" ignored="false" />
     <file path="/routes.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416200243008" ignored="false" />
     <file path="/application.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1405886384680" ignored="false" />
@@ -198,7 +194,7 @@
     <file path="$USER_HOME$/Rose Point/rpsf/app/views/cmap_license_installations/_cmap_license_installation.haml" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1400780910393" ignored="false" />
     <file path="/store_controller.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1409071237278" ignored="false" />
     <file path="/filter_parameter_logging.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1400190876634" ignored="false" />
-    <file path="/registrations_controller.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408257548027" ignored="false" />
+    <file path="/registrations_controller.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416201690203" ignored="false" />
     <file path="/_reports.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1400259027695" ignored="false" />
     <file path="/_silver.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1400195590331" ignored="false" />
     <file path="/_session_name.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1400197764293" ignored="false" />
@@ -467,7 +463,7 @@
     <file path="/reset.css" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408161590934" ignored="false" />
     <file path="/_destroy_session.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1405790245163" ignored="false" />
     <file path="/_subscription.html.erb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1405838345071" ignored="false" />
-    <file path="/subscription.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1405880444712" ignored="false" />
+    <file path="/subscription.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416201343099" ignored="false" />
     <file path="/subscriptions_controller.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1408169620527" ignored="false" />
     <file path="/users.coffee" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1405800401183" ignored="false" />
     <file path="/20140719201003_initial_subscriptions_table.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1405833692225" ignored="false" />
@@ -591,15 +587,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/guests/show.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="7" selection-start="439" selection-end="439" vertical-scroll-proportion="-10.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="send_feedback.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/send_feedback.html.erb">
           <provider selected="true" editor-type-id="text-editor">
@@ -618,19 +605,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+      <file leaf-file-name="subscription.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/subscription.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="216" column="32" selection-start="6301" selection-end="6301" vertical-scroll-proportion="0.0">
+            <state line="11" column="23" selection-start="333" selection-end="333" vertical-scroll-proportion="0.2782462">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_mailer.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="146" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registrations_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/registrations_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="30" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_mailer.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.22765599">
+            <state line="9" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -681,8 +686,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/albums/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
         <option value="$PROJECT_DIR$/app/models/user.rb" />
@@ -697,6 +700,8 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/registrations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/subscription.rb" />
       </list>
     </option>
   </component>
@@ -1399,20 +1404,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/environments/staging.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="42" selection-start="0" selection-end="3011" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="28" selection-start="761" selection-end="761" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/paperclip_defaults.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="86" selection-start="140" selection-end="140" vertical-scroll-proportion="0.0">
@@ -1497,16 +1488,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="216" column="32" selection-start="6301" selection-end="6301" vertical-scroll-proportion="0.0">
+        <state line="9" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mailers/user_mailer.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="48" selection-start="258" selection-end="258" vertical-scroll-proportion="0.22765599">
+        <state line="20" column="146" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/registrations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="30" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/subscription.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="23" selection-start="333" selection-end="333" vertical-scroll-proportion="0.2782462">
           <folding />
         </state>
       </provider>
