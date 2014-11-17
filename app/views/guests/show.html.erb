@@ -8,8 +8,12 @@
   <%= @guest.name %>
   <h3><u>FEEDBACK</u></h3>
   <ol>
-    <% @guest.answers.each do |answer| %>
-      <li><%= answer.content %></li>
+    <% if @guest.answers.count > 0 %>
+        <% @guest.answers.each do |answer| %>
+          <li><%= answer.content %></li>
+        <% end %>
+    <% else %>
+        None
     <% end %>
   </ol>
   <script>
