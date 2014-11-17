@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_display_nav.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_display_nav.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.yml" afterPath="$PROJECT_DIR$/config/application.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/display.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/display.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/new.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/set_logo.html.erb" afterPath="$PROJECT_DIR$/app/views/users/set_logo.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/set_password.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/set_password.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/set_url.html.erb" afterPath="$PROJECT_DIR$/app/views/users/set_url.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/albums/show.html.erb" afterPath="$PROJECT_DIR$/app/views/albums/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/stripe.rb" afterPath="$PROJECT_DIR$/config/initializers/stripe.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/subscription.rb" afterPath="$PROJECT_DIR$/app/models/subscription.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/welcome_complete.html.erb" afterPath="$PROJECT_DIR$/app/views/users/welcome_complete.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/paperclip_defaults.rb" afterPath="$PROJECT_DIR$/config/initializers/paperclip_defaults.rb" />
     </list>
     <ignored path="BMRNG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,10 +16,10 @@
     <file path="/20140309030507_initial_users_table.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1405884761870" ignored="false" />
     <file path="/user.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416181288288" ignored="false" />
     <file path="/database.yml" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394336694977" ignored="false" />
-    <file path="/Dummy.txt" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416179579643" ignored="false" />
+    <file path="/Dummy.txt" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416184826060" ignored="false" />
     <file path="/account.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1404774189523" ignored="false" />
     <file path="$PROJECT_DIR$/../wishinawell/app/models/account.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394337705547" ignored="false" />
-    <file path="/a.dummy" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416182824830" ignored="false" />
+    <file path="/a.dummy" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416187387411" ignored="false" />
     <file path="/devise.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394338790441" ignored="false" />
     <file path="/routes.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416074845505" ignored="false" />
     <file path="/application.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1405886384680" ignored="false" />
@@ -592,19 +576,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="18" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="albums.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="35" selection-start="2326" selection-end="2326" vertical-scroll-proportion="-12.730769">
+            <state line="137" column="35" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -622,10 +597,8 @@
       <file leaf-file-name="set_logo.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/set_logo.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="95" selection-start="660" selection-end="660" vertical-scroll-proportion="-8.75">
-              <folding>
-                <marker date="1416183059000" expanded="true" signature="1367:1418" placeholder="{...}" />
-              </folding>
+            <state line="17" column="95" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -642,7 +615,7 @@
       <file leaf-file-name="_logo.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/users/_logo.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -660,16 +633,25 @@
       <file leaf-file-name="photo.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/photo.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
+            <state line="7" column="29" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="paperclip_defaults.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/initializers/paperclip_defaults.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="75" selection-start="129" selection-end="129" vertical-scroll-proportion="0.02529511">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="users_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="35" selection-start="4500" selection-end="4500" vertical-scroll-proportion="0.5185185">
+            <state line="159" column="35" selection-start="4464" selection-end="4464" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -678,7 +660,7 @@
       <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="35" selection-start="831" selection-end="831" vertical-scroll-proportion="-15.0">
+            <state line="27" column="35" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -702,7 +684,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/set_url.html.erb" />
         <option value="$PROJECT_DIR$/app/views/albums/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/welcome_complete.html.erb" />
         <option value="$PROJECT_DIR$/app/views/albums/_form.html.erb" />
@@ -718,6 +699,7 @@
         <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/views/users/set_logo.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/config/initializers/paperclip_defaults.rb" />
       </list>
     </option>
   </component>
@@ -752,6 +734,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="RailsProjectView" />
       <pane id="Scope">
         <subPane subId="Problems" />
         <subPane subId="Project Files">
@@ -767,7 +750,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -995,13 +977,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="preferences.sourceCode.Ruby" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="preferences.sourceCode.Ruby" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../rose_point/rpsf_clean" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1290,7 +1272,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26818183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15789473" sideWeight="0.7318182" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15973072" sideWeight="0.7318182" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1366,13 +1348,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="31" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.53956836">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/display.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5" column="77" selection-start="220" selection-end="220" vertical-scroll-proportion="0.13181019">
@@ -1417,7 +1392,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="137" column="35" selection-start="2326" selection-end="2326" vertical-scroll-proportion="-12.730769">
+        <state line="137" column="35" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1431,10 +1406,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/users/set_logo.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="95" selection-start="660" selection-end="660" vertical-scroll-proportion="-8.75">
-          <folding>
-            <marker date="1416183059000" expanded="true" signature="1367:1418" placeholder="{...}" />
-          </folding>
+        <state line="17" column="95" selection-start="660" selection-end="660" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1452,16 +1425,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/photo.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="35" selection-start="831" selection-end="831" vertical-scroll-proportion="-15.0">
+        <state line="27" column="35" selection-start="831" selection-end="831" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1475,7 +1441,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="35" selection-start="4500" selection-end="4500" vertical-scroll-proportion="0.5185185">
+        <state line="159" column="35" selection-start="4464" selection-end="4464" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/photo.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="29" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/paperclip_defaults.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="75" selection-start="129" selection-end="129" vertical-scroll-proportion="0.02529511">
           <folding />
         </state>
       </provider>
