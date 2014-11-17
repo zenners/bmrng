@@ -106,6 +106,8 @@ class User < ActiveRecord::Base
   end
 
   def cancel_subscription
-    subscription.destroy
+    if subscription
+      subscription.destroy
+    end
   end
 end
