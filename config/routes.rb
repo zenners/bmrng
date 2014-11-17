@@ -20,6 +20,7 @@ BMRNG::Application.routes.draw do
   resources :users do
     resources :subscriptions
     match :send_feedback, via: [:get, :post]
+    match :request_support, via: [:get, :post]
     member do
       get :analytics
       get :manage

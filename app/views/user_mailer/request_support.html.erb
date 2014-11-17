@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+<h1>Support help requested from <%= @user.human_name %></h1>
+<p>
+  Reply to them at <%= mail_to @user.email, @user.email %>
+</p>
+<p>
+  <%= @message %>
+</p>
+</body>
+</html>

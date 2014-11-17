@@ -1,0 +1,31 @@
+<div class="session_start login_logo">
+  <h1>
+    GET
+    <%= image_tag('bmrng_logo.png') %>
+    HELP
+  </h1>
+</div>
+
+<p class='session_start'>
+  <b>Sorry your having troubles.</b> Please send us a quick note about your troubles and we will get back to you
+  as soon as possible.
+</p>
+
+<div class="session_start">
+  <%= simple_form_for :support, url: 'request_support' do |f| %>
+  <div class="form-inputs big_input">
+    <%= f.input :message, :label => false, as: :text %>
+  </div>
+  <br>
+  <%= f.button :submit, "GET HELP" %>
+  <% end %>
+
+</div>
+<%= javascript_include_tag 'fancyInput' %>
+<script>
+    $('section :input').val('').fancyInput()[0].focus();
+</script>
+</div>
+<script>
+    $("#feedback_message").trigger('focus');
+</script>

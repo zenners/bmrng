@@ -7,7 +7,7 @@
       <!--<li class="nav"><span class="badge red">5</span></li>-->
 
       <ul class="nav pull-right">
-      <li class="nav_link_bot dark pull-right"><a data-toggle="modal" href="#support">SUPPORT</a></li>
+      <li class="nav_link_bot dark pull-right"><%= link_to "SUPPORT", user_request_support_path(current_user) %></li>
         <li class="nav_link_bot dark pull-right"><%= link_to 'SUGGEST', user_send_feedback_path(current_user) %></li>
       </ul>
 

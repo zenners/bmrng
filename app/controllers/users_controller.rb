@@ -211,4 +211,13 @@ class UsersController < ApplicationController
       render :send_feedback
     end
   end
+
+  def request_support
+    if request.post?
+      UserMailer.request_support(current_user, params[:support][:message]).deliver
+      redirect_to current_user, notice: 'We will get back to you soon!' and return
+    else
+      render :request_help
+    end
+  end
 end
