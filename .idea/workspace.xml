@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/paperclip_defaults.rb" afterPath="$PROJECT_DIR$/config/initializers/paperclip_defaults.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
     </list>
     <ignored path="BMRNG.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +19,7 @@
     <file path="/Dummy.txt" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416184826060" ignored="false" />
     <file path="/account.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1404774189523" ignored="false" />
     <file path="$PROJECT_DIR$/../wishinawell/app/models/account.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394337705547" ignored="false" />
-    <file path="/a.dummy" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416187387411" ignored="false" />
+    <file path="/a.dummy" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416187436917" ignored="false" />
     <file path="/devise.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1394338790441" ignored="false" />
     <file path="/routes.rb" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1416074845505" ignored="false" />
     <file path="/application.js" changelist="f6cb7517-b94e-43f5-9a06-8ad5dd54de69" time="1405886384680" ignored="false" />
@@ -576,15 +576,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="albums.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/albums.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="137" column="35" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="photos_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/photos_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -639,10 +630,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="paperclip_defaults.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="paperclip_defaults.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/initializers/paperclip_defaults.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="75" selection-start="129" selection-end="129" vertical-scroll-proportion="0.02529511">
+            <state line="1" column="75" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -653,6 +644,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="159" column="35" selection-start="4464" selection-end="4464" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jquery.fancybox.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2332" column="8" selection-start="55093" selection-end="55288" vertical-scroll-proportion="0.33275864">
+              <folding>
+                <marker date="1416187451000" expanded="false" signature="53839:53875" placeholder="..." />
+                <marker date="1416187451000" expanded="false" signature="54186:54238" placeholder="..." />
+                <marker date="1416187451000" expanded="true" signature="55005:55019" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -684,7 +688,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/albums/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/welcome_complete.html.erb" />
         <option value="$PROJECT_DIR$/app/views/albums/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/albums/set_password.html.erb" />
@@ -700,6 +703,7 @@
         <option value="$PROJECT_DIR$/app/views/users/set_logo.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
         <option value="$PROJECT_DIR$/config/initializers/paperclip_defaults.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js" />
       </list>
     </option>
   </component>
@@ -1348,13 +1352,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/display.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="77" selection-start="220" selection-end="220" vertical-scroll-proportion="0.13181019">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20141116231104_add_current_period_to_subscriptions.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="66" selection-start="143" selection-end="143" vertical-scroll-proportion="0.05059022">
@@ -1455,8 +1452,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/paperclip_defaults.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="75" selection-start="129" selection-end="129" vertical-scroll-proportion="0.02529511">
+        <state line="1" column="75" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/jquery.fancybox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2332" column="8" selection-start="55093" selection-end="55288" vertical-scroll-proportion="0.33275864">
+          <folding>
+            <marker date="1416187451000" expanded="false" signature="53839:53875" placeholder="..." />
+            <marker date="1416187451000" expanded="false" signature="54186:54238" placeholder="..." />
+            <marker date="1416187451000" expanded="true" signature="55005:55019" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

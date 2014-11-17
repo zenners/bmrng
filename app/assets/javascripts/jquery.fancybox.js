@@ -2330,9 +2330,9 @@
 		$("<style type='text/css'>.fancybox-margin{margin-right:" + F.lockMargin + "px;}</style>").appendTo("head");
 
 		// Auto start
-		if ($("script[src*='application.js']").attr('src').match(/autorun/) ){
-			$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif'],.fancybox").attr('data-fancybox-group', 'gallery').fancybox();
-		}
+//		if ($("script[src*='application.js']").attr('src').match(/autorun/) ){
+//			$("a[href$='.jpg'],a[href$='.png'],a[href$='.gif'],.fancybox").attr('data-fancybox-group', 'gallery').fancybox();
+//		}
 	});
 
 	// jQuery plugin initialization
