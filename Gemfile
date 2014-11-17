@@ -43,6 +43,7 @@ gem 'acts_as_follower'
 gem 'aws-sdk'
 gem 'paperclip-meta'
 gem "nested_form"
+gem 'newrelic_rpm'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
