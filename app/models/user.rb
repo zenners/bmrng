@@ -104,4 +104,8 @@ class User < ActiveRecord::Base
   def created?
     status == 'created'
   end
+
+  def cancel_subscription
+    subscription.destroy
+  end
 end
