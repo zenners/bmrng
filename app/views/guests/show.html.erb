@@ -42,7 +42,7 @@
   <% @popular_pics.each do |rave| %>
     <div class='row'>
         <div class="report_image_box">
-          <%= image_tag(rave.photo.url(:medium)) %>
+          <%= image_tag(rave.photo.url(:large)) %>
           <div class='side_raves'>
             <div class="grey_ball">
               <%= rave.followers_count %>
