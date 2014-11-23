@@ -15,6 +15,9 @@ class RegistrationsController < Devise::RegistrationsController
       if sub.save_with_payment
         sign_in @user, :bypass => true
         redirect_to after_sign_in_path_for(@user) and return
+      else
+        @user.destroy
+        render new
       end
     end
     render :new

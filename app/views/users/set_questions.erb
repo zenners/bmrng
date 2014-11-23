@@ -11,8 +11,11 @@
 <div class="session_start">
 	<%= nested_form_for resource, url: 'set_questions' do |f| %>
         <%= f.fields_for :questions do |q_form| %>
+      <div class="form-inputs big_input">
           <%= q_form.text_field :content %>
-          <%= q_form.link_to_remove "Remove this question" %>
+          <%= q_form.link_to_remove " - Remove this question" %>
+        </div>
+
         <% end %>
         <p><%= f.link_to_add "Add a question", :questions %></p>
         <br>
