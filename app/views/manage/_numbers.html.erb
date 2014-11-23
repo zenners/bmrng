@@ -4,7 +4,7 @@
 			<span class="title animated bounceIn">TOTAL VIEWS</span>
 		</div>
 			<div class="blue_ball animated pulse">
-				<span class="total_views"><%= @album.impressions.count %></span>
+				<span class="count"><%= @album.impressions.count %></span>
 			</div>
 	</div>
 	<div class="span2">
@@ -12,7 +12,7 @@
 			<span class="title animated bounceIn">UNIQUE VIEWS</span>
 		</div>
 			<div class="blue_ball animated pulse">
-				<span class="uni_views"><%= @album.impressions_count || 0 %></span>
+				<span class="count"><%= @album.impressions_count || 0 %></span>
 			</div>
 	</div>
 	<div class="span2">
@@ -20,7 +20,7 @@
 			<span class="title animated pulse">TOTAL RAVES</span>
 		</div>
 			<div class="blue_ball animated pulse">
-				<span class="total_raves"><%= @count %></span>
+				<span class="count"><%= @count %></span>
 			</div>
 	</div>
 </div>
