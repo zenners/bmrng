@@ -2,7 +2,7 @@ ActionMailer::Base.delivery_method = :smtp
 
 ActionMailer::Base.smtp_settings = {
     :address => 'smtpout.secureserver.net',
-    :port => 587,
+    :port => 465,
     :domain => 'boomerangproof.com',
     :authentication => 'plain',
     :user_name => 'chris@boomerangproof.com',
